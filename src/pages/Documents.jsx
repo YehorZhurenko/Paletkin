@@ -11,7 +11,7 @@ const Documents = () => {
     { id: 'recommended', label: 'Реквизиты компании' },
     { id: 'forms', label: 'Формы и бланки' },
     { id: 'contracts', label: 'Договоры' },
-    { id: 'contracts', label: 'Договоренности' },
+    { id: 'dogorennsiti', label: 'Договоренности' },
 
   ]
 
@@ -140,19 +140,30 @@ const Documents = () => {
 
             <div className="faq-list">
               {faqs.map((faq, index) => (
-                <div key={index} className="faq-item">
+                <div key={index} className={`faq-item ${expandedFaq === index ? 'expanded' : ''}`}>
                   <button
                     className={`faq-question ${expandedFaq === index ? 'open' : ''}`}
                     onClick={() => setExpandedFaq(expandedFaq === index ? -1 : index)}
-                  >
-                    <span className="faq-icon">●</span>
-                    {faq.question}
-                  </button>
-                  {expandedFaq === index && (
-                    <div className="faq-answer">
-                      {faq.answer}
+                    aria-expanded={expandedFaq === index}
+                  > 
+                    <span className={`faq-icon ${expandedFaq === index ? 'open' : ''}`} aria-hidden>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </span>
+
+                    <div className="faq-content">
+                      <span className="faq-title">{faq.question}</span>
+                      <div className={`faq-answer ${expandedFaq === index ? 'open' : ''}`} role="region">
+                        <div className="faq-answer-inner">
+                          {faq.answer}
+                        </div>
+                      </div>
                     </div>
-                  )}
+
+                  </button>
+
+                  
                 </div>
               ))}
             </div>
@@ -174,10 +185,19 @@ const Documents = () => {
 
             <div className="cta-card right-card">
               <h3>Готовы отправить груз?</h3>
-              <p>Дан сервис по доставке отправлений за день. Документы дома в срок</p>
-              <Link to="/checkout" className="order-cta-btn">
-                Оформить заказ
-              </Link>
+              <p>Две минуты на оформление, остальное за нами. Доставим день в день</p>
+              <form className="cta-form">
+                <input 
+                  type="tel" 
+                  placeholder="Ваш номер телефона" 
+                  className="cta-input"
+                  required
+                />
+                <button type="submit" className="order-cta-btn">
+                  Оставить заявку
+                </button>
+              </form>
+              <span className="cta-notice">Нажимая кнопку, вы согласаетесь с нашей политикой конфиденциальности</span>
             </div>
           </div>
         </div>
