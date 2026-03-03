@@ -17,6 +17,8 @@ import FaqSection from '../components/FaqSection'
 import OfferSection from '../components/OfferSection'
 import DeliverySection from '../components/DeliverySection'
 import TariffSection from '../components/TariffsSection';
+import BlogSection from '../components/BlogSection';
+import VideoSection from '../components/VideoSection';
 
 import companys from '../assets/image/partners/companys.svg'
 
@@ -103,6 +105,13 @@ function Home() {
           <TariffSection />
         </div>
       </div>
+
+      <div className="home-video">
+        <div className="container">
+          <VideoSection />
+        </div>
+      </div>
+
       <div className="home-different">
         <div className="container">
           <DifferentSection />
@@ -112,6 +121,12 @@ function Home() {
       <div className="home-cars">
         <div className="container">
           <CarsSection />
+        </div>
+      </div>
+
+      <div className="home-blog">
+        <div className="container">
+          <BlogSection />
         </div>
       </div>
 
@@ -132,6 +147,7 @@ function Home() {
           <WhyUsSection />
         </div>
       </div>
+
 
       <div className="home-faq">
         <div className="container">

@@ -2,20 +2,52 @@ import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Header.css'
 
-import logo from '../assets/image/logo/logo-black.svg';
-
-
-// basic svg placeholders for icons (could later be replaced with proper assets)
-const ServiceIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="24" height="24" fill="#ccc" />
-  </svg>
-)
+import logo from '../assets/image/logo/logo-black.svg'
+import servicesIcon from '../assets/image/icons/header/services.svg'
+import deliveryIcon from '../assets/image/icons/header/delivery.svg'
+import docsIcon from '../assets/image/icons/header/docs.svg'
+import calculatorHeader from '../assets/image/calculator-header.png'
+import aboutHeader from '../assets/image/about-header.png'
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const dropdownRef = useRef(null)
   const dropdownMenuRef = useRef(null)
+  const servicesMenuItems = [
+    {
+      to: '/services',
+      icon: servicesIcon,
+      title: 'Все услуги',
+      description: 'Прозрачные цены без скрытых комиссий'
+    },
+    {
+      to: '/marketplace',
+      icon: deliveryIcon,
+      title: 'Доставка на маркетплейсы',
+      description: 'Срочная доставка в России и СНГ'
+    },
+    {
+      to: '/documents',
+      icon: docsIcon,
+      title: 'Документы',
+      description: 'Срочная доставка в России и СНГ'
+    }
+  ]
+
+  const featuredBlocks = [
+    {
+      to: '/online-table',
+      image: calculatorHeader,
+      title: 'Калькулятор',
+      description: 'Расчет стоимости на всю логистику'
+    },
+    {
+      to: '/about',
+      image: aboutHeader,
+      title: 'О компании',
+      description: 'Убедитесь в нашей компетентности'
+    }
+  ]
 
   // close dropdown when clicking outside
   useEffect(() => {
@@ -39,7 +71,6 @@ function Header() {
 
             <li>
               <Link to="/" className="logo">
-                {/* insert actual logo image or svg here */}
                 <img src={logo} alt="Paletkin" />
               </Link>
             </li>
@@ -51,7 +82,7 @@ function Header() {
                 onClick={() => setMenuOpen((o) => !o)}
               >
                 Услуги
-                <span className={`arrow ${menuOpen ? 'open' : ''}`}></span>
+                <span className={`arrow ${menuOpen ? 'open' : ''}`}>⌄</span>
               </button>
             </li>
 
@@ -67,6 +98,9 @@ function Header() {
             <li>
               <div className="header-actions">
                 <a href="tel:+79933430444" className="phone">
+                  <svg className="phone-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.13 1.17A1 1 0 0 1 4.17.5h1.6a1 1 0 0 1 .98.82l.3 1.8a1 1 0 0 1-.29.86l-1.02 1.01a8.38 8.38 0 0 0 3.27 3.27l1.01-1.02a1 1 0 0 1 .86-.29l1.8.3a1 1 0 0 1 .82.98v1.6a1 1 0 0 1-.67 1.04l-1.2.4a2.8 2.8 0 0 1-2.66-.45 15.26 15.26 0 0 1-4.79-4.79 2.8 2.8 0 0 1-.45-2.66l.4-1.2Z" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
                   +7 (993) 343‑04‑44
                 </a>
                 <Link to="/checkout" className="order-btn">
@@ -78,55 +112,39 @@ function Header() {
         </nav>
         <div className={`dropdown-menu ${menuOpen ? 'open' : ''}`} ref={dropdownMenuRef}>
           <div className="dropdown-col services-list">
+            <p className="services-list-title">Услуги</p>
             <ul>
-              <li>
-                <Link to="/services" onClick={() => setMenuOpen(false)}>
-                  <ServiceIcon />
-                  <div className="text">
-                    <span className="title">Все услуги</span>
-                    <span className="desc">Прозрачные цены без скрытых комиссий</span>
-                  </div>
-                </Link>
-              </li>
-              <li>
-                <Link to="/marketplace" onClick={() => setMenuOpen(false)}>
-                  <ServiceIcon />
-                  <div className="text">
-                    <span className="title">Доставка на маркетплейсы</span>
-                    <span className="desc">Срочная доставка в России и СНГ</span>
-                  </div>
-                </Link>
-              </li>
-              <li>
-                <Link to="/documents" onClick={() => setMenuOpen(false)}>
-                  <ServiceIcon />
-                  <div className="text">
-                    <span className="title">Документы</span>
-                    <span className="desc">Срочная доставка в России и СНГ</span>
-                  </div>
-                </Link>
-              </li>
+              {servicesMenuItems.map((item) => (
+                <li key={item.title}>
+                  <Link to={item.to} onClick={() => setMenuOpen(false)}>
+                    <img src={item.icon} alt="" />
+                    <div className="text">
+                      <span className="title">{item.title}</span>
+                      <span className="desc">{item.description}</span>
+                    </div>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div className="dropdown-col extra-info">
             <div className="featured-blocks">
-              <Link 
-                to="/blog/1" 
-                className="featured-block" 
-                onClick={() => setMenuOpen(false)}
-                style={{ backgroundImage: 'url(/path/to/image1.jpg)' }}
-              >
-                <h3>Как работает срочная доставка</h3>
-              </Link>
-              <Link 
-                to="/blog/2" 
-                className="featured-block" 
-                onClick={() => setMenuOpen(false)}
-                style={{ backgroundImage: 'url(/path/to/image2.jpg)' }}
-              >
-                <h3>Выбираем маркетплейс для бизнеса</h3>
-              </Link>
+              {featuredBlocks.map((block) => (
+                <Link
+                  key={block.title}
+                  to={block.to}
+                  className="featured-block"
+                  onClick={() => setMenuOpen(false)}
+                  style={{ backgroundImage: `url(${block.image})` }}
+                >
+                  <div className="featured-content">
+                    <h3>{block.title}</h3>
+                    <p>{block.description}</p>
+                  </div>
+                  <span className="featured-arrow">›</span>
+                </Link>
+              ))}
             </div>
           </div>
         </div>

@@ -75,3 +75,15 @@
   justify-content: center;
   align-items: center;
 }
+
+.home-blog {
+  padding: 144px 0;
+}
+
+.home-video {
+  padding-bottom: 144px;
+}
+
+.home-tariff {
+  padding: 144px 0;
+}
