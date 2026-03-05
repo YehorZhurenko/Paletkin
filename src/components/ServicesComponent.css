@@ -32,10 +32,7 @@
   color: #eb7300;
 }
 
-.active {
-  color: #fff;
-  background-color: #f87f07;
-}
+
 .service-body {
   display: flex;
   flex-wrap: wrap;

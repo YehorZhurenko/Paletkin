@@ -7,7 +7,7 @@ import wh from '../assets/image/services/wh.png'
 import logi from '../assets/image/services/logi.png'
 import fl from '../assets/image/services/fl.png'
 
-function ServiceSection ({ title = "Все услуги", subtitle = "" }) {
+function ServiceSection ({ title = "Все наши услуги", subtitle = "" }) {
     return (
         <div className="service-all">
             <h2>{title}</h2>

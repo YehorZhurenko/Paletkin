@@ -43,7 +43,7 @@ function Header() {
 
   const featuredBlocks = [
     {
-      to: '/online-table',
+      to: '/calculator',
       image: calculatorHeader,
       title: 'Калькулятор',
       description: 'Расчет стоимости на всю логистику'

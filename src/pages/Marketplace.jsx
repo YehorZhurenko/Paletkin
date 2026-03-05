@@ -277,7 +277,7 @@ function Marketplace() {
               <h2>Фулфилмент услуги</h2>
               <p>Полный комплекс услуг для работы с фулфилмент-центрами и маркетплейсами</p>
             </div>
-            <div className="marketplace-card-grid marketplace-card-grid--three">
+            <div className="marketplace-card-grid">
               {fulfillmentCards.map((card) => (
                 <article className="marketplace-info-card" key={card.title}>
                   <img src={card.icon} alt="" className="marketplace-info-card__icon" />
@@ -287,52 +287,52 @@ function Marketplace() {
               ))}
             </div>
           </section>
-
-          <section className="marketplace-card-block">
-            <div className="marketplace-card-block__header">
+          <section className="marketplace-schemes-block">
+            <div className="schemes-block__header">
               <h2>Наши схемы работы</h2>
               <div className="scheme-tabs">
                 <span className="scheme-tabs__item scheme-tabs__item--active">FBS</span>
                 <span className="scheme-tabs__item">FBO</span>
-                <span className="scheme-tabs__item">rFBS / DBS</span>
+                <span className="scheme-tabs__item">rFBS/DBS</span>
               </div>
             </div>
+
             <div className="scheme-grid">
-              {workSchemeSteps.map((step, index) => (
-                <article className="scheme-step" key={step.title}>
+              {workSchemeSteps.map((step) => (
+                <div className="scheme-step" key={step.title}>
                   <img src={step.icon} alt="" className="marketplace-info-card__icon" />
                   <h3>{step.title}</h3>
                   <p>{step.description}</p>
-                  <span className="scheme-step__point">{index + 1}</span>
-                </article>
+                  <span className="scheme-step__point" />
+                </div>
               ))}
             </div>
           </section>
 
-          <section className="marketplace-card-block">
-            <div className="marketplace-card-block__header">
+          <section className="packaging-block general-block">
+            <div className="packaging-block-card-block__header general-block-header">
               <h2>Упаковочные материалы</h2>
             </div>
-            <div className="marketplace-card-grid marketplace-card-grid--four">
+            <div className="packaging-block-body general-block-body">
               {packagingItems.map((item) => (
-                <article className="marketplace-media-card" key={item.title}>
+                <article className="packaging-block-card general-block-card" key={item.title}>
                   <img src={item.image} alt={item.title} />
-                  <h3>{item.title}</h3>
+                  <span>{item.title}</span>
                   <p>{item.description}</p>
                 </article>
               ))}
             </div>
           </section>
 
-          <section className="marketplace-card-block">
-            <div className="marketplace-card-block__header">
+          <section className="storage-block general-block">
+            <div className="storage-block-card-block__header general-block-header">
               <h2>Хранение товара во время перевозки</h2>
             </div>
-            <div className="marketplace-card-grid marketplace-card-grid--three">
+            <div className="storage-block-body general-block-body ">
               {palletItems.map((item) => (
-                <article className="marketplace-media-card" key={item.title}>
+                <article className="storage-block-card general-block-card" key={item.title}>
                   <img src={item.image} alt={item.title} />
-                  <h3>{item.title}</h3>
+                  <span>{item.title}</span>
                   <p>{item.description}</p>
                 </article>
               ))}

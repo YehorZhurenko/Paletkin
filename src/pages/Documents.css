@@ -159,6 +159,8 @@
   grid-template-columns: 1fr 2fr;
   gap: 40px;
   align-items: start;
+  max-width: 1920px;
+  margin: 0 auto
 }
 
 .faq-intro h2 {

@@ -10,6 +10,7 @@ import Marketplace from './pages/Marketplace'
 import Checkout from './pages/Checkout'
 import Contacts from './pages/Contacts'
 import FAQ from './pages/FAQ'
+import OnlineTable from './pages/OnlineTable'
 import './App.css'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/online-table" element={<OnlineTable />} />
           </Routes>
         </main>
         <Footer />
