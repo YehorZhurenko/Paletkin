@@ -1,9 +1,5 @@
 .footer {
-  background: linear-gradient(
-    75deg,
-    var(--Color-scheme-Brand-900, #EB7300) 25.78%,
-    #FFA729 93.94%
-  );
+  background-image: linear-gradient(63deg, #e46314 26%, #ffa729 94%);
 
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   color: white;
@@ -21,6 +17,7 @@
 
 .newsletter-wrapper {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 40px;
@@ -134,14 +131,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Main Footer Content */
-.footer-main {
-  padding: 32px 0px;
-  /* reduce bottom spacing; columns will wrap on smaller screens */
-  margin-bottom: 32px;
-}
-
-
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -253,7 +242,7 @@
 
 /* Footer Bottom */
 .footer-bottom {
-  margin-top: 32px;
+  padding: 48px 0 0;  
 }
 
 .footer-bottom-content {
@@ -488,14 +477,14 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.22);
 }
 
-.newsletter-wrapper {
+/* .newsletter-wrapper {
   display: flex;
   flex-direction: column;
   gap: 18px;
   padding: 24px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.14);
-}
+} */
 
 .newsletter-content {
   height: auto;
@@ -554,21 +543,16 @@
 }
 
 .footer-main {
-  padding: 36px 0 0;
+  margin-top: 63px;
+  padding: 48px 0;
   margin-bottom: 0;
 }
 
-.footer-content {
-  display: grid;
-  grid-template-columns: minmax(360px, 1.2fr) 220px 220px;
-  gap: 24px 36px;
-  align-items: start;
-}
 
 .footer-info {
   display: flex;
-  flex-direction: column;
-  gap: 28px;
+  flex-direction: row;
+  gap: 48px;
 }
 
 .footer-company {
@@ -616,7 +600,7 @@
 .footer-links-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 32px;
 }
 
 .footer-link-column ul {
@@ -637,25 +621,6 @@
   font-weight: 600;
 }
 
-.footer-bottom {
-  margin-top: 34px;
-}
-
-.footer-bottom-content {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 14px;
-}
-
-.footer-legal {
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  justify-content: start;
-  gap: 12px;
-}
-
 .footer-legal a {
   height: 48px;
   padding: 12px 20px;
@@ -672,7 +637,6 @@
 
 .footer-logo-bottom {
   margin-top: 28px;
-  width: min(1020px, 100%);
 }
 
 @media (max-width: 1200px) {

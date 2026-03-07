@@ -48,9 +48,8 @@
 .regular-supplies__header {
   width: 100%;
   max-width: 640px;
-  margin-left: auto;
   margin-bottom: 28px;
-  text-align: right;
+  text-align: left;
 }
 
 .regular-supplies__header h2 {
@@ -144,9 +143,49 @@
   white-space: nowrap;
 }
 
+/* 1920 — 1600: крупный десктоп */
+@media (min-width: 1600px) {
+  .regular-supplies {
+    padding: 64px 0 80px;
+  }
+
+  .regular-supplies__content {
+    grid-template-columns: 320px 1fr;
+    gap: 44px;
+  }
+
+  .regular-supplies__markets {
+    gap: 24px;
+  }
+
+}
+
+@media (max-width: 1600px) {
+  .regular-supplies__market-name,
+  .regular-supplies__market-dot,
+  .regular-supplies__market-count {
+    font-size: 40px;
+  }
+}
+
+/* ≤1400: скрываем изображение, контент на всю ширину */
+@media (max-width: 1400px) {
+  .regular-supplies__image {
+    display: none;
+  }
+
+  .regular-supplies__content {
+    grid-template-columns: 1fr;
+  }
+
+  .regular-supplies__markets {
+    max-width: 100%;
+  }
+}
+
+/* 1280 — 1200 */
 @media (max-width: 1280px) {
   .regular-supplies__content {
-    grid-template-columns: 260px 1fr;
     gap: 28px;
   }
 
@@ -157,6 +196,29 @@
   }
 }
 
+/* 1200 — 1024 */
+@media (max-width: 1200px) {
+  .regular-supplies__content {
+    gap: 24px;
+  }
+
+  .regular-supplies__header h2 {
+    font-size: 48px;
+  }
+
+  .regular-supplies__market-name,
+  .regular-supplies__market-dot,
+  .regular-supplies__market-count {
+    font-size: 38px;
+  }
+
+  .regular-supplies__market-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* 1024 — 981: одна колонка, маркеты в 2 колонки */
 @media (max-width: 1024px) {
   .regular-supplies__header {
     text-align: left;
@@ -178,13 +240,14 @@
   }
 }
 
-@media (max-width: 768px) {
+/* 980 — 769: узкий десктоп перед слайдером */
+@media (max-width: 980px) {
   .regular-supplies {
-    padding: 36px 0 48px;
+    padding: 48px 0 56px;
   }
 
   .regular-supplies__header h2 {
-    font-size: 40px;
+    font-size: 44px;
   }
 
   .regular-supplies__header p {
@@ -192,14 +255,146 @@
   }
 
   .regular-supplies__markets {
-    grid-template-columns: 1fr;
-    gap: 22px;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 16px;
   }
 
   .regular-supplies__market-name,
   .regular-supplies__market-dot,
   .regular-supplies__market-count {
-    font-size: 36px;
+    font-size: 34px;
+  }
+
+  .regular-supplies__market-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Слайдер регулярных поставок (≤960px) */
+.regular-supplies__header--slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+  max-width: 100%;
+}
+
+.regular-supplies__header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.regular-supplies__header-controls {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.regular-supplies .slider-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: none;
+  background: #f87f07;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.regular-supplies .slider-btn:hover:not(:disabled) {
+  background: #ff8c20;
+}
+
+.regular-supplies .slider-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.regular-supplies__slider {
+  overflow: hidden;
+  width: 100%;
+  min-width: 0;
+}
+
+.regular-supplies__track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.35s ease;
+}
+
+.regular-supplies__slider .regular-supplies__market-item {
+  width: 406px;
+  height: 288px;
+  flex-shrink: 0;
+}
+
+.regular-supplies__range {
+  margin-top: 24px;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: #d9d9d9;
+  border-radius: 999px;
+}
+
+.regular-supplies__range:focus {
+  outline: none;
+}
+
+.regular-supplies__range::-webkit-slider-runnable-track {
+  height: 4px;
+  background: #d9d9d9;
+  border-radius: 999px;
+  border: none;
+}
+
+.regular-supplies__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25%;
+  height: 4px;
+  border-radius: 999px;
+  background: #f87f07;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+.regular-supplies__range::-moz-range-track {
+  height: 4px;
+  background: #d9d9d9;
+  border-radius: 999px;
+  border: none;
+}
+
+.regular-supplies__range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #f87f07;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+@media (max-width: 960px) {
+  .regular-supplies__slider .regular-supplies__market-name,
+  .regular-supplies__slider .regular-supplies__market-dot,
+  .regular-supplies__slider .regular-supplies__market-count {
+    font-size: 32px;
+  }
+}
+
+/* 768 и уже слайдер: стили для мобильного слайдера */
+@media (max-width: 768px) {
+  .regular-supplies__slider .regular-supplies__market-item {
+    width: min(406px, 86vw);
+    height: 288px;
   }
 }
 
@@ -417,6 +612,136 @@
   color: #353332;
 }
 
+/* Слайдер general-block — по типу ReviewsSection (≤960px) */
+.general-block-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.general-block-top .general-block-title {
+  margin: 0;
+  font-family: var(--font-tilda);
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -1.12px;
+  color: #050200;
+}
+
+.general-block-buttons {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.general-block .slider-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  border: none;
+  background: #f87f07;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.general-block .slider-btn:hover:not(:disabled) {
+  background: #ff8c20;
+}
+
+.general-block .slider-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.general-block-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.general-block-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.4s ease;
+}
+
+.general-block-card--slide {
+  min-width: 300px;
+  flex-shrink: 0;
+}
+
+.general-block-card-accent {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #f87f07;
+  border-radius: 2px;
+  margin-top: 4px;
+}
+
+.general-block-slider-range {
+  width: 100%;
+  margin-top: 24px;
+  -webkit-appearance: none;
+  background: transparent;
+  height: 4px;
+}
+
+.general-block-slider-range:focus {
+  outline: none;
+}
+
+.general-block-slider-range::-webkit-slider-runnable-track {
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  border: none;
+}
+
+.general-block-slider-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25%;
+  height: 4px;
+  background: #ff8c20;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.general-block-slider-range::-webkit-slider-thumb:hover {
+  background: #e67e1b;
+}
+
+.general-block-slider-range::-moz-range-track {
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  border: none;
+}
+
+.general-block-slider-range::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: #ff8c20;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s ease;
+}
+
+.general-block-slider-range::-moz-range-thumb:hover {
+  background: #e67e1b;
+}
+
 .scheme-tabs {
   display: inline-flex;
   align-items: center;
@@ -462,9 +787,21 @@
 }
 
 
+.scheme-step__icon {
+  display: block;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  margin-bottom: 14px;
+}
+
 .scheme-step {
   position: relative;
   padding: 4px 4px 22px;
+  min-width: 0;
+}
+
+.scheme-step__content {
   min-width: 0;
 }
 
@@ -536,8 +873,7 @@
   }
 
   .focus-clients__items,
-  .marketplace-card-grid--three,
-  .scheme-grid {
+  .marketplace-card-grid--three {
     grid-template-columns: repeat(2, minmax(240px, 1fr));
   }
 
@@ -545,18 +881,84 @@
     grid-template-columns: repeat(2, minmax(240px, 1fr));
   }
 
-  .scheme-grid::after {
+  /* Вертикальный таймлайн для «Наши схемы работы» */
+  .marketplace-schemes-block .scheme-grid {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: unset;
+    gap: 0;
+    padding-bottom: 0;
+    position: relative;
+  }
+
+  .marketplace-schemes-block .scheme-grid::after {
     display: none;
   }
 
-  .scheme-step {
-    background: #ededed;
+  .marketplace-schemes-block .scheme-grid::before {
+    content: '';
+    position: absolute;
+    left: 12.4px;
+    top: 5%;
+    bottom: 15%;
+    width: 3px;
+    background: #f87f07;
+    border-radius: 6px;
+    z-index: 0;
+  }
+
+  .marketplace-schemes-block .scheme-step {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 0 32px;
+    background: transparent;
+    border-radius: 0;
+  }
+
+  .marketplace-schemes-block .scheme-step:last-child {
+    padding-bottom: 0;
+  }
+
+  .marketplace-schemes-block .scheme-step__point {
+    position: relative;
+    left: 13.4px;
+    top: 20px;
+    bottom: auto;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    border-width: 6px;
+    display: inline-flex;
+    z-index: 1;
+  }
+
+  .marketplace-schemes-block .scheme-step__icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    margin-bottom: 0;
     border-radius: 8px;
-    padding: 20px;
+    object-fit: contain;
   }
 
-  .scheme-step__point {
-    display: none;
+  .marketplace-schemes-block .scheme-step__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .marketplace-schemes-block .scheme-step h3 {
+    margin: 0 0 6px;
+  }
+
+  .marketplace-schemes-block .scheme-step p {
+    margin: 0;
+  }
+
+  .marketplace-schemes-block .schemes-block__header h2 {
+    margin-bottom: 20px;
   }
 }
 
@@ -600,16 +1002,30 @@
 }
 
 .marketplace-double-cta__card {
-  min-height: 190px;
+  min-height: 220px;
   border-radius: 8px;
-  padding: 28px;
+  padding: 28px 28px 28px 32px;
   background-color: #f5f5f5;
+  background-image: url('../assets/image/logo/logo-bg.png');
   background-repeat: no-repeat;
-  background-size: auto 105%;
-  background-position: right bottom;
+  background-position: right top;
+  background-size: auto 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  overflow: hidden;
+}
+
+.marketplace-double-cta__card-body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px;
+  min-width: 0;
+  flex: 0 1 auto;
+  z-index: 1;
 }
 
 .marketplace-double-cta__card h3 {
@@ -621,6 +1037,19 @@
   line-height: 0.95;
   letter-spacing: -1.12px;
   color: #050200;
+}
+
+.marketplace-double-cta__card-img {
+  flex-shrink: 0;
+  width: auto;
+  max-width: 50%;
+  height: 168px;
+  object-fit: contain;
+  object-position: right center;
+  z-index: 1;
+  margin-right: 16px;
+  margin-bottom: 8px;
+  margin-top: 8px;
 }
 
 .marketplace-double-cta__card button {
@@ -805,7 +1234,7 @@
 }
 
 .marketplace-calculator {
-  padding-bottom: 72px;
+  padding-bottom: 18px;
 }
 
 .marketplace-tariff {
@@ -877,6 +1306,40 @@
   }
 }
 
+/* Промежуточные экраны (~1000px): карточки CTA вертикально — текст не обрезается, картинка не перекрывает */
+@media (max-width: 1100px) {
+  .marketplace-double-cta__card {
+    min-height: 280px;
+    padding: 24px 24px 28px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  .marketplace-double-cta__card-body {
+    display: contents;
+  }
+  .marketplace-double-cta__card h3 {
+    order: 1;
+    max-width: 100%;
+    font-size: 40px;
+    line-height: 1.05;
+  }
+  .marketplace-double-cta__card-img {
+    order: 2;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 160px;
+    margin: 0;
+    object-fit: contain;
+    object-position: center;
+  }
+  .marketplace-double-cta__card button {
+    order: 3;
+    align-self: flex-start;
+  }
+}
+
 @media (max-width: 768px) {
   .marketplace-top {
     padding: 28px 0 32px;
@@ -907,7 +1370,12 @@
     padding-top: 44px;
   }
 
-  .marketplace-double-cta__card h3,
+  .marketplace-double-cta__card h3 {
+    font-size: 34px;
+  }
+  .marketplace-double-cta__card-img {
+    max-height: 140px;
+  }
   .marketplace-related-services__top h2 {
     font-size: 38px;
   }
@@ -952,6 +1420,133 @@
   }
 }
 
+/* Адаптация для малых экранов (≤600px): без кнопок слайдеров, меньше текст, меньше отступы */
+@media (max-width: 600px) {
+  .regular-supplies__header-controls,
+  .general-block-buttons {
+    display: none;
+  }
+
+  .marketplace-top {
+    padding: 24px 0 32px;
+  }
+  .marketplace-top h1 {
+    font-size: 32px;
+  }
+  .marketplace-top p {
+    font-size: 14px;
+  }
+
+  .regular-supplies {
+    padding: 28px 0 36px;
+  }
+  .regular-supplies__header h2 {
+    font-size: 24px;
+  }
+  .regular-supplies__header p {
+    font-size: 13px;
+  }
+  .regular-supplies__slider .regular-supplies__market-name,
+  .regular-supplies__slider .regular-supplies__market-dot,
+  .regular-supplies__slider .regular-supplies__market-count {
+    font-size: 22px;
+  }
+
+  .marketplace-delivery .delivery-section {
+    padding-bottom: 48px;
+  }
+
+  .marketplace-sections {
+    padding-bottom: 40px;
+  }
+  .focus-clients {
+    margin: 48px 0;
+  }
+  .focus-clients__top h2 {
+    font-size: 28px;
+  }
+  .focus-clients__top p {
+    font-size: 14px;
+  }
+  .focus-clients__item h3 {
+    font-size: 18px;
+  }
+
+  .marketplace-card-block__header h2,
+  .schemes-block__header h2,
+  .general-block-header h2 {
+    font-size: 28px;
+  }
+  .marketplace-card-block__header p {
+    font-size: 13px;
+  }
+  .marketplace-info-card h3,
+  .marketplace-media-card span,
+  .general-block-card span {
+    font-size: 20px;
+  }
+  .marketplace-info-card p,
+  .marketplace-media-card p,
+  .general-block-card p {
+    font-size: 13px;
+  }
+
+  .marketplace-card-block,
+  .marketplace-schemes-block,
+  .general-block {
+    margin-bottom: 48px;
+    padding: 28px 16px;
+  }
+  .marketplace-card-block__header,
+  .marketplace-card-block .marketplace-card-block__header {
+    padding: 28px 20px;
+  }
+  .scheme-step h3 {
+    font-size: 18px;
+  }
+  .scheme-step p {
+    font-size: 12px;
+  }
+  .general-block-top .general-block-title {
+    font-size: 28px;
+  }
+  .general-block-card--slide span:not(.general-block-card-accent) {
+    font-size: 16px;
+  }
+  .general-block-card--slide p {
+    font-size: 12px;
+  }
+  .general-block-card--slide {
+    min-width: min(280px, 85vw);
+  }
+  .regular-supplies__slider .regular-supplies__market-item {
+    width: min(320px, 90vw);
+    height: 260px;
+  }
+
+  .marketplace-calculator,
+  .marketplace-tariff,
+  .marketplace-video,
+  .marketplace-faq {
+    padding-bottom: 32px;
+  }
+  .marketplace-tariff {
+    padding-top: 32px;
+  }
+  .marketplace-double-cta__card h3 {
+    font-size: 24px;
+  }
+  .marketplace-related-services__top h2 {
+    font-size: 28px;
+  }
+  .marketplace-related-services__card h3 {
+    font-size: 22px;
+  }
+  .marketplace-related-services__card p {
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 480px) {
   .marketplace-top {
     padding: 20px 0 24px;
@@ -990,6 +1585,40 @@
   .regular-supplies__market-dot,
   .regular-supplies__market-count {
     font-size: 18px;
+  }
+  .marketplace-double-cta {
+    padding: 0 0 20px;
+  }
+  .marketplace-double-cta__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .marketplace-double-cta__card {
+    min-height: 320px;
+    padding: 24px 20px 28px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .marketplace-double-cta__card-body {
+    display: contents;
+  }
+  .marketplace-double-cta__card h3 {
+    order: 1;
+    max-width: 100%;
+    font-size: 28px;
+  }
+  .marketplace-double-cta__card-img {
+    order: 2;
+    width: 100%;
+    height: auto;
+    max-height: 160px;
+    object-fit: contain;
+    object-position: center;
+    margin: 8px 0;
+  }
+  .marketplace-double-cta__card button {
+    order: 3;
+    align-self: center;
   }
   .marketplace-double-cta__card h3,
   .marketplace-related-services__top h2 {
@@ -1034,6 +1663,27 @@
 
   .marketplace-double-cta__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* 360px: картинки -full на всю карточку */
+@media (max-width: 360px) {
+  .marketplace-double-cta__card {
+    min-height: 280px;
+    padding: 20px 16px 24px;
+  }
+  .marketplace-double-cta__card-img {
+    max-height: 140px;
+    object-fit: cover;
+    width: 100%;
+    height: 120px;
+  }
+  .marketplace-double-cta__card h3 {
+    font-size: 24px;
+    color: #050200;
+  }
+  .marketplace-double-cta__card button {
+    align-self: center;
   }
 }
 

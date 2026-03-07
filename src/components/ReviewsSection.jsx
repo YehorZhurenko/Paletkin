@@ -43,6 +43,7 @@ const reviewsData = [
 function ReviewsSection() {
   return (
     <section className="reviews">
+      <div className="container">
         <div className="reviews-content">
           <SliderBase items={reviewsData}>
             {({ step, maxStep, goTo, sliderRef, trackRef, offset, swipeHandlers }) => (
@@ -109,6 +110,7 @@ function ReviewsSection() {
               </>
             )}
           </SliderBase>
+      </div>
       </div>
     </section>
   )

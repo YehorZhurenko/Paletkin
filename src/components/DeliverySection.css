@@ -1,11 +1,12 @@
 /* delivery Section */
 .delivery-section {
-  padding: 144px 0;
+
   overflow: hidden;
 }
 .delivery-section-text {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px;
 }
 .delivery-title {
   font-family: var(--font-tilda);
@@ -23,7 +24,7 @@
   letter-spacing: -0.36px;
   color: #353332;
   max-width: 800px;
-  margin-bottom: 48px;
+  text-align: center;
 }
 
 .delivery-band {

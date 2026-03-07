@@ -83,9 +83,8 @@ export default function BlogSection({
                 </article>
               ))}
             </div>
-          </div>
 
-          <input
+            <input
             type="range"
             min="0"
             max={maxStep}
@@ -93,7 +92,8 @@ export default function BlogSection({
             onChange={(e) => goTo(Number(e.target.value))}
             className="blog-slider-range"
           />
-
+              
+          </div>
           <a href={telegramLink} className="blog-section-tg-btn">
             Перейти в наш телеграм
           </a>

@@ -1,7 +1,6 @@
 import React from 'react'
 import './Home.css'
 
-import logo from '../assets/image/main-banner/logo.png'
 import logo3d from '../assets/image/main-banner/logo3d.png'
 import boxes from '../assets/image/main-banner/boxes.png'
 
@@ -31,17 +30,25 @@ import marketplace from '../assets/image/offer/marketplace.png'
 function Home() {
   return (
     <section className="home">
-      <div className="home-banner">
-        <img src={boxes} alt="Boxes" />
-        <img src={logo3d} alt="Logo 3D" />
-      </div>
 
+      <div className="home-top">
+        <div className="container">
+          <div className="home-banner">
+            <div className="home-banner__boxes-wrap">
+              <img src={boxes} alt="Коробки" className="home-banner__boxes" />
+            </div>
+            <img src={logo3d} alt="Paletkin" className="home-banner__logo" />
+          </div>
+        </div>
+      </div>
+      
+    
       <div className="home-offer">
         <div className="container">
           <div className="home-offer-content">
             <div className="home-offer-text">
               <p>Надежная и быстрая доставка на Wildberries, Ozon, Яндекс.Маркет <br />и другие маркетплейсы.</p>
-              <h2>Доставка на маркетплейсы <span>по всей России</span> 
+              <h2>Доставка на маркетплейсы <span> <br /> по всей России</span> 
               <img src={companys} alt="Партнеры" />
               </h2>
             </div>
@@ -100,6 +107,12 @@ function Home() {
       
       <PartnersSection />
 
+      <div className="home-different">
+        <DifferentSection />
+      </div>
+      
+      <CarsSection />
+
       <div className="home-tariff">
         <div className="container">
           <TariffSection />
@@ -111,16 +124,6 @@ function Home() {
           <VideoSection />
         </div>
       </div>
-
-      <div className="home-different">
-        <div className="container">
-          <DifferentSection />
-        </div>
-      </div>
-
-   
-      <CarsSection />
-
 
       <div className="home-blog">
         <div className="container">
@@ -136,7 +139,7 @@ function Home() {
 
       <div className="home-reviews">
         <div className="container">
-          <ReviewsSection />
+          <ReviewsSection showFaqCard />
         </div>
       </div>
 

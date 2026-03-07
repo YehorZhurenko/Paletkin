@@ -173,6 +173,7 @@
 }
 
 .address-switch {
+  align-self: start;
   border: none;
   padding: 12px;
   cursor: pointer;

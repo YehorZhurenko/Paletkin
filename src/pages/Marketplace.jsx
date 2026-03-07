@@ -17,6 +17,8 @@ import bubbleMaterial from '../assets/image/materials/bubblefiml.svg'
 import scotchMaterial from '../assets/image/materials/scotch.svg'
 import casesIllustration from '../assets/image/illustration.png'
 import documentsIllustration from '../assets/image/document-illustration.png'
+import casesIllustrationFull from '../assets/image/illustration-full.png'
+import documentsIllustrationFull from '../assets/image/document-illustration-full.png'
 import amerPallet from '../assets/image/pallet/amer-pallet-fz.svg'
 import evroPallet from '../assets/image/pallet/evro-pallet-fz.svg'
 import finPallet from '../assets/image/pallet/fin-pallet-fz.svg'
@@ -146,14 +148,41 @@ function Marketplace() {
     {
       title: 'Смотреть наши кейсы',
       buttonLabel: 'Смотреть наши кейсы',
-      image: casesIllustration
+      image: casesIllustration,
+      imageFull: casesIllustrationFull
     },
     {
       title: 'Смотреть наши документы',
       buttonLabel: 'Смотреть наши документы',
-      image: documentsIllustration
+      image: documentsIllustration,
+      imageFull: documentsIllustrationFull
     }
   ]
+
+  const [useCtaFullImage, setUseCtaFullImage] = useState(false)
+  useEffect(() => {
+    const check = () => setUseCtaFullImage(window.innerWidth <= 360)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
+
+  const [useSuppliesSlider, setUseSuppliesSlider] = useState(false)
+  const [useGeneralBlockSlider, setUseGeneralBlockSlider] = useState(false)
+
+  useEffect(() => {
+    const check = () => setUseSuppliesSlider(window.innerWidth <= 960)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
+
+  useEffect(() => {
+    const check = () => setUseGeneralBlockSlider(window.innerWidth <= 960)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
 
   const relatedServiceSlides = [
     {
@@ -208,37 +237,111 @@ function Marketplace() {
 
       <div className="regular-supplies">
         <div className="container">
-          <div className="regular-supplies__header">
-            <h2>Регулярные поставки</h2>
-            <p>Мы осуществляем регулярные поставки на все основные маркетплейсы России</p>
-          </div>
-
-          <div className="regular-supplies__content">
-            <div className="regular-supplies__image">
-              <img src={loader} alt="Погрузка поставок" />
-            </div>
-
-            <div className="regular-supplies__markets">
-              {marketplaceWarehouses.map((marketplace) => (
-                <div className="regular-supplies__market-item" key={marketplace.id}>
-                  <div className="regular-supplies__market-header">
-                    <img src={marketplace.icon} alt={marketplace.name} className="regular-supplies__market-icon" />
-                    <span className="regular-supplies__market-name">{marketplace.name}</span>
-                    <span className="regular-supplies__market-dot">·</span>
-                    <span className="regular-supplies__market-count">{marketplace.count}</span>
+          {useSuppliesSlider ? (
+            <SliderBase items={marketplaceWarehouses}>
+              {({ step, maxStep, goTo, sliderRef, trackRef, offset, swipeHandlers }) => (
+                <>
+                  <div className="regular-supplies__header regular-supplies__header--slider">
+                    <div className="regular-supplies__header-text">
+                      <h2>Регулярные поставки</h2>
+                      <p>Мы осуществляем регулярные поставки на все основные маркетплейсы России</p>
+                    </div>
+                    <div className="regular-supplies__header-controls">
+                      <button
+                        type="button"
+                        className="slider-btn prev"
+                        onClick={() => goTo(step - 1)}
+                        disabled={step === 0}
+                        aria-label="Назад"
+                      >
+                        ❮
+                      </button>
+                      <button
+                        type="button"
+                        className="slider-btn next"
+                        onClick={() => goTo(step + 1)}
+                        disabled={step >= maxStep}
+                        aria-label="Вперёд"
+                      >
+                        ❯
+                      </button>
+                    </div>
                   </div>
 
-                  <ul className="regular-supplies__tags">
-                    {marketplace.warehouses.map((warehouse) => (
-                      <li key={warehouse} className="regular-supplies__tag">
-                        {warehouse}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="regular-supplies__slider" ref={sliderRef}>
+                    <div
+                      className="regular-supplies__track"
+                      ref={trackRef}
+                      style={{ transform: `translateX(-${offset}px)` }}
+                      {...swipeHandlers}
+                    >
+                      {marketplaceWarehouses.map((marketplace) => (
+                        <div className="regular-supplies__market-item" key={marketplace.id}>
+                          <div className="regular-supplies__market-header">
+                            <img src={marketplace.icon} alt={marketplace.name} className="regular-supplies__market-icon" />
+                            <span className="regular-supplies__market-name">{marketplace.name}</span>
+                            <span className="regular-supplies__market-dot">·</span>
+                            <span className="regular-supplies__market-count">{marketplace.count}</span>
+                          </div>
+                          <ul className="regular-supplies__tags">
+                            {marketplace.warehouses.map((warehouse) => (
+                              <li key={warehouse} className="regular-supplies__tag">
+                                {warehouse}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <input
+                    type="range"
+                    min="0"
+                    max={maxStep}
+                    value={step}
+                    onChange={(e) => goTo(Number(e.target.value))}
+                    className="regular-supplies__range"
+                    aria-label="Позиция слайдера"
+                  />
+                </>
+              )}
+            </SliderBase>
+          ) : (
+            <>
+              <div className="regular-supplies__header">
+                <h2>Регулярные поставки</h2>
+                <p>Мы осуществляем регулярные поставки на все основные маркетплейсы России</p>
+              </div>
+
+              <div className="regular-supplies__content">
+                <div className="regular-supplies__image">
+                  <img src={loader} alt="Погрузка поставок" />
                 </div>
-              ))}
-            </div>
-          </div>
+
+                <div className="regular-supplies__markets">
+                  {marketplaceWarehouses.map((marketplace) => (
+                    <div className="regular-supplies__market-item" key={marketplace.id}>
+                      <div className="regular-supplies__market-header">
+                        <img src={marketplace.icon} alt={marketplace.name} className="regular-supplies__market-icon" />
+                        <span className="regular-supplies__market-name">{marketplace.name}</span>
+                        <span className="regular-supplies__market-dot">·</span>
+                        <span className="regular-supplies__market-count">{marketplace.count}</span>
+                      </div>
+
+                      <ul className="regular-supplies__tags">
+                        {marketplace.warehouses.map((warehouse) => (
+                          <li key={warehouse} className="regular-supplies__tag">
+                            {warehouse}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </div>
 
@@ -300,43 +403,108 @@ function Marketplace() {
             <div className="scheme-grid">
               {workSchemeSteps.map((step) => (
                 <div className="scheme-step" key={step.title}>
-                  <img src={step.icon} alt="" className="marketplace-info-card__icon" />
-                  <h3>{step.title}</h3>
-                  <p>{step.description}</p>
-                  <span className="scheme-step__point" />
+                  <span className="scheme-step__point" aria-hidden />
+                  <div className="scheme-step__body">
+                    <img src={step.icon} alt="" className="scheme-step__icon" />
+                    <div className="scheme-step__content">
+                      <h3>{step.title}</h3>
+                      <p>{step.description}</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </section>
 
           <section className="packaging-block general-block">
-            <div className="packaging-block-card-block__header general-block-header">
-              <h2>Упаковочные материалы</h2>
-            </div>
-            <div className="packaging-block-body general-block-body">
-              {packagingItems.map((item) => (
-                <article className="packaging-block-card general-block-card" key={item.title}>
-                  <img src={item.image} alt={item.title} />
-                  <span>{item.title}</span>
-                  <p>{item.description}</p>
-                </article>
-              ))}
-            </div>
+            {useGeneralBlockSlider ? (
+              <SliderBase items={packagingItems}>
+                {({ step, maxStep, goTo, sliderRef, trackRef, offset, swipeHandlers }) => (
+                  <>
+                    <div className="general-block-top">
+                      <h2 className="general-block-title">Упаковочные материалы</h2>
+                      <div className="general-block-buttons">
+                        <button type="button" className="slider-btn prev" onClick={() => goTo(step - 1)} disabled={step === 0} aria-label="Назад">❮</button>
+                        <button type="button" className="slider-btn next" onClick={() => goTo(step + 1)} disabled={step >= maxStep} aria-label="Вперёд">❯</button>
+                      </div>
+                    </div>
+                    <div className="general-block-slider" ref={sliderRef}>
+                      <div className="general-block-track" ref={trackRef} style={{ transform: `translateX(-${offset}px)` }} {...swipeHandlers}>
+                        {packagingItems.map((item) => (
+                          <article className="general-block-card general-block-card--slide" key={item.title}>
+                            <img src={item.image} alt={item.title} />
+                            <span>{item.title}</span>
+                            <p>{item.description}</p>
+                          </article>
+                        ))}
+                      </div>
+                    </div>
+                    <input type="range" min="0" max={maxStep} value={step} onChange={(e) => goTo(Number(e.target.value))} className="general-block-slider-range" aria-label="Позиция слайдера" />
+                  </>
+                )}
+              </SliderBase>
+            ) : (
+              <>
+                <div className="packaging-block-card-block__header general-block-header">
+                  <h2>Упаковочные материалы</h2>
+                </div>
+                <div className="packaging-block-body general-block-body">
+                  {packagingItems.map((item) => (
+                    <article className="packaging-block-card general-block-card" key={item.title}>
+                      <img src={item.image} alt={item.title} />
+                      <span>{item.title}</span>
+                      <p>{item.description}</p>
+                    </article>
+                  ))}
+                </div>
+              </>
+            )}
           </section>
 
           <section className="storage-block general-block">
-            <div className="storage-block-card-block__header general-block-header">
-              <h2>Хранение товара во время перевозки</h2>
-            </div>
-            <div className="storage-block-body general-block-body ">
-              {palletItems.map((item) => (
-                <article className="storage-block-card general-block-card" key={item.title}>
-                  <img src={item.image} alt={item.title} />
-                  <span>{item.title}</span>
-                  <p>{item.description}</p>
-                </article>
-              ))}
-            </div>
+            {useGeneralBlockSlider ? (
+              <SliderBase items={palletItems}>
+                {({ step, maxStep, goTo, sliderRef, trackRef, offset, swipeHandlers }) => (
+                  <>
+                    <div className="general-block-top">
+                      <h2 className="general-block-title">Хранение товара во время перевозки</h2>
+                      <div className="general-block-buttons">
+                        <button type="button" className="slider-btn prev" onClick={() => goTo(step - 1)} disabled={step === 0} aria-label="Назад">❮</button>
+                        <button type="button" className="slider-btn next" onClick={() => goTo(step + 1)} disabled={step >= maxStep} aria-label="Вперёд">❯</button>
+                      </div>
+                    </div>
+                    <div className="general-block-slider" ref={sliderRef}>
+                      <div className="general-block-track" ref={trackRef} style={{ transform: `translateX(-${offset}px)` }} {...swipeHandlers}>
+                        {palletItems.map((item) => (
+                          <article className="general-block-card general-block-card--slide" key={item.title}>
+                            <img src={item.image} alt={item.title} />
+                            <span>{item.title}</span>
+                            <p>{item.description}</p>
+                            <span className="general-block-card-accent" aria-hidden />
+                          </article>
+                        ))}
+                      </div>
+                    </div>
+                    <input type="range" min="0" max={maxStep} value={step} onChange={(e) => goTo(Number(e.target.value))} className="general-block-slider-range" aria-label="Позиция слайдера" />
+                  </>
+                )}
+              </SliderBase>
+            ) : (
+              <>
+                <div className="storage-block-card-block__header general-block-header">
+                  <h2>Хранение товара во время перевозки</h2>
+                </div>
+                <div className="storage-block-body general-block-body">
+                  {palletItems.map((item) => (
+                    <article className="storage-block-card general-block-card" key={item.title}>
+                      <img src={item.image} alt={item.title} />
+                      <span>{item.title}</span>
+                      <p>{item.description}</p>
+                    </article>
+                  ))}
+                </div>
+              </>
+            )}
           </section>
         </div>
       </div>
@@ -351,13 +519,16 @@ function Marketplace() {
         <div className="container">
           <div className="marketplace-double-cta__grid">
             {ctaCards.map((card) => (
-              <article
-                key={card.title}
-                className="marketplace-double-cta__card"
-                style={{ backgroundImage: `url(${card.image})` }}
-              >
-                <h3>{card.title}</h3>
-                <button type="button">{card.buttonLabel}</button>
+              <article key={card.title} className="marketplace-double-cta__card">
+                <div className="marketplace-double-cta__card-body">
+                  <h3>{card.title}</h3>
+                  <button type="button">{card.buttonLabel}</button>
+                </div>
+                <img
+                  src={useCtaFullImage && card.imageFull ? card.imageFull : card.image}
+                  alt=""
+                  className="marketplace-double-cta__card-img"
+                />
               </article>
             ))}
           </div>

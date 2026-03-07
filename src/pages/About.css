@@ -343,6 +343,58 @@
   width: 100%;
 }
 
+.specialist-slider-range {
+  width: 100%;
+  -webkit-appearance: none;
+  background: transparent;
+  height: 4px;
+  margin-top: 16px;
+}
+
+.specialist-slider-range:focus {
+  outline: none;
+}
+
+.specialist-slider-range::-webkit-slider-runnable-track {
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  border: none;
+}
+
+.specialist-slider-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25%;
+  height: 4px;
+  background: #ff8c20;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.specialist-slider-range::-webkit-slider-thumb:hover {
+  background: #e67e1b;
+}
+
+.specialist-slider-range::-moz-range-track {
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  border: none;
+}
+
+.specialist-slider-range::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: #ff8c20;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s ease;
+}
+
+.specialist-slider-range::-moz-range-thumb:hover {
+  background: #e67e1b;
+}
 
 .specialist-info {
   background: #ffffff;
@@ -493,7 +545,6 @@
 
 /* Steps Section */
 .steps-section {
-  padding: 144px 0;
   background: #ffffff;
 }
 

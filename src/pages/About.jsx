@@ -218,7 +218,7 @@ function About() {
                       max={maxStep}
                       value={step}
                       onChange={(e) => goTo(Number(e.target.value))}
-                      className="slider-range"
+                      className="specialist-slider-range"
                     />
                   </>
                 )}

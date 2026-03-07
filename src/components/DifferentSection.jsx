@@ -33,6 +33,7 @@ const slidesData = [
 function DifferentSection() {
   return (
     <section className="different">
+      <div className="container">
         <div className="different-content">
           <SliderBase items={slidesData}>
             {({ step, maxStep, goTo, sliderRef, trackRef, offset, swipeHandlers }) => (
@@ -83,6 +84,7 @@ function DifferentSection() {
               </>
             )}
           </SliderBase>
+      </div>
       </div>
     </section>
   )

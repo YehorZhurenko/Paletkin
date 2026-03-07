@@ -80,8 +80,6 @@ function Footer() {
                 </div>
               </div>             
                 
-              
-
               <div className="company-details">
                 <div className="detail-block">
                   <h4>Адрес</h4>
@@ -100,13 +98,13 @@ function Footer() {
                 </div>
               </div>
             </div>
-
+            
             {/* Middle & Right Columns - Links */}
             <div className="footer-links-grid">
               <div className="footer-link-column">
                 <ul>
                   <li><Link to="/calculator">Все услуги</Link></li>
-                  <li><Link to="/services">Доставка на маркетплейсы</Link></li>
+                  <li><Link to="/services">Доставка на <br /> маркетплейсы</Link></li>
                   <li><Link to="/documents">Документы</Link></li>
                 </ul>
               </div>
@@ -128,12 +126,14 @@ function Footer() {
       {/* Footer Bottom */}
       <div className="footer-bottom">
           <div className="footer-bottom-content">
+            
+            <p className="copyright">© 2025 Paletkin. Все права защищены.</p>
             <div className="footer-legal">
               <a href="#cookies">Настройки cookies</a>
               <a href="#terms">Условия использования сервиса</a>
               <a href="#privacy">Политика конфиденциальности</a>
             </div>
-            <p className="copyright">© 2025 Paletkin. Все права защищены.</p>
+            
           </div>
       </div>
 

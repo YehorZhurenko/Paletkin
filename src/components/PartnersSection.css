@@ -29,7 +29,7 @@
 
 .partners-track {
   display: flex;
-  gap: 64px;
+  gap: 22px;
   align-items: center;
   width: max-content;
   animation: partnersScroll 30s linear infinite;
