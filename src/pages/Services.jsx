@@ -5,6 +5,7 @@ import CalculatorComponent from '../components/Calculator'
 import FaqSection from '../components/FaqSection'
 import ServiceSection from '../components/ServicesComponent'
 import TopDesc from '../components/TopDesc'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 
 import companys from '../assets/image/partners/companys.svg'
@@ -14,6 +15,13 @@ function Services() {
 
 
   return (
+    <div className="page">
+      <div className="page__breadcrumbs">
+        <div className="container">
+          <Breadcrumbs items={[{ label: 'Главная', to: '/' }, { label: 'Услуги' }]} />
+        </div>
+      </div>
+      <div className="page__content">
     <div className="services-page">
       <div className="container">
         <div className="services-container">
@@ -30,7 +38,7 @@ function Services() {
             <img src={companys} alt="Партнеры" />
           </div>
 
-          <ServiceSection show_top="true" />
+          <ServiceSection show_top="true" sectionStyle={{ padding: '48px', background: '#f5f5f5', borderRadius: '8px' }} />
 
           <CalculatorComponent />
           <FaqSection
@@ -41,6 +49,8 @@ function Services() {
           />
           <DocumentsCtaSection />
         </div>  
+      </div>
+    </div>
       </div>
     </div>
   )

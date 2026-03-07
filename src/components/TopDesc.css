@@ -1,6 +1,5 @@
 .top-text {
     display: flex;
-    padding-top: 48px;
     justify-content: space-between;
     width: 100%;
     flex-wrap: wrap;
@@ -18,6 +17,7 @@
     text-align: left;
     color: #050200;
     align-self: center;
+    max-width: 800px;
 }
 
 .top-text p {

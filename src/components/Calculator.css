@@ -593,7 +593,6 @@
   overflow-y: hidden;
   gap: 10px;
   margin-bottom: 20px;
-  padding: 16px;
   padding-bottom: 12px;
   border-radius: 8px;
   background-color: #ededed;
@@ -676,6 +675,7 @@
   color: #898989;
   display: flex;
   gap: 8px;
+  margin-bottom: 8px;
 }
 
 .cargo-info {
@@ -987,6 +987,7 @@
   animation: calcFadeIn 0.3s ease forwards;
   background-color: #ededed;
   border-radius: 8px;
+  padding: 24px;
 }
 
 .modal-content {

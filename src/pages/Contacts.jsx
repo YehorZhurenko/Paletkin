@@ -7,6 +7,7 @@ import link from "../assets/image/icons/link.svg"
 
 import OfferSection from '../components/OfferSection'
 import TopDesc from '../components/TopDesc'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 
 function Contacts() {
@@ -37,6 +38,13 @@ function Contacts() {
   const moscowPosition = [55.7558, 37.6173]
 
   return (
+    <div className="page">
+      <div className="page__breadcrumbs">
+        <div className="container">
+          <Breadcrumbs items={[{ label: 'Главная', to: '/' }, { label: 'Контакты' }]} />
+        </div>
+      </div>
+      <div className="page__content">
     <div className="contacts-page">
       <section className="contacts">
         <div className="container">
@@ -118,6 +126,8 @@ function Contacts() {
       </section>
 
       <OfferSection title="Готовы отправить груз?" />
+    </div>
+      </div>
     </div>
   )
 }

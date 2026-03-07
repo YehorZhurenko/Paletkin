@@ -7,12 +7,21 @@ import wh from '../assets/image/services/wh.png'
 import logi from '../assets/image/services/logi.png'
 import fl from '../assets/image/services/fl.png'
 
-function ServiceSection ({ title = "Все наши услуги", subtitle = "", show_top=false}) {
-    return (
-        <div className="service-all">
+function ServiceSection ({
+  title = "Все наши услуги",
+  subtitle = "",
+  show_top = false,
+  /** Доп. класс для обёртки — задайте на странице паддинги и фон через свой CSS (например .service-section--home) */
+  wrapperClassName = "",
+  /** Инлайн-стили для .service-all-body: { padding: '32px 24px', background: '#f5f5f5' } — для простой настройки без отдельного CSS */
+  sectionStyle,
+}) {
+  const rootClassName = ["service-all", wrapperClassName].filter(Boolean).join(" ");
+  return (
+        <div className={rootClassName}>
             <h2>{title}</h2>
             <p>{subtitle}</p>
-            <div className="service-all-body">
+            <div className="service-all-body" style={sectionStyle}>
                 {show_top && (
                 <div className="service-body-top">
                 <button className='active'>

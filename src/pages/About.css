@@ -1,6 +1,10 @@
 .about-page {
   width: 100%;
   background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  gap: 144px;
 }
 
 
@@ -13,7 +17,6 @@
   align-items: center;
   justify-content: space-between;
   gap: 60px;
-  margin: 140px 0;
   max-height: 350px;
 }
 
@@ -104,7 +107,6 @@
 
 /* Delivery Section */
 .delivery {
-  padding: 144px 0;
   background: #ffffff;
 }
 
@@ -242,6 +244,10 @@
 }
 
 @media (max-width: 1024px) {
+  .about-page {
+    gap: 96px;
+  }
+  
   .steps-body {
     gap: 32px !important;
   }
@@ -252,11 +258,6 @@
   .specialist-controls {
     display: none;
   }
-}
-
-/* Specialist Section */
-.specialist {
-  padding-bottom: 144px;
 }
 
 .specialist-content {
@@ -508,6 +509,9 @@
 }
 
 @media (max-width: 480px) {
+  .about-page {
+    gap: 64px;
+  }
   .specialist-item,
   .specialist-placeholder {
     flex: 0 0 90%;

@@ -2,13 +2,20 @@ import { useState } from 'react'
 import './FAQ.css'
 
 import FaqSection from '../components/FaqSection'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 function FAQ() {
   const [expandedFaq, setExpandedFaq] = useState(0)
 
   return (
+    <div className="page">
+      <div className="page__breadcrumbs">
+        <div className="container">
+          <Breadcrumbs items={[{ label: 'Главная', to: '/' }, { label: 'FAQ' }]} />
+        </div>
+      </div>
+      <div className="page__content">
     <div className="faq-page">
-      {/* FAQ Section */}
       <section className="faq-section">
         <div className="container">
           <div className="faq-top">
@@ -47,6 +54,8 @@ function FAQ() {
             subtitle="Если вы все еще имеете вопросы о документах и сервисах"
           />
       </section>
+    </div>
+      </div>
     </div>
   )
 }

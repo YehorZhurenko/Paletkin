@@ -1,3 +1,7 @@
+/* Корневой блок: паддинги/фон по умолчанию. Переопределяйте через wrapperClassName (например service-section--home) и sectionStyle в пропсах */
+.service-all {
+  box-sizing: border-box;
+}
 .service-all h2 {
   font-family: var(--font-tilda);
   font-size: 56px;
@@ -45,6 +49,10 @@
   color: #eb7300;
 }
 
+.service-body-top .active {
+  background: #f87f07;
+  color: #fff;
+}
 
 .service-body {
   display: grid;

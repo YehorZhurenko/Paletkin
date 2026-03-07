@@ -1,7 +1,13 @@
 .home {
   display: flex;
   flex-direction: column;
-  gap: 144px  ;
+  gap: 144px;
+}
+
+.home-pupi {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 
 .home-top {
@@ -158,6 +164,9 @@
 /* ========== Адаптив Home ========== */
 /* 1040px: блок не должен мешать адаптивности — ограничиваем ширину и переполнение */
 @media (max-width: 1040px) {
+  .home {
+    gap: 96px;
+  }
   .home-top {
     min-height: 320px;
     overflow: hidden;
@@ -362,6 +371,9 @@
 
 /* 480px: высота 376px, колонка; левая картинка — лёгкий поворот, дальше усиливается с уменьшением экрана */
 @media (max-width: 480px) {
+  .home {
+    gap: 64px;
+  }
   .home-top {
     height: 376px;
     min-height: 376px;
@@ -523,4 +535,10 @@
   .home-banner__logo {
     max-height: 45%;
   }
+}
+
+/* Секция услуг на главной: паддинги задаёт обёртка .home-services, здесь только фон при необходимости */
+.service-all.service-section--home {
+  padding: 0;
+  background: transparent;
 }

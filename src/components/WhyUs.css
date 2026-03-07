@@ -11,7 +11,7 @@
     align-items: center;
 }
 .whyus-top h2 {
-    font-family: var(--font-tilda);
+  font-family: var(--font-tilda);
   font-size: 56px;
   font-weight: 600;
   letter-spacing: -1.12px;
@@ -21,7 +21,7 @@
 .whyus-top p {
     max-width: 567px;
     font-family: var(--font-inter-tight);
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.3;
     letter-spacing: -0.36px;
     text-align: left;
@@ -35,8 +35,8 @@
 .whyus-text {
     max-width: 586px;
     font-family: var(--font-inter-tight);
-    font-size: 16px;
-    line-height: 1.3;
+    font-size: 18px;
+    line-height: 1.5;
     letter-spacing: -0.36px;
     text-align: left;
     color: #353332;

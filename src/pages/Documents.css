@@ -1,10 +1,11 @@
 .documents-page {
-  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 144px;
+  padding-bottom: 64px;
 }
 
 .page-header {
-  margin-top: 50px;
-  margin-bottom: 72px;
 }
 
 .page-header h1 {
@@ -32,7 +33,6 @@
 }
 
 .documents-section {
-  padding-top: 72px;
 }
 .documents-section h1 {
   font-size: 56px;
@@ -48,7 +48,6 @@
   padding: 48px;
   background-color: #f5f5f5;
   margin-top: 48px;
-  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -57,43 +56,46 @@
 /* Tabs Navigation */
 .docs-tabs {
   display: flex;
-  gap: 8px;
+  gap: 16px;
   flex-wrap: wrap;
-  flex-grow: 1;
-  justify-content: space-between;
-  border-radius: 1000px;
-  background-color: #ededed;
 }
 
 .tab-btn {
-  padding: 8px 0;
+  padding: 8px 16px;
   border: none;
-  color: #666;
+  color: #eb7300;
   font-weight: 500;
-  font-size: 13px;
-  border-radius: 20px;
+  font-size: 16px;
+  border-radius: 1000px;
   cursor: pointer;
   transition: all 0.3s ease;
-  flex: 1;
   font-family: var(--font-inter-tight);
+  -webkit-backdrop-filter: blur(32px);
+  backdrop-filter: blur(32px);
+  background-color: rgba(248, 127, 7, 0.1);
 }
 
 .tab-btn.active {
-  background: var(--warning, #ff9800);
+  background: #f87f07;
   color: #fff;
 }
 
 .tab-btn:hover {
-  background: var(--warning, #ff9800);
+  background: #ff9800;
   color: #fff;
 }
 
 /* Documents Grid */
 .docs-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(auto, auto));
-  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
   margin-bottom: 60px;
+}
+
+/* Если на последней строке один блок — растягиваем на всю ширину */
+.doc-card:last-child:nth-child(3n+1) {
+  grid-column: 1 / -1;
 }
 
 .doc-card {
@@ -104,6 +106,8 @@
   gap: 12px;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 0;
+  box-sizing: border-box;
 }
 
 .doc-card:hover {
@@ -114,7 +118,8 @@
 .doc-title {
   font-size: 32px;
   font-weight: 600;
-  margin: 15px 0 10px;
+  margin-bottom: 12px;
+  letter-spacing: -0.64px;
   color: #333;
   line-height: 1;
   font-family: var(--font-tilda);
@@ -298,7 +303,6 @@
 
 /* Bottom CTAs */
 .bottom-ctas {
-  padding: 60px 0;
   background: #fff;
 }
 
@@ -432,6 +436,9 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
+  .documents-page {
+    gap: 96px;
+  }
   .page-header h1 {
     font-size: 48px;
   }
@@ -441,6 +448,12 @@
   .docs-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+  }
+  .doc-card:last-child:nth-child(3n+1) {
+    grid-column: auto;
+  }
+  .doc-card:last-child:nth-child(2n+1) {
+    grid-column: 1 / -1;
   }
 }
 
@@ -491,6 +504,9 @@
 }
 
 @media (max-width: 480px) {
+  .documents-page {
+    gap: 64px;
+  }
   .page-header {
     margin-top: 24px;
     margin-bottom: 32px;

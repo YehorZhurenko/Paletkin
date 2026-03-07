@@ -30,6 +30,7 @@ import FaqSection from '../components/FaqSection'
 import OfferSection from '../components/OfferSection'
 import SliderBase from '../components/SliderBase'
 import TopDesc from '../components/TopDesc'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 function Marketplace() {
   const marketplaceWarehouses = [
@@ -223,6 +224,13 @@ function Marketplace() {
   ]
 
   return (
+    <div className="page">
+      <div className="page__breadcrumbs">
+        <div className="container">
+          <Breadcrumbs items={[{ label: 'Главная', to: '/' }, { label: 'Маркетплейсы' }]} />
+        </div>
+      </div>
+      <div className="page__content">
     <div className="marketplace-page">
       <div className="marketplace-top">
         <div className="container">
@@ -353,9 +361,10 @@ function Marketplace() {
         />
       </div>
 
-      <div className="marketplace-sections">
+      
+      <section className="focus-clients">
         <div className="container">
-          <section className="focus-clients">
+          <div className="focus-clients-content">
             <div className="focus-clients__top">
               <h2>Наш фокус - клиенты</h2>
               <p>
@@ -373,24 +382,33 @@ function Marketplace() {
                 </article>
               ))}
             </div>
-          </section>
-
-          <section className="marketplace-card-block">
-            <div className="marketplace-card-block__header">
-              <h2>Фулфилмент услуги</h2>
-              <p>Полный комплекс услуг для работы с фулфилмент-центрами и маркетплейсами</p>
+          </div>
+        </div>
+      </section>
+      
+      <section className="fullfilment">
+        <div className="container">
+            <div className="marketplace-card-block">
+              <div className="marketplace-card-block__header">
+                <h2>Фулфилмент услуги</h2>
+                <p>Полный комплекс услуг для работы с фулфилмент-центрами и маркетплейсами</p>
+              </div>
+              <div className="marketplace-card-grid">
+                {fulfillmentCards.map((card) => (
+                  <article className="marketplace-info-card" key={card.title}>
+                    <img src={card.icon} alt="" className="marketplace-info-card__icon" />
+                    <h3>{card.title}</h3>
+                    <p>{card.description}</p>
+                  </article>
+                ))}
+              </div>
             </div>
-            <div className="marketplace-card-grid">
-              {fulfillmentCards.map((card) => (
-                <article className="marketplace-info-card" key={card.title}>
-                  <img src={card.icon} alt="" className="marketplace-info-card__icon" />
-                  <h3>{card.title}</h3>
-                  <p>{card.description}</p>
-                </article>
-              ))}
-            </div>
-          </section>
-          <section className="marketplace-schemes-block">
+        </div>
+      </section>
+      
+      <section className="advantages">
+        <div className="container">
+          <div className="marketplace-schemes-block">
             <div className="schemes-block__header">
               <h2>Наши схемы работы</h2>
               <div className="scheme-tabs">
@@ -414,9 +432,9 @@ function Marketplace() {
                 </div>
               ))}
             </div>
-          </section>
+          </div>
 
-          <section className="packaging-block general-block">
+          <div className="packaging-block general-block">
             {useGeneralBlockSlider ? (
               <SliderBase items={packagingItems}>
                 {({ step, maxStep, goTo, sliderRef, trackRef, offset, swipeHandlers }) => (
@@ -459,9 +477,9 @@ function Marketplace() {
                 </div>
               </>
             )}
-          </section>
+          </div>
 
-          <section className="storage-block general-block">
+          <div className="storage-block general-block">
             {useGeneralBlockSlider ? (
               <SliderBase items={palletItems}>
                 {({ step, maxStep, goTo, sliderRef, trackRef, offset, swipeHandlers }) => (
@@ -505,36 +523,37 @@ function Marketplace() {
                 </div>
               </>
             )}
-          </section>
-        </div>
-      </div>
-
-      <div className="marketplace-calculator">
-        <div className="container">
-          <CalculatorComponent />
-        </div>
-      </div>
-
-      <section className="marketplace-double-cta">
-        <div className="container">
-          <div className="marketplace-double-cta__grid">
-            {ctaCards.map((card) => (
-              <article key={card.title} className="marketplace-double-cta__card">
-                <div className="marketplace-double-cta__card-body">
-                  <h3>{card.title}</h3>
-                  <button type="button">{card.buttonLabel}</button>
-                </div>
-                <img
-                  src={useCtaFullImage && card.imageFull ? card.imageFull : card.image}
-                  alt=""
-                  className="marketplace-double-cta__card-img"
-                />
-              </article>
-            ))}
           </div>
         </div>
       </section>
+      
+      <div className="calculator-cta">
+        <section className="marketplace-calculator">
+          <div className="container">
+            <CalculatorComponent />
+          </div>
+        </section>
 
+        <section className="marketplace-double-cta">
+          <div className="container">
+            <div className="marketplace-double-cta__grid">
+              {ctaCards.map((card) => (
+                <article key={card.title} className="marketplace-double-cta__card">
+                  <div className="marketplace-double-cta__card-body">
+                    <h3>{card.title}</h3>
+                    <button type="button">{card.buttonLabel}</button>
+                  </div>
+                  <img
+                    src={useCtaFullImage && card.imageFull ? card.imageFull : card.image}
+                    alt=""
+                    className="marketplace-double-cta__card-img"
+                  />
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
       <section className="marketplace-related-services">
         <div className="container">
           <SliderBase items={relatedServiceSlides}>
@@ -626,7 +645,11 @@ function Marketplace() {
             linkText="Перейти в раздел FAQ"
           />
         </div>
-        <OfferSection title="Начните доставку на маркетплейсы" />
+        
+      </div>
+
+      <OfferSection title="Начните доставку на маркетплейсы" />
+    </div>
       </div>
     </div>
   )

@@ -16,6 +16,7 @@ import specialist7 from '../assets/image/specialist/specialist-card7.png'
 import { useEffect, useState } from 'react'
 
 import TopDesc from '../components/TopDesc'
+import Breadcrumbs from '../components/Breadcrumbs'
 import DifferentSection from '../components/DifferentSection'
 import CarsSection from '../components/CarsSection'
 import StepsSection from '../components/StepsSection'
@@ -61,11 +62,17 @@ function About() {
   }, [])
 
   return (
+    <div className="page">
+      <div className="page__breadcrumbs">
+        <div className="container">
+          <Breadcrumbs items={[{ label: 'Главная', to: '/' }, { label: 'О компании' }]} />
+        </div>
+      </div>
+      <div className="page__content">
     <div className="about-page">
-      
       <section className="intro-section">
         <div className="container">
-         <TopDesc title="О компании" body="Мы специализируемся на грузоперевозках для B2B-сегмента и поставщиков маркетплейсов. Наш приоритет — комплексный подход: от экспресс-доставки до полного экспедирования грузов. Мы знаем требования торговых площадок и понимаем ценность времени в бизнесе, поэтому гарантируем надежность и контроль на каждом этапе пути." />
+          <TopDesc title="О компании" body="Мы специализируемся на грузоперевозках для B2B-сегмента и поставщиков маркетплейсов. Наш приоритет — комплексный подход: от экспресс-доставки до полного экспедирования грузов. Мы знаем требования торговых площадок и понимаем ценность времени в бизнесе, поэтому гарантируем надежность и контроль на каждом этапе пути." />
         </div>
       </section>
 
@@ -287,6 +294,8 @@ function About() {
       
       <OfferSection />
 
+    </div>
+      </div>
     </div>
   )
 }

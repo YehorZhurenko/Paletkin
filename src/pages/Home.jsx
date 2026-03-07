@@ -31,65 +31,65 @@ function Home() {
   return (
     <section className="home">
 
-      <div className="home-top">
-        <div className="container">
-          <div className="home-banner">
-            <div className="home-banner__boxes-wrap">
-              <img src={boxes} alt="Коробки" className="home-banner__boxes" />
+      <div className="home-pupi">
+        <div className="home-top">
+          <div className="container">
+            <div className="home-banner">
+              <div className="home-banner__boxes-wrap">
+                <img src={boxes} alt="Коробки" className="home-banner__boxes" />
+              </div>
+              <img src={logo3d} alt="Paletkin" className="home-banner__logo" />
             </div>
-            <img src={logo3d} alt="Paletkin" className="home-banner__logo" />
           </div>
         </div>
-      </div>
       
-    
-      <div className="home-offer">
-        <div className="container">
-          <div className="home-offer-content">
-            <div className="home-offer-text">
-              <p>Надежная и быстрая доставка на Wildberries, Ozon, Яндекс.Маркет <br />и другие маркетплейсы.</p>
-              <h2>Доставка на маркетплейсы <span> <br /> по всей России</span> 
-              <img src={companys} alt="Партнеры" />
-              </h2>
-            </div>
-            <div className="home-offer-blocks">
-              <div className="home-blocks-item">
-                <div className="home-blocks-image">
-                  <img src={dlvry} alt="Delivery" />
-                </div>
-                <div className="home-blocks-text">
-                  Надежная доставка
-                </div>
+        <div className="home-offer">
+          <div className="container">
+            <div className="home-offer-content">
+              <div className="home-offer-text">
+                <p>Надежная и быстрая доставка на Wildberries, Ozon, Яндекс.Маркет <br />и другие маркетплейсы.</p>
+                <h2>Доставка на маркетплейсы <span> <br /> по всей России</span> 
+                <img src={companys} alt="Партнеры" />
+                </h2>
               </div>
-              <div className="home-blocks-item">
-                <div className="home-blocks-image">
-                  <img src={marketplace} alt="Marketplace" />
+              <div className="home-offer-blocks">
+                <div className="home-blocks-item">
+                  <div className="home-blocks-image">
+                    <img src={dlvry} alt="Delivery" />
+                  </div>
+                  <div className="home-blocks-text">
+                    Надежная доставка
+                  </div>
                 </div>
-                <div className="home-blocks-text">
-                  Маркетплейсы
+                <div className="home-blocks-item">
+                  <div className="home-blocks-image">
+                    <img src={marketplace} alt="Marketplace" />
+                  </div>
+                  <div className="home-blocks-text">
+                    Маркетплейсы
+                  </div>
                 </div>
-              </div>
-              <div className="home-blocks-item">
-                <div className="home-blocks-image">
-                  <img src={quolty} alt="Quality" />
+                <div className="home-blocks-item">
+                  <div className="home-blocks-image">
+                    <img src={quolty} alt="Quality" />
+                  </div>
+                  <div className="home-blocks-text">
+                    Гарантия качества
+                  </div>
                 </div>
-                <div className="home-blocks-text">
-                  Гарантия качества
-                </div>
-              </div>
-              <div className="home-blocks-item">
-                <div className="home-blocks-image">
-                  <img src={globe} alt="Globe" />
-                </div>
-                <div className="home-blocks-text">
-                  Широкая география
+                <div className="home-blocks-item">
+                  <div className="home-blocks-image">
+                    <img src={globe} alt="Globe" />
+                  </div>
+                  <div className="home-blocks-text">
+                    Широкая география
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       <div className="home-calculator">
         <div className="container">
           <CalculatorComponent mode="estimate" />
@@ -100,8 +100,11 @@ function Home() {
 
       <div className="home-services">
         <div className="container">
-          <ServiceSection title='Наши услуги'
-          subtitle='Мы предлагаем комплексные логистические решения для эффективного управления цепочками поставок и доставки товаров на ведущие маркетплейсы России.'/>
+          <ServiceSection
+            title="Наши услуги"
+            subtitle="Мы предлагаем комплексные логистические решения для эффективного управления цепочками поставок и доставки товаров на ведущие маркетплейсы России."
+            wrapperClassName="service-section--home"
+          />
         </div>
       </div>
       
@@ -131,17 +134,10 @@ function Home() {
         </div>
       </div>
 
-      <div className="home-steps">
-        <div className="container">
-          <StepsSection />
-        </div>
-      </div>
 
-      <div className="home-reviews">
-        <div className="container">
-          <ReviewsSection showFaqCard />
-        </div>
-      </div>
+      <StepsSection />
+
+      <ReviewsSection showFaqCard />
 
       <div className="home-whyus">
         <div className="container">

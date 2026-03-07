@@ -3,6 +3,7 @@ import './Documents.css'
 import FaqSection from '../components/FaqSection'
 import DocumentsCtaSection from '../components/DocumentsCtaSection'
 import TopDesc from '../components/TopDesc'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 const Documents = () => {
   const [activeTab, setActiveTab] = useState('all')
@@ -59,9 +60,14 @@ const Documents = () => {
   )
 
   return (
+    <div className="page">
+      <div className="page__breadcrumbs">
+        <div className="container">
+          <Breadcrumbs items={[{ label: 'Главная', to: '/' }, { label: 'Документы' }]} />
+        </div>
+      </div>
+      <div className="page__content">
     <div className="documents-page">
-
-
       <section className="page-header">
         <div className="container">
           <div className="page-header-content">
@@ -106,17 +112,20 @@ const Documents = () => {
            </div>
         </div>
       </section>
-
-      <div className="container">
-          <FaqSection
-            title="Ответы на вопросы"
-            subtitle="Если вы все еще имеете вопросы о документах и сервисах"
-            linkTo="/faq"
-            linkText="Перейти в раздел FAQ"
-          />
-      </div>
-
+      
+      <section className="faq-documents">
+        <div className="container">
+            <FaqSection
+              title="Ответы на вопросы"
+              subtitle="Если вы все еще имеете вопросы о документах и сервисах"
+              linkTo="/faq"
+              linkText="Перейти в раздел FAQ"
+            />
+        </div>
+      </section>
       <DocumentsCtaSection />
+    </div>
+      </div>
     </div>
   )
 }

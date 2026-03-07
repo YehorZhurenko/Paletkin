@@ -1,9 +1,10 @@
 .marketplace-page {
-  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 144px;
 }
 
 .marketplace-top {
-  padding: 48px 0 60px;
 }
 
 .marketplace-top-body {
@@ -220,6 +221,9 @@
 
 /* 1024 — 981: одна колонка, маркеты в 2 колонки */
 @media (max-width: 1024px) {
+  .marketplace-page {
+    gap: 96px;
+  }
   .regular-supplies__header {
     text-align: left;
     max-width: 100%;
@@ -403,7 +407,6 @@
 }
 
 .focus-clients {
-  margin: 144px 0;
 }
 
 .focus-clients__top {
@@ -463,7 +466,6 @@
 .marketplace-card-block {
   border-radius: 8px;
   width: 100%;
-  margin-bottom: 144px;
 }
 
 .marketplace-schemes-block {
@@ -1071,8 +1073,6 @@
 }
 
 .marketplace-related-services {
-  padding: 144px 0 ;
-  
 }
 
 .marketplace-related-services__top {
@@ -1238,15 +1238,12 @@
 }
 
 .marketplace-tariff {
-  padding: 96px 0 72px;
 }
 
 .marketplace-video {
-  padding-bottom: 72px;
 }
 
 .marketplace-faq {
-  padding-bottom: 72px;
 }
 
 .marketplace-faq .faq-section {
@@ -1438,7 +1435,7 @@
   }
 
   .regular-supplies {
-    padding: 28px 0 36px;
+    padding: 0;
   }
   .regular-supplies__header h2 {
     font-size: 24px;
@@ -1548,8 +1545,8 @@
 }
 
 @media (max-width: 480px) {
-  .marketplace-top {
-    padding: 20px 0 24px;
+  .marketplace-page {
+    gap: 64px;
   }
   .marketplace-top h1 {
     font-size: 28px;
@@ -1558,7 +1555,7 @@
     font-size: 14px;
   }
   .regular-supplies {
-    padding: 32px 0 48px;
+    padding: 0;
   }
   .regular-supplies__content {
     grid-template-columns: 1fr;

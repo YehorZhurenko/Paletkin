@@ -1,3 +1,9 @@
+.services-container {
+  display: flex;
+  flex-direction: column;
+  gap: 144px;
+}
+
 .services-top {
   display: flex;
   justify-content: space-between;
@@ -30,7 +36,6 @@
   letter-spacing: -1.12px;
   text-align: left;
   color: #050200;
-  padding: 144px 0;
 }
 .service-offer span {
   color: #eb7300;
@@ -45,6 +50,9 @@
 }
 
 @media (max-width: 1024px) {
+  .services-container {
+    gap: 96px;
+  }
   .services-top {
     flex-direction: column;
     gap: 20px;
@@ -57,7 +65,6 @@
   }
   .service-offer {
     font-size: 40px;
-    padding: 80px 0;
   }
 }
 
@@ -70,7 +77,6 @@
   }
   .service-offer {
     font-size: 28px;
-    padding: 56px 0;
   }
   .service-offer img {
     height: 36px;
@@ -78,6 +84,9 @@
 }
 
 @media (max-width: 480px) {
+  .services-container {
+    gap: 64px;
+  }
   .services-top h1 {
     font-size: 28px;
   }
@@ -86,9 +95,31 @@
   }
   .service-offer {
     font-size: 22px;
-    padding: 40px 0;
   }
   .service-offer img {
     height: 28px;
+  }
+}
+
+/* Блок услуг на странице /services: свои паддинги и фон */
+.service-all.service-section--services {
+  padding: 48px;
+  background: #f5f5f5;
+  border-radius: 8px;
+
+}
+@media (max-width: 960px) {
+  .service-all.service-section--services {
+    padding: 80px 0;
+  }
+}
+@media (max-width: 768px) {
+  .service-all.service-section--services {
+    padding: 56px 0;
+  }
+}
+@media (max-width: 480px) {
+  .service-all.service-section--services {
+    padding: 40px 0;
   }
 }

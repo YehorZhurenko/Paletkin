@@ -4,6 +4,7 @@ import '../components/Calculator.css'
 
 import FaqSection from '../components/FaqSection'
 import OfferSection from '../components/OfferSection'
+import Breadcrumbs from '../components/Breadcrumbs'
 import arrowIcon from '../assets/image/icons/arrow.svg'
 
 const popularRoutes = [
@@ -334,6 +335,13 @@ function OnlineTable() {
   }
 
   return (
+    <div className="page">
+      <div className="page__breadcrumbs">
+        <div className="container">
+          <Breadcrumbs items={[{ label: 'Главная', to: '/' }, { label: 'Онлайн-таблица' }]} />
+        </div>
+      </div>
+      <div className="page__content">
     <div className="online-table-page">
       <div className="container">
         <header className="online-table-header">
@@ -673,6 +681,8 @@ function OnlineTable() {
           </div>
         </div>
       )}
+    </div>
+      </div>
     </div>
   )
 }

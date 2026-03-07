@@ -5,14 +5,21 @@ import FaqSection from '../components/FaqSection'
 import DocumentsCtaSection from '../components/DocumentsCtaSection'
 import CalculatorComponent from '../components/Calculator'
 import TopDesc from '../components/TopDesc'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 import fire from "../assets/image/icons/fire.svg"
 
 function Checkout() {
 
   return (
+    <div className="page">
+      <div className="page__breadcrumbs">
+        <div className="container">
+          <Breadcrumbs items={[{ label: 'Главная', to: '/' }, { label: 'Оформление заказа' }]} />
+        </div>
+      </div>
+      <div className="page__content">
     <section className="checkout-page">
-      
       <div className="checkout-top">
         <div className="container">
           <div className="checkout-top-content">
@@ -50,6 +57,8 @@ function Checkout() {
       <DocumentsCtaSection />
       
     </section>
+      </div>
+    </div>
   )
 }
 
