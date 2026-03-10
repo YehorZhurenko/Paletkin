@@ -156,20 +156,21 @@
 /* FAQ Section */
 /* FAQ Section */
 .faq-section {
-  padding: 60px 0;
+  padding: 0px;
 }
 
 .faq-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 40px;
+  gap: 80px;
   align-items: start;
   max-width: 1920px;
   margin: 0 auto
 }
 
 .faq-intro h2 {
-  font-size: 28px;
+  padding-top: 36px;
+  font-size: 56px;
   font-weight: 700;
   margin: 0 0 15px;
   color: #333;
@@ -178,7 +179,7 @@
 .faq-intro p {
   color: #666;
   margin: 0 0 30px;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .learn-more-btn {
@@ -435,7 +436,20 @@
 }
 
 /* Responsive */
+
+@media (min-width: 1200px) {
+  .faq-grid {
+    gap: 400px;
+  }
+}
+
 @media (max-width: 1024px) {
+  .faq-grid {
+    gap: 400px;
+  }
+
+
+  
   .documents-page {
     gap: 96px;
   }

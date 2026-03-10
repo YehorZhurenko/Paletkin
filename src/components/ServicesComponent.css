@@ -59,6 +59,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 266px;
   gap: 16px;
+  grid-auto-rows: auto; /* или minmax(266px, auto) */
 }
 .service-body-item {
   padding: 48px;
@@ -77,32 +78,48 @@
   width: auto;
   max-width: 100%;
   object-fit: contain;
-  margin-bottom: 24px;
+  margin-bottom: 0px;
   flex-shrink: 0;
 }
 .service-item-text {
+  padding-top: 12px;
   display: flex;
   flex-direction: column;
   gap: 12px;
   min-width: 0;
   max-width: 100%;
   flex: 1;
-  min-height: 0;
-  overflow: hidden;
+  /* min-height: 0; */
+  /* overflow: hidden;  <- убрать */
 }
 .service-item-text p {
-  overflow: hidden;
+  overflow: visible;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+
+.service-item-text h3{
+
+  font-family: var(--font-inter-tight);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.48px;
+  text-align: left;
+  color: #050200;
+}
+
 .service-item-text h3,
 .service-item-text p {
   margin: 0;
 }
 .service-body-item button {
-  padding: 12px 24px;
+  font-size: 18px;
+  margin-top: 24px;      /* расстояние от текста до кнопки */
+  align-self: flex-start;/* не растягивать на всю ширину */
+  padding: 12px 24px;    /* внутренние отступы — можно увеличить/уменьшить */
   border-radius: 8px;
   background-color: #f87f07;
   border: none;
