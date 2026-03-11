@@ -20,16 +20,16 @@ function App() {
         <Header />
         <main className="main-content">
             <Routes>
-              <Route path="/Paletkin/" element={<Home />} />
-              <Route path="/Paletkin/calculator" element={<Calculator />} />
-              <Route path="/Paletkin/documents" element={<Documents />} />
-              <Route path="/Paletkin/services" element={<Services />} />
-              <Route path="/Paletkin/about" element={<About />} />
-              <Route path="/Paletkin/marketplace" element={<Marketplace />} />
-              <Route path="/Paletkin/checkout" element={<Checkout />} />
-              <Route path="/Paletkin/contacts" element={<Contacts />} />
-              <Route path="/Paletkin/faq" element={<FAQ />} />
-              <Route path="/Paletkin/online-table" element={<OnlineTable />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/calculator" element={<Calculator />} />
+              <Route path="/documents" element={<Documents />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/contacts" element={<Contacts />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/online-table" element={<OnlineTable />} />
             </Routes>
         </main>
         <Footer />
