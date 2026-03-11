@@ -29,7 +29,7 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/faq" element={<FAQ />} />
-            <Route path="/online-table" element={<OnlineTable />} />
+            <Route path="/online-table" element={<OnlineTable />} />{}
           </Routes>
         </main>
         <Footer />
