@@ -1319,13 +1319,13 @@ export default function CalculatorComponent({ mode = 'estimate' }) {
               <span className="calculator-cta-toggle-slider" />
               <span className="calculator-cta-toggle-label">Бизнес доставка</span>
             </label>
-            <p className="calculator-cta-disclaimer">
-              Нажимая кнопку, вы соглашаетесь с нашей политикой конфиденциальности
-            </p>
           </div>
           <button type="button" className="calculator-cta-btn">
             Рассчитать стоимость
           </button>
+            <p className="calculator-cta-disclaimer">
+              Нажимая кнопку, вы соглашаетесь с нашей политикой конфиденциальности
+            </p>
         </div>
       </div>
     </div>

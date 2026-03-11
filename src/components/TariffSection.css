@@ -163,6 +163,7 @@
 }
 
 .tariff-section-prices-col-title {
+  text-align: center;
   font-family: var(--font-tilda);
   font-size: 16px;
   font-weight: 500;
@@ -201,7 +202,7 @@
 
 .tariff-section-price-pill {
   display: inline-block;
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
   padding: 10px 0;
 }

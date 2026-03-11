@@ -169,7 +169,6 @@
 }
 
 .faq-intro h2 {
-  padding-top: 36px;
   font-size: 56px;
   font-weight: 700;
   margin: 0 0 15px;
@@ -439,13 +438,13 @@
 
 @media (min-width: 1200px) {
   .faq-grid {
-    gap: 400px;
+    gap: 80px;
   }
 }
 
 @media (max-width: 1024px) {
   .faq-grid {
-    gap: 400px;
+    gap: 80px;
   }
 
 

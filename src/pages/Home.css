@@ -59,7 +59,7 @@
   max-width: 100%;
   width: auto;
   height: auto;
-  max-height: 468px;
+  max-height: 300px;
   object-fit: contain;
   object-position: center bottom;
 }

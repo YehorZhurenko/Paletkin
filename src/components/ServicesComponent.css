@@ -57,20 +57,21 @@
 .service-body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 266px;
+ /* grid-auto-rows: 266px; */
   gap: 16px;
-  grid-auto-rows: auto; /* или minmax(266px, auto) */
+  grid-auto-rows:  или minmax(266px, auto)
 }
 .service-body-item {
-  padding: 48px;
+  padding: 32px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  flex-shrink: 0;
   border-radius: 8px;
   background-color: #ededed;
   min-width: 0;
-  height: 100%;
-  min-height: 0;
+  height: auto;
+  min-height: max-content;
   box-sizing: border-box;
 }
 .service-body-item img {
@@ -89,8 +90,7 @@
   min-width: 0;
   max-width: 100%;
   flex: 1;
-  /* min-height: 0; */
-  /* overflow: hidden;  <- убрать */
+  overflow: visible; 
 }
 .service-item-text p {
   overflow: visible;
@@ -103,7 +103,7 @@
 .service-item-text h3{
 
   font-family: var(--font-inter-tight);
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.48px;
@@ -115,6 +115,11 @@
 .service-item-text p {
   margin: 0;
 }
+
+.service-item-text p {
+  font-size: 16;
+}
+
 .service-body-item button {
   font-size: 18px;
   margin-top: 24px;      /* расстояние от текста до кнопки */
@@ -129,7 +134,7 @@
 @media (max-width: 1220px) {
   .service-body {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 266px;
+ 
   }
 }
 
@@ -138,9 +143,7 @@
   .service-all {
     padding: 80px 0;
   }
-  .service-all-body {
-    padding: 32px 24px;
-  }
+
   .service-body {
     gap: 12px;
   }
@@ -157,9 +160,7 @@
   .service-all {
     padding: 56px 0;
   }
-  .service-all-body {
-    padding: 24px 16px;
-  }
+
   .service-body-top {
     flex-direction: column;
     align-items: stretch;
@@ -172,9 +173,10 @@
   .service-body {
     gap: 10px;
   }
-  .service-body-item {
+  .service-body-item {   
     padding: 24px 20px;
     gap: 16px;
+    min-height: 300px;
   }
   .service-body-item img {
     height: 40px;
@@ -194,14 +196,26 @@
   }
   .service-body {
     grid-template-columns: 1fr;
-    grid-auto-rows: 266px;
+
     gap: 12px;
   }
   .service-body-item {
     padding: 20px 16px;
     gap: 16px;
+    min-height: 250px;
   }
   .service-body-item img {
     height: 36px;
+  }
+
+  .service-item-text h3{
+
+    font-family: var(--font-inter-tight);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.48px;
+    text-align: left;
+    color: #050200;
   }
 }
