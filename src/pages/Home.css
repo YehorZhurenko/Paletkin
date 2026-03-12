@@ -62,6 +62,7 @@
   max-height: 300px;
   object-fit: contain;
   object-position: center bottom;
+
 }
 
 /* Лого на фоне блока: позиция справа, не расширяет блок */
@@ -375,14 +376,14 @@
     gap: 64px;
   }
   .home-top {
-    height: 376px;
-    min-height: 376px;
-    max-height: 376px;
+    height: 260px;
+    min-height: 260px;
+    max-height: 260px;
     padding: 0;
     align-items: stretch;
   }
   .home-top .container {
-    height: 376px;
+    height: 260px;
   }
   .home-banner {
     flex-direction: column;
@@ -395,14 +396,14 @@
   }
   .home-banner__logo {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: -80px;
+    bottom: 110px;
     margin-left: auto;
     max-width: 55%;
     max-height: 55%;
     width: auto;
     object-fit: contain;
-    object-position: right top;
+    object-position: right bottom;
     z-index: 1;
   }
   .home-banner__boxes-wrap {
@@ -418,12 +419,16 @@
     margin-bottom: 0;
     z-index: 0;
   }
-  .home-banner__boxes {
-    max-height: 200px;
-    width: auto;
-    object-fit: contain;
-    object-position: left bottom;
-  }
+
+.home-banner__boxes {
+  transform: rotate(320deg);
+  max-width: 400%;
+  position: relative;
+  left: -15px;
+  bottom: 200px;
+  
+}
+
   .home-offer-text h2 {
     font-size: 28px;
   }
@@ -465,7 +470,7 @@
 /* 420px: поворот левой картинки усиливается */
 @media (max-width: 420px) {
   .home-banner__boxes-wrap {
-    transform: rotate(-8deg);
+   
     margin-right: -50px;
   }
 }
@@ -473,9 +478,7 @@
 /* 360px: поворот левой картинки сильнее, одна коробка под лого — видно 3 коробки */
 @media (max-width: 360px) {
   .home-top {
-    height: 376px;
-    min-height: 376px;
-    max-height: 376px;
+
   }
   .home-top .container {
     height: 376px;
@@ -487,15 +490,15 @@
   }
   .home-banner__logo {
     position: absolute;
-    right: 0;
-    top: 0;
+ 
     margin-left: auto;
     max-width: 58%;
     max-height: 50%;
     width: auto;
     z-index: 2;
     object-fit: contain;
-    object-position: right top;
+
+
   }
   .home-banner__boxes-wrap {
     overflow: hidden;
@@ -506,25 +509,28 @@
     min-height: 0;
     display: flex;
     align-items: flex-end;
-    transform: rotate(-12deg);
+
     transform-origin: left bottom;
     margin-right: -45px;
   }
   .home-banner__boxes {
-    object-position: 35% bottom;
-    max-height: 180px;
-    width: auto;
+ 
+    left: 30px;
+    bottom: 260px;
+    max-height: 100px;
+    transform: rotate(300deg);
     min-width: 240%;
     margin-left: -70%;
     object-fit: contain;
+
   }
 }
 
 @media (max-width: 320px) {
   .home-top {
-    min-height: 320px;
-    height: 376px;
-    max-height: 376px;
+    min-height: 200px;
+    height: 200px;
+    max-height: 200px;
   }
   .home-banner {
     min-height: 320px;

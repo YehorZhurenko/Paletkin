@@ -116,9 +116,7 @@
   margin: 0;
 }
 
-.service-item-text p {
-  font-size: 16;
-}
+
 
 .service-body-item button {
   font-size: 18px;
@@ -150,6 +148,8 @@
   .service-body-item {
     padding: 32px 24px;
     gap: 20px;
+    min-height: 320px;
+    
   }
   .service-body-item img {
     height: 44px;
@@ -160,6 +160,8 @@
   .service-all {
     padding: 56px 0;
   }
+
+
 
   .service-body-top {
     flex-direction: column;
@@ -180,6 +182,7 @@
   }
   .service-body-item img {
     height: 40px;
+    
   }
 }
 
@@ -195,6 +198,7 @@
     margin-bottom: 20px;
   }
   .service-body {
+    grid-template-columns: 1;
     grid-template-columns: 1fr;
 
     gap: 12px;
@@ -202,7 +206,7 @@
   .service-body-item {
     padding: 20px 16px;
     gap: 16px;
-    min-height: 250px;
+    min-height: 240px;
   }
   .service-body-item img {
     height: 36px;
@@ -217,5 +221,6 @@
     letter-spacing: -0.48px;
     text-align: left;
     color: #050200;
+
   }
 }

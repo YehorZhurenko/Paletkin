@@ -322,6 +322,13 @@
 }
 
 @media (max-width: 768px) {
+
+  .form-header h2 {
+    margin-top: 40px;
+    font-size: 48px;
+    padding-bottom: 4px;
+  }
+
   .calculator-component {
     flex-direction: column;
     min-height: auto;
@@ -376,6 +383,15 @@
 }
 
 @media (max-width: 460px) {
+
+  .form-header h2 {
+    margin-top: 40px;
+    font-size: 32px;
+    padding-bottom: 4px;
+  }
+  
+
+
   .calculator-component {
     padding: 16px 12px;
   }
@@ -449,6 +465,7 @@
     font-size: 18px;
   }
 }
+
 
 /* additional form styles */
 
