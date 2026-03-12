@@ -112,6 +112,7 @@
 }
 
 .home-offer-text h2 img {
+  display: inline-block;
   margin: 3px 0px 0 11px;
 }
 .home-offer-blocks {
@@ -298,8 +299,10 @@
   }
   
   .home-offer-text h2 img {
-    max-width: 120px;
+    max-width: 160px;
     height: auto;
+    margin-top: 20px;
+    
   }
   .home-offer-blocks {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -323,7 +326,7 @@
   }
   .home-blog,
   .home-tariff {
-    padding: 80px 0;
+    padding: 20px 0;
   }
   .home-video {
     padding-bottom: 80px;
@@ -334,12 +337,17 @@
   .home-offer-text h2 {
     font-size: 36px;
   }
+
+  .home-offer-text h2 img {
+
+    margin-top: 8px;
+    max-width: 120px;
+  }
+
   .home-offer-text p {
     font-size: 16px;
   }
-  .home-offer-blocks {
-    grid-template-columns: 1fr;
-  }
+
   .home-blocks-item {
     flex-direction: row;
   }
@@ -369,6 +377,14 @@
     padding: 64px 0;
   } */
 }
+
+  @media (max-width: 660px) {
+
+    .home-offer-blocks {
+      grid-template-columns: 1fr;
+    }
+
+  }
 
 /* 480px: высота 376px, колонка; левая картинка — лёгкий поворот, дальше усиливается с уменьшением экрана */
 @media (max-width: 480px) {
@@ -433,9 +449,9 @@
     font-size: 28px;
   }
   .home-offer-text h2 img {
-    display: block;
+
     margin-top: 8px;
-    max-width: 160px;
+    max-width: 80px;
   }
   .home-offer-text p {
     font-size: 14px;
@@ -480,6 +496,7 @@
   .home-top {
 
   }
+
   .home-top .container {
     height: 376px;
   }

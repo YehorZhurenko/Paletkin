@@ -17,7 +17,7 @@
   font-size: 56px;
   font-weight: 600;
   letter-spacing: -1.12px;
-  text-align: left;
+  text-align: center;
   color: #050200;
   margin-bottom: 60px;
 }
@@ -29,13 +29,12 @@
     letter-spacing: -0.36px;
     text-align: left;
     color: #353332;
+
+    margin-bottom: 20px;
 }
-.whyus-bottom {
-    display: flex;
-    justify-content: space-around;
-    gap: 48px;
-    align-items: stretch;       /* дети одной высоты */
-}
+
+
+
 
 .whyus-text {
     max-width: 586px;
@@ -54,6 +53,7 @@
 .whyus-bottom img {
   flex: 1 1 0;                  /* картинка – второй flex-элемент */
   width: 100%;
+  max-width: 30vh;  
   height: 100%;   
   max-width: 700px;              /* по высоте соседа */
   object-fit: cover;            /* обрезаем лишнее */
@@ -61,29 +61,29 @@
   display: block;
 }
 
+.whyus-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+
+}
+
 @media (max-width: 1024px) {
-  .whyus {
-    padding: 80px 0;
-  }
+ 
   .whyus-top h2 {
     font-size: 40px;
   }
   .whyus-top p {
-    font-size: 15px;
+    font-size: 18px;
   }
-  .whyus-bottom {
 
-    gap: 32px;
-  }
 }
 
 @media (max-width: 768px) {
-  .whyus {
-    padding: 56px 0;
-  }
+
   .whyus-top {
     flex-direction: column;
-    align-items: flex-start;
+    align-items:center;
     gap: 16px;
   }
   .whyus-top h2 {
@@ -98,20 +98,35 @@
   }
 }
 
+
 @media (max-width: 480px) {
-  .whyus {
-    padding: 40px 0;
-  }
+
+  .whyus-bottom {
+    display: flex;
+    justify-content: space-around;
+    gap: 48px;
+    align-items: stretch;       /* дети одной высоты */
+}
+
+
   .whyus-top h2 {
     font-size: 26px;
+    margin-bottom: 20px;
   }
+
+  .whyus-top p {
+
+    font-size: 16px;
+ 
+  }
+
   .whyus-text {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .whyus-bottom {
 
-flex-direction: column;
+  flex-direction: column;
 
   }
 }

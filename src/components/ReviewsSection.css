@@ -219,6 +219,12 @@
 
 @media (max-width: 480px) {
 
+  .reviews-title {
+
+    font-size: 32px;
+
+  }
+
   .review-footer {
     display: flex;
     flex-direction: column;

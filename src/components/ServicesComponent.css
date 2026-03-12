@@ -157,14 +157,33 @@
   .service-all {
     padding: 56px 0;
   }
-
-  .service-item-text h3 {
   
-    white-space: nowrap;
+  .service-item-text h3 {
+    
+    
     overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;      /* разрешаем перенос */
+    text-overflow: clip;
+    
   }
+  
+  
+  @media (max-width: 700px) {
 
+    .service-body {
+      grid-template-columns: 1;
+      grid-template-columns: 1fr;
+  
+      gap: 12px;
+    }
+
+    .service-body-item {
+
+      min-height: 100px;
+
+    }
+
+  }
 
 
   .service-body-top {
@@ -201,12 +220,7 @@
   .service-body-top {
     margin-bottom: 20px;
   }
-  .service-body {
-    grid-template-columns: 1;
-    grid-template-columns: 1fr;
 
-    gap: 12px;
-  }
   .service-body-item {
     padding: 20px 16px;
     gap: 16px;

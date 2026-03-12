@@ -783,7 +783,20 @@ email-link:hover {
 
 }
 
+@media (max-width: 1024px) {
+
+  .steps-content {
+    flex-direction: column;
+  
+    }
+
+}
+
+
 @media (max-width: 960px) {
+
+
+
   .delivery-content {
     flex-direction: column;
   }
@@ -841,7 +854,7 @@ email-link:hover {
     padding: 0;
   }
   .steps-content {
-    flex-direction: column;
+ 
     gap: 48px;
   }
 
@@ -855,7 +868,7 @@ email-link:hover {
 
 @media (max-width: 768px) {
   .steps-section {
-    padding: 80px 0;
+
   }
 
   .steps-title {

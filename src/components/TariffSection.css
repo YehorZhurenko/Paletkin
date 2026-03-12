@@ -251,7 +251,7 @@
   }
 
   .tariff-section-title {
-    font-size: 44px;
+    font-size: 56px;
     letter-spacing: -0.88px;
   }
 
@@ -311,9 +311,9 @@
 }
 
 @media (max-width: 768px) {
-  .tariff-section {
-    padding: 24px 0;
-  }
+
+
+  
 
   .tariff-section-inner {
     padding: 24px 20px 32px;
@@ -321,7 +321,7 @@
   }
 
   .tariff-section-title {
-    font-size: 24px;
+    font-size: 48px;
   }
 
   .tariff-section-subtitle {
@@ -371,7 +371,7 @@
     gap: 16px;
   }
   .tariff-section-title {
-    font-size: 20px;
+    font-size: 32px;
   }
   .tariff-section-subtitle {
     font-size: 13px;
