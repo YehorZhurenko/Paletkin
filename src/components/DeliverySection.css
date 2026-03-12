@@ -8,6 +8,7 @@
   flex-direction: column;
   margin-bottom: 48px;
   justify-content: center;
+  align-items: center
 }
 .delivery-title {
   font-family: var(--font-tilda);
@@ -17,6 +18,8 @@
   letter-spacing: -1.12px;
   color: #050200;
   margin: 0 0 12px;
+
+  
 }
 .delivery-subtitle {
   font-family: var(--font-inter-tight);
@@ -57,10 +60,11 @@
 /* Адаптив DeliverySection */
 @media (max-width: 1024px) {
   .delivery-section {
-    padding: 80px 0;
+    padding: 20px 0;
   }
   .delivery-title {
     font-size: 40px;
+    text-align: center;
 
   }
   .delivery-subtitle {
@@ -74,10 +78,11 @@
 
 @media (max-width: 768px) {
   .delivery-section {
-    padding: 56px 0;
+    padding: 20px 0;
   }
   .delivery-title {
-    font-size: 32px;
+
+    font-size: 48px;
 
   }
   .delivery-subtitle {
@@ -95,7 +100,7 @@
 
 @media (max-width: 480px) {
   .delivery-section {
-    padding: 40px 0;
+    padding: 10px 0;
   }
   .delivery-title {
     font-size: 26px;

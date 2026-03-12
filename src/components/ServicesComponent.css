@@ -93,11 +93,8 @@
   overflow: visible; 
 }
 .service-item-text p {
+  display: block;
   overflow: visible;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
 }
 
 .service-item-text h3{
@@ -161,6 +158,13 @@
     padding: 56px 0;
   }
 
+  .service-item-text h3 {
+  
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
 
 
   .service-body-top {
@@ -206,7 +210,7 @@
   .service-body-item {
     padding: 20px 16px;
     gap: 16px;
-    min-height: 240px;
+    min-height: 200px;
   }
   .service-body-item img {
     height: 36px;
@@ -221,6 +225,8 @@
     letter-spacing: -0.48px;
     text-align: left;
     color: #050200;
+
+    
 
   }
 }

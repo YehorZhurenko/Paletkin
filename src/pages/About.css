@@ -130,7 +130,7 @@
   font-style: normal;
   line-height: 1;
   letter-spacing: -1.12px;
-  text-align: left;
+
   color: #050200;
 }
 
@@ -755,7 +755,7 @@ email-link:hover {
   font-family: var(--font-inter-tight);
   color: #666;
   max-width: 370px;
-  margin-bottom: 12px;
+
 }
 
 .offer-input::placeholder {
@@ -953,6 +953,11 @@ email-link:hover {
 
   .delivery {
     padding: 40px 0;
+  }
+
+  .order-offer-btn {
+    display: block;
+    width: 100%;
   }
 }
 

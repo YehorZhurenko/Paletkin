@@ -247,14 +247,16 @@
 
 .footer-bottom-content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 30px;
   margin: 0 auto;
 }
 
 .copyright {
-  align-self: start;
+
+  text-align: center;
   margin: 0;
   font-size: 16px;
   color: #f9e2cb;
@@ -285,7 +287,8 @@
   background-color: rgba(255, 255, 255, 0.1);
   font-family: var(--font-inter-tight);
   font-size: 18px;
-
+  text-align: center;
+  width: 100%;
   line-height: 1.5;
   letter-spacing: -0.36px;
 }
@@ -326,7 +329,7 @@
   }
 
   .newsletter-form {
-    flex-direction: column;
+    
     width: 100%;
   }
 
@@ -335,11 +338,6 @@
   }
 }
 
-@media (max-width: 960px) {
-
-
-
-}
 
 @media (max-width: 768px) {
   .footer-main {
@@ -361,6 +359,7 @@
 
   .footer-bottom-content {
     flex-direction: column;
+    justify-content: center;
     gap: 20px;
   }
 
@@ -378,6 +377,7 @@
 
   .footer-legal a {
     display: block;
+    width: 100%;  
   }
 
   .newsletter-form input {
@@ -386,11 +386,11 @@
   }
 
   .footer-link-column h4 {
-    font-size: 0.95rem;
+    font-size: 16px;
   }
 
   .footer-link-column a {
-    font-size: 0.85rem;
+    font-size: 16px;
   }
 
   .company-logo h2 {
@@ -634,12 +634,12 @@
   padding: 12px 20px;
   font-size: 16px;
   line-height: 1;
+
 }
 
 .copyright {
-  align-self: flex-start;
-  margin: 0;
-  font-size: 16px;
+  align-self: center;
+  margin: 0 auto;
   line-height: 1.2;
 }
 
@@ -651,9 +651,16 @@
   .newsletter-content h2 {
     font-size: 48px;
   }
+
+  .footer-info {
+    flex-direction: column;
+  }
+
 }
 
 @media (max-width: 960px) {
+
+
   .newsletter-content h2 {
     font-size: 48px;
   }
@@ -668,14 +675,12 @@
     gap: 26px 24px;
   }
 
-  .footer-info {
-    grid-column: 1 / -1;
-  }
+
 
   .footer-company {
-    flex-direction: row;
+ 
     justify-content: space-between;
-    align-items: center;
+    align-items:start;
   }
 
   .detail-block h4 {
@@ -692,11 +697,10 @@
     grid-template-columns: auto auto;
   }
 
-  .footer-legal a:last-child {
-    grid-column: 1 / -1;
-    width: fit-content;
-  }
+
 }
+
+
 
 @media (max-width: 640px) {
   .footer-newsletter {
@@ -770,6 +774,7 @@
   .footer-links-grid {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
+    font-size: 18px;
   }
 
   .footer-legal {
