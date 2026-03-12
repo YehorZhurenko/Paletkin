@@ -360,7 +360,7 @@
 
   .cargo-type {
     flex: 1;
-    width: 100%;
+    width: max-content;
     justify-content: space-between;
   }
 
@@ -409,6 +409,8 @@
 
   .cargo-type button {
     font-size: 16px;
+  
+
   }
 
   .quick-dates button {
@@ -569,7 +571,7 @@
 .cargo-type {
   display: flex;
   flex-wrap: nowrap;
-  width: max-content;
+  width: 100%;
   max-width: 100%;
   min-width: 0;
   gap: 8px;
@@ -579,8 +581,8 @@
   line-height: 0;
 }
 .cargo-type button {
-  flex: 1;
-  min-width: 0;
+  flex: 1 1 auto;
+  min-width: max-content;
   border: none;
   padding: 7px 16px;
   border-radius: 1000px;
@@ -589,8 +591,8 @@
   color: #898989;
   font-family: var(--font-inter-tight);
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: visible;
+  text-overflow: clip;
   transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
 }
 .cargo-type button:hover {
