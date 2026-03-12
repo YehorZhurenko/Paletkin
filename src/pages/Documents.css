@@ -161,11 +161,8 @@
 
 .faq-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 80px;
-  align-items: start;
-  max-width: 1920px;
-  margin: 0 auto
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
 
 .faq-intro h2 {
@@ -514,9 +511,26 @@
   .cta-card h3 {
     font-size: 28px;
   }
+
+  .faq-intro h2 {
+    font-size: 48px;
+
+  }
 }
 
 @media (max-width: 480px) {
+
+  .faq-intro h2 {
+    font-size: 32px;
+
+  }
+
+
+  .faq-item {
+
+    padding: 0;
+  }
+
   .documents-page {
     gap: 64px;
   }
@@ -552,3 +566,5 @@
     max-width: none;
   }
 }
+
+

@@ -6,7 +6,8 @@
 }
 
 .whyus-top {
-    display: flex;
+    display: flex;  
+  /*  flex-direction: column; */
     flex: 1;
     justify-content: space-between;
     align-items: center;
@@ -82,7 +83,7 @@
   }
   .whyus-top p {
     max-width: 100%;
-    font-size: 14px;
+    font-size: 18px;
   }
   .whyus-bottom img {
     max-width: 100%;
