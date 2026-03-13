@@ -7,6 +7,16 @@
     padding: 48px;
 }
 
+.qta-faq-section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* две колонки */
+  grid-auto-rows: auto;
+  gap: 40px;
+  justify-content: center;
+  align-items: start;
+  padding: 0 60px 60px 60px;
+}
+
 .faq-top {
     display: flex;
     width: 100%;
@@ -63,6 +73,12 @@
   color: #fff;
 }
 
+.cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
 @media (max-width: 1024px) {
   .faq-section {
     padding: 32px 24px;
@@ -88,6 +104,11 @@
   .faq-section {
     padding: 28px 24px;
   }
+
+  .qta-faq-section {
+    grid-template-columns: 1fr; /* одна колонка */
+  }
+
   .faq-page .faq-grid {
     padding: 28px 24px;
   }
@@ -111,7 +132,7 @@
 
 @media (max-width: 768px) {
   .faq-section {
-    padding: 24px 16px;
+    padding: 0 16px;
   }
   .faq-page .faq-grid {
     padding: 24px 16px;

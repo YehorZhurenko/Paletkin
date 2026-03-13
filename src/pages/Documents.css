@@ -160,6 +160,7 @@
   justify-content: space-between;
   align-items: stretch;
   gap: 24px;
+  margin-bottom: 40px;
 }
 
 .faq-grid > .faq-intro { flex: 6 1 0; min-width: 0; }

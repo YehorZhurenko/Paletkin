@@ -96,7 +96,7 @@
 
 .tariff-section-warehouses {
   background: var(--tariff-bg-block);
-  padding: 28px 32px;
+  padding: 28px 0;
   border-right: 1px solid var(--tariff-border);
   display: flex;
   flex-direction: column;
@@ -270,7 +270,7 @@
   }
 
   .tariff-section-warehouses {
-    padding: 24px 28px;
+    padding: 24px 0;
     gap: 12px;
     border-bottom: 1px solid var(--tariff-border);
   }
@@ -335,7 +335,7 @@
 
   .tariff-section-warehouses,
   .tariff-section-prices-header {
-    padding: 20px 24px;
+    padding: 20px 0;
   }
 
   .tariff-section-warehouse-block {

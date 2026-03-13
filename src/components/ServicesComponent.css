@@ -64,6 +64,7 @@
 .service-body-item {
   padding: 32px;
   display: flex;
+  gap: 20px;
   align-items: flex-start;
   flex-direction: column;
   flex-shrink: 0;
@@ -75,15 +76,16 @@
   box-sizing: border-box;
 }
 .service-body-item img {
-  height: 48px;
+  width: 48px;
   width: auto;
+
   max-width: 100%;
   object-fit: contain;
   margin-bottom: 0px;
   flex-shrink: 0;
 }
 .service-item-text {
-  padding-top: 12px;
+  
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -144,13 +146,10 @@
   }
   .service-body-item {
     padding: 32px 24px;
-    gap: 20px;
     min-height: 320px;
     
   }
-  .service-body-item img {
-    height: 44px;
-  }
+
 }
 
 @media (max-width: 768px) {
@@ -198,10 +197,7 @@
     gap: 16px;
     min-height: 300px;
   }
-  .service-body-item img {
-    height: 40px;
-    
-  }
+
 }
 
 /* 480px и уже: одна колонка, карточки на всю ширину */
@@ -217,25 +213,32 @@
   }
 
   .service-body-item {
+
+    flex-direction: row;
     padding: 20px 16px;
-    gap: 16px;
+    gap: 26px;
     min-height: 200px;
   }
   .service-body-item img {
-    height: 36px;
+
+    width: 40px;
   }
 
   .service-item-text h3{
 
     font-family: var(--font-inter-tight);
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 600;
     line-height: 1.2;
     letter-spacing: -0.48px;
     text-align: left;
     color: #050200;
-
-    
+  
 
   }
+
+  .service-item-text p {
+    font-size: 16px;
+  }
+
 }

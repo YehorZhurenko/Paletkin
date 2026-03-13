@@ -7,6 +7,12 @@
 .marketplace-top {
 }
 
+.focus-clients-content {
+
+
+  
+}
+
 .marketplace-top-body {
   display: flex;
   justify-content: space-between;
@@ -33,9 +39,7 @@
   color: #353332;
 }
 
-.marketplace-delivery .delivery-section {
-  padding: 0 0 96px;
-}
+
 
 .marketplace-delivery .delivery-subtitle {
   margin-bottom: 36px;
@@ -43,7 +47,7 @@
 
 .regular-supplies {
   background: transparent;
-  padding: 56px 0 72px;
+
 }
 
 .regular-supplies__header {
@@ -247,7 +251,7 @@
 /* 980 — 769: узкий десктоп перед слайдером */
 @media (max-width: 980px) {
   .regular-supplies {
-    padding: 48px 0 56px;
+    padding: 48px 0 0;
   }
 
   .regular-supplies__header h2 {
@@ -436,6 +440,7 @@
 }
 
 .focus-clients__items {
+  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(3, minmax(220px, 1fr));
   gap: 24px;
@@ -497,7 +502,7 @@
 .marketplace-card-block__header {
   margin-bottom: 20px;
   background: #f5f5f5 url('../assets/image/logo/logo-bg.png') no-repeat right top / auto 100%;
-  padding: 48px;
+  padding: 20px;
   
 }
 
@@ -1001,6 +1006,7 @@
 
   .marketplace-info-card  {
     display: flex;
+    align-items: start;
     flex-direction: row;
 
   }
@@ -1010,6 +1016,11 @@
 @media (max-width: 768px) {
   .marketplace-sections {
     padding-bottom: 48px;
+  }
+
+  .general-block-card--slide {
+    min-width: min(240px, 80vw); /* уже карточки */
+
   }
 
   .focus-clients__top h2,
@@ -1048,7 +1059,7 @@
 .marketplace-double-cta__card {
   min-height: 220px;
   border-radius: 8px;
-  padding: 28px 28px 28px 32px;
+ 
   background-color: #f5f5f5;
   background-image: url('../assets/image/logo/logo-bg.png');
   background-repeat: no-repeat;
@@ -1060,12 +1071,14 @@
   align-items: center;
   gap: 24px;
   overflow: hidden;
+  position: relative;
 }
 
 .marketplace-double-cta__card-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 40px;
   gap: 20px;
   min-width: 0;
   flex: 0 1 auto;
@@ -1073,14 +1086,16 @@
 }
 
 .marketplace-double-cta__card h3 {
-  margin: 0;
+
   max-width: 340px;
   font-family: var(--font-inter-tight);
   font-size: 56px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 0.95;
   letter-spacing: -1.12px;
   color: #050200;
+  position: relative;
+  z-index: 2;
 }
 
 .marketplace-double-cta__card-img {
@@ -1088,12 +1103,11 @@
   width: auto;
   max-width: 50%;
   height: 168px;
-  object-fit: contain;
+ 
   object-position: right center;
+  position: relative;
   z-index: 1;
-  margin-right: 16px;
-  margin-bottom: 8px;
-  margin-top: 8px;
+
 }
 
 .marketplace-double-cta__card button {
@@ -1198,8 +1212,8 @@
 }
 
 .marketplace-related-services__icon {
-  width: 28px;
-  height: 28px;
+
+  max-width: 48px;
   object-fit: contain;
   margin-bottom: 16px;
 }
@@ -1319,15 +1333,12 @@
     gap: 24px;
   }
 
-  .marketplace-delivery .delivery-section {
-    padding-bottom: 72px;
-  }
+
 
   .marketplace-calculator,
   .marketplace-related-services,
   .marketplace-tariff,
-  .marketplace-video,
-  .marketplace-faq {
+  .marketplace-video {
     padding-bottom: 56px;
   }
 
@@ -1385,6 +1396,15 @@
 
 @media (max-width: 768px) {
 
+  
+  .general-block-top .general-block-title {
+    font-size: 48px;
+  }
+
+.general-block-card img {
+  height: 96px;
+}
+
   .focus-clients__badge {
 
     width: 48px;
@@ -1409,16 +1429,12 @@
     font-size: 15px;
   }
 
-  .marketplace-delivery .delivery-section {
-    padding-bottom: 44px;
-  }
 
   .marketplace-sections,
   .marketplace-calculator,
   .marketplace-related-services,
   .marketplace-tariff,
-  .marketplace-video,
-  .marketplace-faq {
+  .marketplace-video {
     padding-bottom: 44px;
   }
 
@@ -1522,9 +1538,7 @@
     font-size: 22px;
   }
 
-  .marketplace-delivery .delivery-section {
-    padding-bottom: 48px;
-  }
+
 
   .marketplace-sections {
     padding-bottom: 40px;
@@ -1565,7 +1579,7 @@
     overflow: visible;
   }
 
-  .marketplace-card-block,
+
   .marketplace-schemes-block,
   .general-block {
     margin-bottom: 48px;
@@ -1600,8 +1614,7 @@
 
   .marketplace-calculator,
   .marketplace-tariff,
-  .marketplace-video,
-  .marketplace-faq {
+  .marketplace-video {
     padding-bottom: 32px;
   }
   .marketplace-tariff {
@@ -1713,8 +1726,7 @@
   }
   .marketplace-calculator,
   .marketplace-tariff,
-  .marketplace-video,
-  .marketplace-faq {
+  .marketplace-video {
     padding-bottom: 36px;
   }
   .marketplace-tariff {

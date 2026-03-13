@@ -196,7 +196,7 @@ function Marketplace() {
     {
       title: 'Доставка на маркетплейсы',
       description: 'Быстрая и надежная доставка ваших товаров на склады популярных маркетплейсов с учетом всех требований.',
-      buttonLabel: 'Изучить',
+      buttonLabel: 'Узнать подробнее',
       isPopular: true,
       icon: fulfillmentShipIcon
     },
@@ -355,8 +355,8 @@ function Marketplace() {
 
       <div className="marketplace-delivery">
         <DeliverySection
-          title="Доставка на склады"
-          subtitle="Работаем с Wildberries, Ozon, Яндекс.Маркет, Lamoda и другими площадками."
+          title="Регулярные поставки"
+          subtitle="Мы осуществляем регулярные поставки на все основные маркетплейсы России."
           text_align="flex-start"
         />
       </div>

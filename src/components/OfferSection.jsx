@@ -1,5 +1,17 @@
-function OfferSection({ title = 'Начните доставку прямо сейчас' }) {
+function OfferSection({ title = 'Готовы отправить груз?' }) {
   return (
+    <div className="qta-faq-section">
+
+<section className="offer">
+
+    <h3>Не нашли ответ на свой вопрос?</h3>
+    <p>Свяжитесь с нами любым удобным способом</p>
+    <button type="submit" className="order-offer-btn">
+          Контакты
+        </button>
+
+</section>
+
     <section className="offer">
       <h3>{title}</h3>
       <p>Две минуты на оформление, остальное за нами. Доставим день в день</p>
@@ -18,6 +30,7 @@ function OfferSection({ title = 'Начните доставку прямо се
         Нажимая кнопку, вы согласаетесь с нашей политикой конфиденциальности
       </span>
     </section>
+    </div>
   )
 }
 
