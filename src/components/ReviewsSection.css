@@ -215,6 +215,15 @@
   .reviews-buttons {
     display: none;
   }
+
+
+  .reviews-title {
+
+    font-size: 48px;
+
+  }
+
+
 }
 
 @media (max-width: 480px) {

@@ -188,10 +188,7 @@ function Header() {
         </div>
 
         <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`} ref={mobileMenuRef}>
-          <a href="tel:+79933430444" className="mobile-menu-phone">
-            <img src={phoneIcon} alt="" className="phone-icon" />
-            +7 (993) 343-04-44
-          </a>
+   
 
           <div className="mobile-nav-links">
             <NavLink to="/online-table" onClick={() => setMobileMenuOpen(false)}>
@@ -246,9 +243,7 @@ function Header() {
             </div>
           </div>
 
-          <Link to="/checkout" className="mobile-menu-order-btn" onClick={() => setMobileMenuOpen(false)}>
-            Оформить заказ
-          </Link>
+
         </div>
       </div>
     </header>

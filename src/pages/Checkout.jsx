@@ -6,6 +6,7 @@ import DocumentsCtaSection from '../components/DocumentsCtaSection'
 import CalculatorComponent from '../components/Calculator'
 import TopDesc from '../components/TopDesc'
 import Breadcrumbs from '../components/Breadcrumbs'
+import OfferSection from '../components/OfferSection'
 
 import fire from "../assets/image/icons/fire.svg"
 
@@ -54,7 +55,7 @@ function Checkout() {
           />
       </div>
 
-      <DocumentsCtaSection />
+      <OfferSection />
       
     </section>
       </div>

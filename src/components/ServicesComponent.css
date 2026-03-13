@@ -249,3 +249,10 @@
   }
 
 }
+
+/* 481–768px: карточка по высоте строго под контент */
+@media (max-width: 768px) and (min-width: 481px) {
+  .service-body-item {
+    min-height: auto;
+  }
+}
