@@ -1,3 +1,8 @@
+.page,
+.about-page {
+  overflow-x: hidden;
+}
+
 .about-page {
   width: 100%;
   background: #ffffff;
@@ -10,6 +15,9 @@
 
 /* partner-about Section */
 .partner-about {
+
+  position: relative;
+  overflow: visible;
 }
 
 .partner-about-content {
@@ -22,12 +30,20 @@
 
 .partner-about-text {
   flex: 1;
+  position: relative;
+  z-index: 1;  
+
+  flex: 0 0 66.66%;   /* занимает 2/3 контейнера */
+  max-width: 66.66%;
+
+  
 }
 
 .partner-about-title {
   font-family: var(--font-tilda);
   font-size: 56px;
   font-weight: 600;
+  max-width: 100%;
   letter-spacing: -1.12px;
   text-align: left;
   color: #050200;
@@ -44,12 +60,13 @@
 }
 
 .partner-about-image {
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  max-width: 45%;
+  position: absolute;
+  right: 0;          /* прижать к правому краю (или left: 0;) */
+  top: 50%;
+  transform: translateY(-50%) scale(1.5); /* по центру + увеличить в 1.5 раза */
+  max-width: 45%;    /* как было */
+  pointer-events: none;
+  display: block;
 }
 
 .partner-about {
@@ -61,9 +78,7 @@
 .partner-about-image img {
   width: 100%;
   height: auto;
-  display: block;
   object-fit: contain;
-  max-width: 950px;
 }
 
 /* Statistic Section */
@@ -263,7 +278,7 @@
 .specialist-content {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 20px;
   min-width: 0;
   max-width: 100%;
 }
@@ -309,10 +324,17 @@
 }
 
 .specialist-item {
+
+  height: 430px;     /* постоянная высота */
+  min-height: 430px;
   position: relative;
   border-radius: 16px;
   overflow: hidden;
   background-repeat: no-repeat;
+
+  background-position: center center; /* по центру контейнера */
+  background-size: cover;      
+
   min-height: 430px;
   max-width: 430px;
   display: flex;
@@ -490,17 +512,25 @@
 
 }
 
+.partner-about-content {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  max-height: none;
+}
+
+
+
+
 @media (max-width: 768px) {
-  .specialist {
-    padding: 80px 0;
-  }
+
 
   .specialist-title {
     font-size: 36px;
   }
 
   .specialist-subtitle {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .specialist-item {
@@ -755,7 +785,10 @@ email-link:hover {
   font-size: 16px;
   font-family: var(--font-inter-tight);
   color: #666;
-  max-width: 370px;
+
+  min-width: 0;        /* главное: позволяет сжиматься внутри flex */
+  max-width: 100%;     /* не шире родителя */
+  box-sizing: border-box;
 
 }
 

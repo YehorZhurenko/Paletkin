@@ -1,6 +1,7 @@
 .top-text {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-content: start;
     width: 100%;
     flex-wrap: wrap;
     row-gap: 32px;

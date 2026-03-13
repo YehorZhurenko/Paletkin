@@ -34,10 +34,10 @@ function ServiceSection ({
                     Транспортные услуги
                 </button>
                 <button>
-                    Транспортные услуги
+                    Складские услуги
                 </button>
                 <button>
-                    Транспортные услуги
+                    Доп. услуги
                 </button>
                 </div>
                 )}

@@ -57,6 +57,9 @@
   filter: brightness(0) invert(1);
 }
 
+
+
+
 @media (max-width: 480px) {
   .partners-section {
     padding: 48px 0 64px;

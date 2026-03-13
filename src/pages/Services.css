@@ -7,12 +7,15 @@
 .services-top {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start; 
   width: 100%;
 }
 .services-top h1 {
   font-family: var(--font-tilda);
-  font-size: 72px;
+  font-size: 56px;
   font-weight: 600;
+  text-align: left;
+  align-self: flex-start;
 
   line-height: 0.9;
   letter-spacing: -1.44px;
@@ -73,7 +76,7 @@
     font-size: 36px;
   }
   .services-top p {
-    font-size: 16px;
+    font-size: 18px;
   }
   .service-offer {
     font-size: 28px;

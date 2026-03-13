@@ -6,6 +6,7 @@ import FaqSection from '../components/FaqSection'
 import ServiceSection from '../components/ServicesComponent'
 import TopDesc from '../components/TopDesc'
 import Breadcrumbs from '../components/Breadcrumbs'
+import OfferSection from '../components/OfferSection'
 
 
 import companys from '../assets/image/partners/companys.svg'
@@ -38,7 +39,7 @@ function Services() {
             <img src={companys} alt="Партнеры" />
           </div>
 
-          <ServiceSection show_top="true" sectionStyle={{ padding: '48px', background: '#f5f5f5', borderRadius: '8px' }} />
+          <ServiceSection show_top="true" sectionStyle={{  background: '#f5f5f5', borderRadius: '8px' }} />
 
           <CalculatorComponent />
           <FaqSection
@@ -47,7 +48,7 @@ function Services() {
             linkTo="/faq"
             linkText="Перейти в раздел FAQ"
           />
-          <DocumentsCtaSection />
+             <OfferSection />
         </div>  
       </div>
     </div>
