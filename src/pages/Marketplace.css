@@ -447,16 +447,16 @@
 
 .focus-clients__badge {
   display: block;
-  width: 34px;
-  height: 34px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .focus-clients__item h3 {
   margin: 0;
   font-family: var(--font-inter-tight);
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 600;
   line-height: 1.08;
   letter-spacing: -0.24px;
@@ -522,6 +522,7 @@
 .marketplace-card-grid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -535,7 +536,8 @@
 
 .marketplace-info-card,
 .marketplace-media-card {
-  min-height: 150px;
+
+  max-height: auto;
   padding: 32px 28px;
   border-radius: 8px;
   background: #f5f5f5;
@@ -543,9 +545,9 @@
 }
 
 .marketplace-info-card__icon {
-  display: block;
-  width: 28px;
-  height: 28px;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
   margin-bottom: 14px;
 }
@@ -561,6 +563,8 @@
 }
 
 .marketplace-info-card  {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   font-family: var(--font-inter-tight);
   font-size: 18px;
@@ -851,7 +855,7 @@
 }
 
 @media (max-width: 1280px) {
-  .focus-clients__top h2,
+
   .marketplace-card-block__header h2 {
     font-size: 44px;
   }
@@ -964,6 +968,45 @@
   }
 }
 
+
+@media (max-width: 960px){
+
+  .focus-clients__item {
+    display: flex;
+    align-items: center;      /* по вертикали */
+    gap: 12px;  
+  }
+
+  .marketplace-info-card__icon {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-right: 28px;
+  }
+
+  .marketplace-card-grid {
+    flex-direction: column;
+  }
+
+  .focus-clients__badge {
+    display: inline-block;
+    margin-bottom: 0;
+
+  }
+
+  .focus-clients__items {
+    grid-template-columns: 1fr;
+  }
+
+  .marketplace-info-card  {
+    display: flex;
+    flex-direction: row;
+
+  }
+
+}
+
 @media (max-width: 768px) {
   .marketplace-sections {
     padding-bottom: 48px;
@@ -974,7 +1017,6 @@
     font-size: 38px;
   }
 
-  .focus-clients__items,
   .marketplace-card-grid--three,
   .marketplace-card-grid--four,
   .scheme-grid {
@@ -1305,6 +1347,8 @@
 
 /* Промежуточные экраны (~1000px): карточки CTA вертикально — текст не обрезается, картинка не перекрывает */
 @media (max-width: 1100px) {
+
+  
   .marketplace-double-cta__card {
     min-height: 280px;
     padding: 24px 24px 28px;
@@ -1337,7 +1381,22 @@
   }
 }
 
+
+
 @media (max-width: 768px) {
+
+  .focus-clients__badge {
+
+    width: 48px;
+    height: 48px;
+
+
+  }
+
+  .focus-clients__top h2 {
+    font-size: 48px;
+  }
+
   .marketplace-top {
     padding: 28px 0 32px;
   }
@@ -1393,9 +1452,7 @@
     font-size: 32px;
   }
 
-  .marketplace-card-grid {
-    flex-direction: column;
-  }
+
 
   .marketplace-info-card,
   .marketplace-media-card {
@@ -1422,6 +1479,22 @@
   .regular-supplies__header-controls,
   .general-block-buttons {
     display: none;
+  }
+
+  .marketplace-info-card {
+
+    min-height: auto;   /* или просто удали min-height из общего правила */
+    height: auto;
+    overflow: visible; 
+  }
+
+  .marketplace-info-text p {
+    font-size: 18px;
+    max-height: none;
+    overflow: visible;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 
   .marketplace-top {
@@ -1482,10 +1555,14 @@
   .general-block-card span {
     font-size: 20px;
   }
-  .marketplace-info-card p,
   .marketplace-media-card p,
   .general-block-card p {
     font-size: 13px;
+  }
+
+  .marketplace-info-text {
+    max-height: none;
+    overflow: visible;
   }
 
   .marketplace-card-block,
@@ -1548,6 +1625,11 @@
   .marketplace-page {
     gap: 64px;
   }
+
+  .marketplace-info-text p {
+    font-size: 16px;
+  }
+
   .marketplace-top h1 {
     font-size: 28px;
   }
@@ -1663,12 +1745,17 @@
   }
 }
 
+
+
 /* 360px: картинки -full на всю карточку */
 @media (max-width: 360px) {
   .marketplace-double-cta__card {
     min-height: 280px;
     padding: 20px 16px 24px;
   }
+
+
+
   .marketplace-double-cta__card-img {
     max-height: 140px;
     object-fit: cover;

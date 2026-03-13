@@ -690,8 +690,9 @@
   align-items: center;
   padding: 46px 44px;
   min-height: 280px;
+  max-width: 90vw;
   justify-content: center;
-  position: relative;
+  
   overflow: hidden;
 
   background: #f9f9f9 url('../assets/image/cta-vector/vector.png') no-repeat;

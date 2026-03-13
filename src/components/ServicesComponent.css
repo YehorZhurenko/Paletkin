@@ -166,25 +166,20 @@
     text-overflow: clip;
     
   }
-  
-  
+    
   @media (max-width: 700px) {
 
     .service-body {
       grid-template-columns: 1;
       grid-template-columns: 1fr;
-  
       gap: 12px;
     }
 
     .service-body-item {
-
       min-height: 100px;
-
     }
 
   }
-
 
   .service-body-top {
     flex-direction: column;

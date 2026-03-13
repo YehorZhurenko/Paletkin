@@ -397,8 +397,10 @@ function Marketplace() {
                 {fulfillmentCards.map((card) => (
                   <article className="marketplace-info-card" key={card.title}>
                     <img src={card.icon} alt="" className="marketplace-info-card__icon" />
+                    <div className="marketplace-info-text">
                     <h3>{card.title}</h3>
                     <p>{card.description}</p>
+                    </div>
                   </article>
                 ))}
               </div>
