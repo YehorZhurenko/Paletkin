@@ -15,7 +15,11 @@ const popularRoutes = [
   { id: 'msk-nn', from: 'Москва', to: 'Нижний-Новгород' },
   { id: 'kzn-nn', from: 'Казань', to: 'Нижний-Новгород' },
   { id: 'msk-sochi', from: 'Москва', to: 'Сочи' },
-  { id: 'msk-kaliningrad', from: 'Москва', to: 'Калининград' }
+  { id: 'msk-kaliningrad', from: 'Москва', to: 'Калининград' },
+  { id: 'msk-nn', from: 'Москва', to: 'Нижний-Новгород' },
+  { id: 'msk-spb', from: 'Москва', to: 'СПБ' },
+  { id: 'msk-kzn', from: 'Москва', to: 'Казань' },
+  { id: 'spb-msk', from: 'СПБ', to: 'Москва' },
 ]
 
 const shipmentsMock = [

@@ -68,7 +68,7 @@
   text-align: left;
   color: #050200;
   white-space: nowrap;
-  overflow: visible;
+  overflow: auto;
 }
 
 .contacts-item a img {

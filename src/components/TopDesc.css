@@ -33,21 +33,14 @@
 }
 
 @media (max-width: 960px) {
-
     .top-text h1 {
-
         font-size: 56px;
-
     }
-
 }
 
 @media (max-width: 760px) {
-
     .top-text h1 {
-
         font-size: 48px;
-
     }
 
 }
