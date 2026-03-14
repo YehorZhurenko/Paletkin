@@ -390,10 +390,7 @@
     gap: 12px;
   }
 
-  .footer-legal a {
-    display: block;
-    width: 100%;  
-  }
+
 
   .newsletter-form input {
     min-width: auto;
@@ -681,6 +678,7 @@
 
   .footer-legal a {
    font-size: 16px;
+   width: 100%;
 
   }
   
@@ -692,9 +690,7 @@
     gap: 12px;
   }
 
-  .footer-legal a {
-    width: 100%;
-  }
+
 
   .footer-bottom-content .copyright {
     margin: 0 auto;       /* убираем margin-right:auto */
@@ -839,4 +835,14 @@
     margin-left: -10%;
     max-width: none;
   }
+
+
+  @media (max-width: 360px) {
+
+    .footer-legal a {
+ 
+      font-size: 12px;
+
+  }
+}
 }

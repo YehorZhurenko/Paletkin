@@ -9,7 +9,7 @@
   font-size: 72px;
   font-weight: 700;
   margin: 0;
-  color: #333;
+  color: #050200;
   font-family: var(--font-tilda);
 }
 
@@ -115,7 +115,7 @@
   font-weight: 600;
   margin-bottom: 12px;
   letter-spacing: -0.64px;
-  color: #333;
+  color: #050200;
   line-height: 1;
   font-family: var(--font-tilda);
 }
@@ -126,7 +126,7 @@
   line-height: 1.5;
   letter-spacing: -0.36px;
   text-align: left;
-  color: #353332;
+  color: #050200;
   font-size: 18px;
   font-family: var(--font-inter-tight);
 }
@@ -170,11 +170,11 @@
   font-size: 56px;
   font-weight: 700;
   margin: 30px 0 15px;
-  color: #333;
+  color: #050200
 }
 
 .faq-intro p {
-  color: #666;
+  color: #353322;
   margin: 0 0 30px;
   font-size: 18px;
 }

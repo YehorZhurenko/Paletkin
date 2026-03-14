@@ -19,7 +19,7 @@
   letter-spacing: -1.12px;
   text-align: center;
   color: #050200;
-  margin-bottom: 60px;
+  margin: 40px 0;
 }
 .whyus-top p {
 
@@ -65,17 +65,21 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
+  padding-bottom: 40px;
 
 }
 
 @media (max-width: 1024px) {
  
   .whyus-top h2 {
-    font-size: 40px;
+    font-size: 56px;
+    margin-bottom: 20px;
   }
   .whyus-top p {
     font-size: 18px;
   }
+
+
 
 }
 
@@ -96,6 +100,11 @@
   .whyus-bottom img {
     max-width: 100%;
   }
+
+  .whyus-top h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
 }
 
 
@@ -108,11 +117,11 @@
     align-items: stretch;       /* дети одной высоты */
 }
 
-
-  .whyus-top h2 {
-    font-size: 26px;
-    margin-bottom: 20px;
-  }
+.whyus-top h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+ 
 
   .whyus-top p {
 

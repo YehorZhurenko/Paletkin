@@ -13,6 +13,20 @@
   align-items: flex-start;
 }
 
+.service-buttons button {
+  padding: 12px 24px;
+  border-radius: 1000px;
+  border: none;
+  font-size: 18px;
+  -webkit-backdrop-filter: blur(32px);
+  backdrop-filter: blur(32px);
+  background-color: rgba(248, 127, 7, 0.1);
+  color: #eb7300;
+  display: flex;
+  gap: 8px;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
 .calc-map-wrapper {
   position: sticky;
   top: 24px;
@@ -105,14 +119,15 @@
   margin-bottom: 20px;
 }
 .form-header h2 {
-  margin: 0 0 6px;
+  margin: 40px 0;
   font-size: 56px;
-  padding-top: 20px;
+
+  color: #050200;
 }
 .form-header p {
   margin: 0;
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 18px;
+  color: #353322;
 }
 
 /* address */
@@ -326,7 +341,17 @@
   .form-header h2 {
 
     font-size: 48px;  
-    padding-bottom: 4px;
+    margin: 20px 0;
+  }
+
+  .service-buttons button {
+    font-size: 16px;
+
+  }
+
+
+  .form-header p {
+    font-size: 18px;
   }
 
   .calculator-component {
@@ -390,7 +415,9 @@
     padding-bottom: 4px;
   }
   
-
+  .form-header p {
+    font-size: 16px;
+  }
 
   .calculator-component {
     padding: 16px 12px;
@@ -885,19 +912,7 @@
   flex-wrap: wrap;
   gap: 16px;
 }
-.service-buttons button {
-  padding: 12px 24px;
-  border-radius: 1000px;
-  border: none;
-  font-size: 18px;
-  -webkit-backdrop-filter: blur(32px);
-  backdrop-filter: blur(32px);
-  background-color: rgba(248, 127, 7, 0.1);
-  color: #eb7300;
-  display: flex;
-  gap: 8px;
-  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
-}
+
 .service-buttons button:hover {
   transform: scale(1.03);
 }
@@ -1163,7 +1178,7 @@
   border-radius: 12px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 24px;
   flex-wrap: wrap;
 }
@@ -1287,6 +1302,10 @@
 
   @media (max-width: 480px) {
 
+    .service-buttons button {
+      font-size: 16px;
+    }
+
     .cargo-type button {
       font-size: 12px;
       flex: 1 1 0;
@@ -1296,6 +1315,9 @@
       white-space: nowrap;
     }
     
+    .service-buttons {
+      font-size: 16px;
+
   }
 
 }
@@ -1328,4 +1350,4 @@
   }
 
 }
-
+}

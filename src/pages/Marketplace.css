@@ -1,7 +1,7 @@
 .marketplace-page {
   display: flex;
   flex-direction: column;
-  gap: 144px;
+  gap: 10vw;
 }
 
 .marketplace-top {
@@ -224,7 +224,7 @@
 /* 1024 — 981: одна колонка, маркеты в 2 колонки */
 @media (max-width: 1024px) {
   .marketplace-page {
-    gap: 96px;
+    gap: 56px;
   }
   .regular-supplies__header {
     text-align: left;
@@ -492,8 +492,7 @@
   line-height: 1;
   letter-spacing: -1.12px;
   text-align: left;
-  color: #050200;
-  margin-bottom: 48px;
+
 }
 
 .packaging-block {
@@ -1184,6 +1183,9 @@
   .marketplace-related-services__buttons {
     display: none;
   }
+
+
+
 }
 
 .marketplace-related-services__card {
@@ -1342,7 +1344,7 @@
 
   .marketplace-calculator,
   .marketplace-related-services,
-  .marketplace-tariff,
+  .marketplace-tariff
    {
     padding-bottom: 56px;
   }
@@ -1648,7 +1650,7 @@
 
 @media (max-width: 480px) {
   .marketplace-page {
-    gap: 64px;
+    gap: 28px;
   }
 
   .marketplace-info-text p {

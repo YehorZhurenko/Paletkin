@@ -28,7 +28,7 @@
   font-size: 18px;
   line-height: 1.5;
   letter-spacing: -0.36px;
-  color: #353332;
+  color: #353322;
   max-width: 800px;
   text-align: center;
   margin-bottom: 40px;
@@ -89,7 +89,7 @@
 
   }
   .delivery-subtitle {
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 32px;
   }
   .delivery-track {

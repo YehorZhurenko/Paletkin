@@ -119,7 +119,7 @@ function Contacts() {
               <div className="work-title">Время работы</div>
               <div className="work-info">
               
-                Пн-Сб: 9:00-18:00 &nbsp;  <span>Вс: выходной</span>
+                Пн-Сб: 9:00-18:00 &nbsp;  <span>Вс:выходной</span>
 
               </div>
           </div>

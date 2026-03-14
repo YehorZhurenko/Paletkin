@@ -24,7 +24,7 @@ function FAQ() {
               <p>Всё, что нужно знать о доставке с Paletkin, в одном месте</p>
             </div>
             <div className="faq-top-right">
-              <div className="faq-top-items">
+              <div className="faq-top-items faq-top-items--active">
                 Общие вопросы
               </div>
               <div className="faq-top-items">
@@ -50,7 +50,7 @@ function FAQ() {
 
         </div>
         <FaqSection
-            title="Ответы на вопросы"
+            title="Общие вопросы"
             subtitle="Если вы все еще имеете вопросы о документах и сервисах"
           />
       </section>

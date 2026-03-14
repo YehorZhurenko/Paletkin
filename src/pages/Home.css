@@ -1,13 +1,17 @@
 .home {
   display: flex;
   flex-direction: column;
-  gap: 144px;
+  gap: 90px;
 }
 
 .home-pupi {
   display: flex;
   flex-direction: column;
   gap: 48px;
+}
+
+.container {
+ padding: 0 56px;
 }
 
 .home-top {
@@ -77,9 +81,7 @@
   object-position: right bottom;
   pointer-events: none;
 } 
-.home-offer {
-  
-}
+
 .home-offer-content {
   display: flex; 
   flex-wrap: wrap;
@@ -166,9 +168,7 @@
 /* ========== Адаптив Home ========== */
 /* 1040px: блок не должен мешать адаптивности — ограничиваем ширину и переполнение */
 @media (max-width: 1040px) {
-  .home {
-    gap: 96px;
-  }
+
   .home-top {
     min-height: 320px;
     overflow: hidden;
@@ -228,6 +228,16 @@
 
 /* 960px: высота блока 234px, лого на фоне справа */
 @media (max-width: 960px) {
+
+  .home {
+    gap: 64px;
+  }
+
+  .container {
+    padding: 0 48px;
+   }
+   
+
   .home-top {
     min-height: 234px;
     height: 234px;
@@ -329,13 +339,13 @@
     padding: 20px 0;
   }
   .home-video {
-    padding-bottom: 80px;
+
   }
 }
 
 @media (max-width: 768px) {
   .home-offer-text h2 {
-    font-size: 36px;
+    font-size: 48px;
   }
 
   .home-offer-text h2 img {
@@ -345,7 +355,7 @@
   }
 
   .home-offer-text p {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .home-blocks-item {
@@ -388,6 +398,15 @@
 
 /* 480px: высота 376px, колонка; левая картинка — лёгкий поворот, дальше усиливается с уменьшением экрана */
 @media (max-width: 480px) {
+
+  .home {
+    gap: 36px;
+  }
+
+  .container {
+    padding: 0 32px;
+   }
+
   .home {
     gap: 64px;
   }

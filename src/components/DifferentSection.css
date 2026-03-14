@@ -261,8 +261,11 @@
 }
 
 @media (max-width: 480px) {
-  .different {
-    padding: 40px 0;
+
+  .home {
+
+    gap: 24px;
+
   }
 
   .different-title {
