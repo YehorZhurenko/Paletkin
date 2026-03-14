@@ -881,9 +881,7 @@ email-link:hover {
   .offer-form {
     flex-direction: column;
   }
-  .offer-input {
-    max-width: none;
-  }
+
 }
 
 @media (max-width: 1024px) {

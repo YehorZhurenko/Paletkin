@@ -3,6 +3,7 @@ import './FAQ.css'
 
 import FaqSection from '../components/FaqSection'
 import Breadcrumbs from '../components/Breadcrumbs'
+import OfferSection from '../components/OfferSection'
 
 function FAQ() {
   const [expandedFaq, setExpandedFaq] = useState(0)
@@ -53,6 +54,7 @@ function FAQ() {
             title="Общие вопросы"
             subtitle="Если вы все еще имеете вопросы о документах и сервисах"
           />
+          <OfferSection />
       </section>
     </div>
       </div>
