@@ -52,7 +52,7 @@
 
 .regular-supplies__header {
   width: 100%;
-  max-width: 640px;
+  max-width: 100%;
   margin-bottom: 28px;
   text-align: left;
 }
@@ -70,7 +70,7 @@
 .regular-supplies__header p {
   margin: 0;
   font-family: var(--font-inter-tight);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.4;
   color: #353332;
 }
@@ -207,9 +207,7 @@
     gap: 24px;
   }
 
-  .regular-supplies__header h2 {
-    font-size: 48px;
-  }
+
 
   .regular-supplies__market-name,
   .regular-supplies__market-dot,
@@ -293,6 +291,9 @@
 .regular-supplies__header-text {
   flex: 1;
   min-width: 0;
+}
+
+.regular-supplies__header-text p {
 }
 
 .regular-supplies__header-controls {
@@ -1302,9 +1303,7 @@
 .marketplace-faq {
 }
 
-.marketplace-faq .faq-section {
-  margin-bottom: 14px;
-}
+
 
 @media (max-width: 1280px) {
   .marketplace-double-cta__card h3,
@@ -1344,7 +1343,7 @@
   .marketplace-calculator,
   .marketplace-related-services,
   .marketplace-tariff,
-  .marketplace-video {
+   {
     padding-bottom: 56px;
   }
 

@@ -138,6 +138,20 @@ function Map2GIS({ containerId, mapRef, center, zoom, stops, onMapClick, markerI
     }
   }, [containerId, center[0], center[1], zoom])
 
+  // подгоняем canvas карты под размеры контейнера при ресайзе окна
+  useEffect(() => {
+    const handleResize = () => {
+      if (mapRef.current && typeof mapRef.current.resize === 'function') {
+        mapRef.current.resize()
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [mapRef])
+
   useEffect(() => {
     if (!mapRef.current || !mapglRef.current) return
     const map = mapRef.current

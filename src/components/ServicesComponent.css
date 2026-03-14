@@ -25,7 +25,7 @@
 }
 .service-all-body {
   border-radius: 8px;
-  padding: 0;
+  padding: 48px;
 }
 .service-body-top {
   display: flex;
@@ -150,17 +150,14 @@
     
   }
 
+  .service-all-body {
+    padding: 32px;
+}
+
 }
 
 @media (max-width: 768px) {
- 
-
-  .service-all-body {
-
-  }
-
-
-  
+   
   .service-item-text h3 {
     
     
