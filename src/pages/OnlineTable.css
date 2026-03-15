@@ -2,6 +2,8 @@
   padding: 80px 0 0;
 }
 
+
+
 .online-table-header {
   margin-bottom: 40px;
 }
@@ -233,16 +235,19 @@
 
 .shipments-row {
   display: grid;
-  grid-template-columns: 1.1fr 1.3fr 1.4fr 1.8fr 2.4fr 2.1fr 1.6fr 1.2fr;
+  grid-template-columns: 0.4fr 0.8fr 0.4fr 0.6fr 1fr 1fr 0.8fr 0.7fr;
   gap: 12px;
   padding: 14px 20px;
   align-items: center;
   font-family: var(--font-inter-tight);
   font-size: 14px;
   border-bottom: 1px solid #e5e7eb;
+
+  justify-content: center;
 }
 
 .shipments-row--head {
+ 
   background: #f9fafb;
   font-size: 12px;
   font-weight: 500;
@@ -254,26 +259,46 @@
 }
 
 .cell-code {
+  font-size: 19px;
   font-weight: 600;
   color: #050200;
 }
 
 .cell-deadline {
+  border-radius: 999px;
+  border: none;
+  padding: 8px 14px;
   font-family: var(--font-inter-tight);
-  font-weight: 600;
-  color: #f87f07;
+  font-size: 13px;
+  cursor: pointer;
+  background: #f87f07;
+  color: #ffffff;
+  width: fit-content;
 }
 
 .cell-vehicle {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  font-size: 18px;
   font-weight: 500;
 }
 
+
+.cell-vehicle img {
+  display: inline-block;
+  border-radius: 6px;
+
+  max-width: 80px;
+}
+
 .cell-customer .customer-name {
+  font-size: 18px;
   font-weight: 600;
 }
 
 .cell-customer .customer-type {
-  font-size: 12px;
+  font-size: 16px;
   color: #6b7280;
 }
 
@@ -331,6 +356,12 @@
   border-left: 2px dotted #e5e7eb;
 }
 
+.route-text {
+
+  font-size: 18px;
+
+}
+
 .route-text > div:first-child {
   color: #050200;
 }
@@ -340,7 +371,13 @@
 }
 
 .cell-fill {
-  font-size: 13px;
+  font-size: 18px;
+}
+
+.date-time {
+
+  font-size: 18px;
+
 }
 
 .status-badge {
@@ -350,7 +387,7 @@
   min-width: 90px;
   border-radius: 999px;
   padding: 4px 10px;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .status-badge--Открыта {
@@ -545,6 +582,9 @@
   }
 }
 
+
+
+
 @media (max-width: 768px) {
   .online-table-page {
     padding-top: 48px;
@@ -638,7 +678,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
   .online-table-title {
     font-size: 26px;
   }

@@ -7,6 +7,8 @@ import OfferSection from '../components/OfferSection'
 import Breadcrumbs from '../components/Breadcrumbs'
 import arrowIcon from '../assets/image/icons/arrow.svg'
 
+import car3 from '../assets/image/cars/item-car3.png'
+
 const popularRoutes = [
   { id: 'all', label: 'Все' },
   { id: 'msk-spb', from: 'Москва', to: 'СПБ' },
@@ -486,7 +488,7 @@ function OnlineTable() {
             {pageItems.map((s) => (
               <div key={s.id} className="shipments-row">
                 <div className="cell-deadline">{s.deadline}</div>
-                <div className="cell-vehicle">{s.vehicle}</div>
+                <div className="cell-vehicle"><img src = {car3} alt='car pic'></img>{s.vehicle}</div>
                 <div className="cell-code">{s.id}</div>
                 <div className="cell-customer">
                   <div className="customer-name">{s.customer}</div>
@@ -510,7 +512,7 @@ function OnlineTable() {
                   </div>
                 </div>
                 <div className="cell-fill">{s.fillLevel}</div>
-                <div>{formatDateTimeHuman(s.dateTime)}</div>
+                <div className='date-time'>{formatDateTimeHuman(s.dateTime)}</div>
                 <div>
                   <span
                     className={`status-badge ${
