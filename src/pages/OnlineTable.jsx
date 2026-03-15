@@ -43,7 +43,7 @@ const shipmentsMock = [
   {
     id: '4KHD9201',
     routeId: 'msk-kzn',
-    vehicle: 'Фура 3 т',
+    vehicle: 'Фура 3т',
     deadline: '15:32:59',
     customer: 'OZON',
     customerType: 'Маркетплейс',
@@ -58,7 +58,7 @@ const shipmentsMock = [
   {
     id: 'R2D20877',
     routeId: 'spb-msk',
-    vehicle: 'Фура 5 т',
+    vehicle: 'Фура 5т',
     deadline: '23:45:59',
     customer: 'OZON',
     customerType: 'Маркетплейс',
@@ -73,7 +73,7 @@ const shipmentsMock = [
   {
     id: 'BB79K2E2',
     routeId: 'msk-nn',
-    vehicle: 'Фура 3 т',
+    vehicle: 'Фура 3т',
     deadline: '00:00',
     customer: 'Я.Маркет',
     customerType: 'Маркетплейс',
@@ -88,7 +88,7 @@ const shipmentsMock = [
   {
     id: 'M90L451P',
     routeId: 'msk-nn',
-    vehicle: 'Газель 1,5 т',
+    vehicle: 'Газель 1,5т',
     deadline: '00:00',
     customer: 'OZON',
     customerType: 'Маркетплейс',
@@ -487,6 +487,7 @@ function OnlineTable() {
             </div>
             {pageItems.map((s) => (
               <div key={s.id} className="shipments-row">
+                <div className='grid-painter'></div>
                 <div className="cell-deadline">{s.deadline}</div>
                 <div className="cell-vehicle"><img src = {car3} alt='car pic'></img>{s.vehicle}</div>
                 <div className="cell-code">{s.id}</div>
@@ -513,7 +514,7 @@ function OnlineTable() {
                 </div>
                 <div className="cell-fill">{s.fillLevel}</div>
                 <div className='date-time'>{formatDateTimeHuman(s.dateTime)}</div>
-                <div>
+                
                   <span
                     className={`status-badge ${
                       s.status === 'Почти заполнен'
@@ -523,7 +524,7 @@ function OnlineTable() {
                   >
                     {s.status}
                   </span>
-                </div>
+               
               </div>
             ))}
             {filteredShipments.length === 0 && (
