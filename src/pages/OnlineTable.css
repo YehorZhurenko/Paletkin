@@ -74,6 +74,12 @@
   width: 100%;
 }
 
+.date-input-wrapper {
+  display: flex;
+  align-items: stretch; /* 1. Главное изменение */
+  gap: 16px;
+}
+
 .popular-header {
   display: flex;
   justify-content: space-between;
@@ -175,10 +181,13 @@
 
 .shipments-header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 24px;
   margin-bottom: 20px;
+
+  flex-wrap: wrap;
 }
 
 .shipments-header-right {
@@ -186,12 +195,14 @@
   flex-direction: row;
   align-items: center;
   gap: 12px;
+
+  flex-wrap: wrap;
 }
 
 .shipments-header-text h2 {
   margin: 0 0 6px;
   font-family: var(--font-tilda);
-  font-size: 32px;
+  font-size: 56px;
   font-weight: 600;
   letter-spacing: -0.64px;
   color: #050200;
@@ -206,25 +217,36 @@
 
 .shipments-header-controls {
   display: flex;
+  flex-direction: row;
   gap: 16px;
   align-items: flex-end;
+  
 }
 
 .shipments-status-tags {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap:nowrap;
   gap: 8px;
   justify-content: flex-end;
 }
 
 .status-tag {
-  border-radius: 999px;
-  border: none;
-  padding: 8px 14px;
-  background: #f3f4f6;
   font-family: var(--font-inter-tight);
-  font-size: 13px;
-  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #eb7300;
+  border-radius: 1000px;
+  -webkit-backdrop-filter: blur(32px);
+  backdrop-filter: blur(32px);
+  background-color: rgba(248, 127, 7, 0.1);
+  border: none;
+  letter-spacing: -0.35px;
+  padding: 8px 12px;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+
+  white-space: nowrap;
 }
 
 .status-tag--active {
@@ -256,10 +278,10 @@
   border-radius: 8px;
   border: none;
   padding: 10px 18px;
-  background: #f87f07;
-  color: #ffffff;
+  background: #EDEDED;
+  color: #050200;
   font-family: var(--font-inter-tight);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   cursor: pointer;
 }
@@ -289,11 +311,16 @@
 }
 
 .shipments-row--head {
+
+  display: grid;
+  gap: 20px;
  
   background: #f9fafb;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
   color: #6b7280;
+
+  grid-template-columns: 0.4fr 0.8fr 0.4fr 0.6fr 1fr 1fr 0.8fr 0.7fr;
   
 }
 
@@ -628,6 +655,26 @@
 
 }
 
+  @media (max-width: 960px) {
+
+    .shipments-status-tags {
+      
+      justify-content: flex-start;
+      flex-wrap:wrap;
+
+      gap: 20px;
+      
+    }    
+
+    .shipments-header-right {
+
+      align-items: flex-start;
+      gap: 20px;
+
+}
+
+  }
+
 /*  TABLE, originally, 960px  */
 
 @media (max-width: 1300px) {
@@ -917,7 +964,7 @@
 
   .shipments-header-right {
     flex-direction: column;
-    align-items: flex-start;
+
   }
 
   .shipments-header-controls {

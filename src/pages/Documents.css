@@ -224,10 +224,10 @@
   width: 100%;
   background: transparent;
   border: none;
-  padding: 16px 16px;
+  padding: 0 16px;
   cursor: pointer;
   text-align: left;
-  min-height: 56px; /* keep question height stable so it doesn't shift */
+  min-height: 48px; /* keep question height stable so it doesn't shift */
 }
 
 .faq-icon {

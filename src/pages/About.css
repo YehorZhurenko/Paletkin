@@ -273,6 +273,12 @@
   .specialist-controls {
     display: none;
   }
+
+  .statistic-count {
+    font-size: 48px;
+
+  }
+
 }
 
 .specialist-content {
@@ -546,6 +552,14 @@
   .specialist-placeholder {
     flex: 0 0 90%;
     min-height: 260px;
+  }
+
+  .statistic-count {
+    font-size: 36px;
+    color: #050200;
+    font-weight: 600;
+    letter-spacing: -1.12px;
+    font-family: var(--font-tilda);
   }
 }
 

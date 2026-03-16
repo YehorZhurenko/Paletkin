@@ -20,6 +20,8 @@
     color: #050200;
     align-self: center;
     max-width: 800px;
+
+    justify-items: center;
 }
 
 .top-text p {

@@ -180,6 +180,7 @@
   flex-grow: 1;
   height: 48px;
   min-width: 0;
+  height: 48px;
 }
 
 .field-input::placeholder {
@@ -544,14 +545,16 @@
 }
 
 .calendar-btn {
-  padding: 12px;
-  background: #ff8c00;
-  border: none;
+  display: flex;       /* 2. Центрируем иконку внутри растянутой кнопки */
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;     /* 3. Оставляем паддинги только по бокам */
+  height: 100%;        /* 4. Позволяем флексу растянуть элемент */
   border-radius: 8px;
   background-color: #f87f07;
+  border: none;
   cursor: pointer;
-  line-height: 0;
-  transition: background-color 0.25s ease, transform 0.2s ease;
+  box-sizing: border-box;
 }
 .calendar-btn:hover {
   transform: scale(1.05);

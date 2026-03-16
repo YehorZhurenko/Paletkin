@@ -186,18 +186,11 @@ function DateFilter({ value, onChange }) {
 
   return (
     <div className="shipments-date-control">
-      <label>Дата отправления</label>
+
       <div className="date-field">
         <div className="date-input-wrapper" onClick={() => setOpen(true)}>
-          <input
-            type="text"
-            className="field-input"
-            placeholder="Выбрать дату"
-            readOnly
-            value={value ? formatDateHuman(value) : ''}
-          />
-          <button type="button" className="calendar-btn">
-            📅
+          <button type="button" className="shipments-filter-btn">
+            Открыть расписание
           </button>
         </div>
 
@@ -428,7 +421,7 @@ function OnlineTable() {
           <div className="shipments-header">
             <div className="shipments-header-text">
               <h2>Отправления</h2>
-              <p>Список ближайших рейсов с доступными местами для вашего груза</p>
+          
             </div>
             <div className="shipments-header-right">
               <div className="shipments-status-tags">
