@@ -917,13 +917,15 @@
     align-items: center;
   }
 
-
-
 }
 
 @media (max-width: 480px) {
   .online-table-page {
     padding-top: 56px;
+  }
+
+  .shipments-header-text h2 {
+    font-size: 32px;
   }
 
   .popular-cta-btn {
@@ -996,9 +998,7 @@
     font-size: 20px;
   }
 
-  .shipments-header-text h2 {
-    font-size: 22px;
-  }
+
 
   .shipments-filter-btn {
     padding: 8px 14px;
