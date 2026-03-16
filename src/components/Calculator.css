@@ -7,14 +7,29 @@
   max-width: 100%;
   box-sizing: border-box;
   min-height: fit-content;
-  padding: 24px 48px;
+  padding: 24px;
   border-radius: 8px;
   background-color: #f5f5f5;
   align-items: flex-start;
 }
 
+.payment-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.payment-text .method {
+  font-family: var(--font-inter-tight);
+  font-size: 18px;
+  letter-spacing: -0.36px;
+  color: #353332;
+  margin: 0;
+}
+
 .service-buttons button {
-  padding: 12px 24px;
+  padding: 12px 12px;
   border-radius: 1000px;
   border: none;
   font-size: 18px;
@@ -39,6 +54,8 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   align-self: flex-start;
 }
+
+
 
 .calc-map-2gis {
   min-height: 100%;
@@ -339,6 +356,21 @@
 
 @media (max-width: 768px) {
 
+  .payment-image {
+    border-radius: 8px;
+    background-color: rgba(248, 127, 7, 0.1);
+ 
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+  }
+
+  .payment-text .method {
+    font-size: 16px;
+  }
+
   .form-header h2 {
 
     font-size: 48px;  
@@ -358,7 +390,7 @@
   .calculator-component {
     flex-direction: column;
     min-height: auto;
-    padding: 24px 20px;
+    padding: 12px;
   }
 
   .calc-map-wrapper {
@@ -398,11 +430,12 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   .payment {
     flex: 1 1 auto;
+    justify-content: space-between;
     min-width: 200px;
     max-width: 280px;
   }
@@ -414,6 +447,13 @@
     margin-top: 40px;
     font-size: 32px;
     padding-bottom: 4px;
+  }
+
+  .payment-text {
+
+    flex-direction: column;
+
+
   }
   
   .form-header p {
@@ -458,9 +498,8 @@
     max-width: 100%;
   }
 
-  .payment-text .method {
-    font-size: 16px;
-  }
+
+
 
   .payment-text .details {
     font-size: 20px;
@@ -933,7 +972,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   flex: 1;
-  gap: 10px;
+ 
   justify-content: center;
 }
 
@@ -961,27 +1000,16 @@
 .payment-image {
   border-radius: 8px;
   background-color: rgba(248, 127, 7, 0.1);
-  padding: 8px;
+ 
   line-height: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.payment-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-}
 
-.payment-text .method {
-  font-family: var(--font-inter-tight);
-  font-size: 18px;
-  letter-spacing: -0.36px;
-  color: #353332;
-  margin: 0;
-}
+
+
 
 .payment-text .details {
   font-family: var(--font-inter-tight);
@@ -1181,7 +1209,7 @@
   border-radius: 12px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 24px;
   flex-wrap: wrap;
 }
@@ -1252,7 +1280,7 @@
   border-radius: 10px;
   font-family: var(--font-inter-tight);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   transition: background 0.2s ease;
 }
@@ -1338,7 +1366,7 @@
   }
   .calculator-cta-btn {
     width: 100%;
-    max-width: 280px;
+    
   }
 
 @media (max-width: 360px) {
