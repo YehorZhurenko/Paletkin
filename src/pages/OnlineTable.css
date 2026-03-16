@@ -38,9 +38,7 @@
 }
 
 
-.online-table-page {
-  padding: 80px 0 0;
-}
+
 
 .online-table-header {
   margin-bottom: 40px;
@@ -651,6 +649,7 @@
     grid-template-columns: 1fr;
     margin: 24px 0 20px;
     row-gap: 16px;
+
   }
 
 }
@@ -896,9 +895,7 @@
 }
 
 @media (max-width: 768px) {
-  .online-table-page {
-    padding-top: 48px;
-  }
+
 
   .online-table-title {
     font-size: 36px;
@@ -920,9 +917,7 @@
 }
 
 @media (max-width: 480px) {
-  .online-table-page {
-    padding-top: 56px;
-  }
+
 
   .shipments-header-text h2 {
     font-size: 32px;
