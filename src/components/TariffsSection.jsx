@@ -38,7 +38,7 @@ const defaultMarketplaces = [
 ]
 
 export default function TariffsSection({
-  title = 'Тарифы доставки на маркетплейсы',
+  title = 'Тарифы на доставку',
   subtitle = 'Прозрачные тарифы на доставку до маркетплейсов',
   marketplaces = defaultMarketplaces,
   className = ''

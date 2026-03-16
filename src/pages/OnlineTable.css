@@ -304,7 +304,8 @@
   justify-content: center;
   letter-spacing: -0.08em;
 
-  margin-top: 60px;
+  padding: 18px 0;
+  margin: 18px 0;
 
 }
 
@@ -312,13 +313,11 @@
 
   display: grid;
   gap: 20px;
- 
-  background: #f9fafb;
-  font-size: 16px;
+   font-size: 16px;
   font-weight: 500;
   color: #6b7280;
-
-  grid-template-columns: 0.4fr 0.8fr 0.4fr 0.6fr 1fr 1fr 0.8fr 0.7fr;
+  grid-template-columns: 0.5fr 0.7fr 0.4fr 0.6fr 1fr 1fr 0.8fr 0.7fr;
+  border: none;
   
 }
 
@@ -652,6 +651,7 @@
 
   }
 
+
 }
 
   @media (max-width: 960px) {
@@ -688,6 +688,8 @@
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 120px 1fr;
     place-items: center;
+
+    border: none;
   }
 
   .grid-painter {

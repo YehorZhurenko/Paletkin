@@ -13,11 +13,13 @@
   align-items: flex-start;
 }
 
-.payment-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
+.payment-text .details {
+  font-family: var(--font-inter-tight);
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.48px;
+  color: #050200;
+  margin: 0;
 }
 
 .payment-text .method {
@@ -42,6 +44,14 @@
   transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
 }
 
+.payment-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
 .calc-map-wrapper {
   position: sticky;
   top: 24px;
@@ -54,8 +64,6 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   align-self: flex-start;
 }
-
-
 
 .calc-map-2gis {
   min-height: 100%;
@@ -364,7 +372,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 54px;
+  
+  }
+
+ 
+
+  .payment-text .details {
+    font-size: 18px;
   }
 
   .payment-text .method {
@@ -430,14 +444,27 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .payment {
-    flex: 1 1 auto;
-    justify-content: space-between;
+    display: flex;
+    flex: 1 1 ;
     min-width: 200px;
     max-width: 280px;
+
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+    gap: 12px;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+
+
   }
 }
 
@@ -449,11 +476,13 @@
     padding-bottom: 4px;
   }
 
-  .payment-text {
+  .payment {
+    align-items: flex-start;
 
-    flex-direction: column;
-
-
+  }
+  
+  .payment-text .method {
+    font-size: 14px;
   }
   
   .form-header p {
@@ -498,12 +527,14 @@
     max-width: 100%;
   }
 
-
-
-
-  .payment-text .details {
-    font-size: 20px;
+  .payment-text {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
   }
+
+
+
 }
 
 @media (max-width: 320px) {
@@ -972,23 +1003,19 @@
   flex-direction: row;
   flex-wrap: nowrap;
   flex: 1;
- 
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .payment {
-  padding: 12px;
-  border-radius: 6px;
+
   cursor: pointer;
   display: flex;
   flex-direction: row;
   align-items: center;
   text-align: center;
   gap: 12px;
-  flex: 1 1 200px;
-  min-width: 0;
-  max-width: 240px;
-  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+
 }
 .payment:hover {
   transform: scale(1.02);
@@ -1000,7 +1027,7 @@
 .payment-image {
   border-radius: 8px;
   background-color: rgba(248, 127, 7, 0.1);
- 
+  padding: 8px;
   line-height: 0;
   display: flex;
   align-items: center;
@@ -1008,17 +1035,6 @@
 }
 
 
-
-
-
-.payment-text .details {
-  font-family: var(--font-inter-tight);
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: -0.48px;
-  color: #050200;
-  margin: 0;
-}
 
 .business-toggle {
   margin-bottom: 20px;
@@ -1280,9 +1296,11 @@
   border-radius: 10px;
   font-family: var(--font-inter-tight);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: background 0.2s ease;
+
+  white-space: nowrap;
 }
 .calculator-cta-btn:hover {
   background: #e67306;
@@ -1321,7 +1339,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
   gap: 12px;
   flex: 1 200px;
@@ -1345,6 +1363,11 @@
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+
+    .payment-text {
+      flex-direction: column;
+      align-items: flex-start;
+    }
     
     .service-buttons {
       font-size: 16px;
@@ -1352,7 +1375,6 @@
   }
 
 }
-
 
   .calculator-cta-block {
     flex-direction: column;
@@ -1366,7 +1388,7 @@
   }
   .calculator-cta-btn {
     width: 100%;
-    
+    max-width: 280px;
   }
 
 @media (max-width: 360px) {
@@ -1377,8 +1399,22 @@
     flex-wrap: wrap;
     flex: 1;
     gap: 10px;
-    justify-content: center;
+    justify-content: flex-start;
   }
+
+  .payment {
+    justify-content: flex-start;
+    align-items: center;
+     }
+
+     .calculator-cta-btn {
+      width: 100%;
+
+    }
+
+    .calculator-cta-block {
+      padding: 8px;
+    }
 
 }
 }
