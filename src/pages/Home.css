@@ -434,8 +434,7 @@
     right: -80px;
     bottom: 110px;
     margin-left: auto;
-    max-width: 55%;
-    max-height: 55%;
+    max-width: 75%;
     width: auto;
     object-fit: contain;
     object-position: right bottom;
@@ -457,10 +456,12 @@
 
 .home-banner__boxes {
   transform: rotate(320deg);
-  max-width: 400%;
+  max-width: 100%;
   position: relative;
   left: -15px;
   bottom: 200px;
+
+  z-index: 4;
   
 }
 
@@ -505,7 +506,6 @@
 /* 420px: поворот левой картинки усиливается */
 @media (max-width: 420px) {
   .home-banner__boxes-wrap {
-   
     margin-right: -50px;
   }
 }
@@ -526,10 +526,7 @@
   }
   .home-banner__logo {
     position: absolute;
- 
     margin-left: auto;
-    max-width: 58%;
-    max-height: 50%;
     width: auto;
     z-index: 2;
     object-fit: contain;

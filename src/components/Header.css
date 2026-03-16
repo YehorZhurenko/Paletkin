@@ -752,11 +752,14 @@
 
 
 @media (max-width: 360px) {
-  .main-nav ul {
-    padding: 10px 0;
+
+  .logo-default {
+    display: block !important;
   }
 
-
+  .logo-compact {
+    display: none !important;
+  }
 
   .header-actions .phone,
   .header-actions .order-btn {

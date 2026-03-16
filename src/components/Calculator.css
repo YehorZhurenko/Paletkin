@@ -1402,6 +1402,10 @@
     justify-content: flex-start;
   }
 
+  .payment-text {
+    gap: 12px;
+  }
+
   .payment {
     justify-content: flex-start;
     align-items: center;
