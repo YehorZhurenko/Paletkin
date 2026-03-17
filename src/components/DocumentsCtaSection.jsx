@@ -2,7 +2,7 @@ function DocumentsCtaSection() {
   return (
     <section className="bottom-ctas">
       <div className="container">
-        <div className="cta-grid">
+        <div className="docs-cta-grid">
           <div className="cta-card left-card">
             <h3>Нужны другие документы?</h3>
             <p>

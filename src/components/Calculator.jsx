@@ -626,7 +626,7 @@ export default function CalculatorComponent({ mode = 'estimate' }) {
 
       <div className="calc-form-wrapper">
         <div className="form-header">
-          <h2>Расчет стоимости доставки на маркетплейсы</h2>
+          <h2>Расчет стоимости доставки</h2>
           <p>Укажите адреса погрузки и выгрузки, укажите параметры и получите ориентировочную стоимость</p>
         </div>
         

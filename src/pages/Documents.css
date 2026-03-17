@@ -1,7 +1,7 @@
 .documents-page {
   display: flex;
   flex-direction: column;
-  gap: 144px;
+  gap: 64px;
   padding-bottom: 64px;
 }
 
@@ -150,9 +150,7 @@
 
 /* FAQ Section */
 /* FAQ Section */
-.faq-section {
-  padding: 0 32px ;
-}
+
 
 .faq-grid {
   display: flex;
@@ -166,12 +164,7 @@
 .faq-grid > .faq-intro { flex: 6 1 0; min-width: 0; }
 .faq-grid > .faq-list  { flex: 8 1 0; min-width: 0; }
 
-.faq-intro h2 {
-  font-size: 56px;
-  font-weight: 700;
-  margin: 30px 0 15px;
-  color: #050200
-}
+
 
 .faq-intro p {
   color: #353322;
@@ -179,27 +172,15 @@
   font-size: 18px;
 }
 
-.learn-more-btn {
-  display: inline-block;
-  background: var(--warning, #ff9800);
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 13px;
-  transition: background 0.3s ease;
-}
 
-.learn-more-btn:hover {
-  background: #f08000;
-}
+
+
 
 /* FAQ List (merged from DocumentsFaq.css) */
 .faq-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+
 }
 
 .faq-item {
@@ -208,32 +189,24 @@
   /* container will grow when the answer is shown */
   overflow: visible;
   /* keep icon visually aligned with the question title */
-  margin-top: 6px;
+
   border-bottom: 1px solid #e0e0e0;
-  padding: 20px 0;
+  padding: 36px 0;
 }
 
 .faq-item:last-child {
   border-bottom: none;
 }
 
-.faq-question {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  width: 100%;
-  background: transparent;
-  border: none;
-  padding: 0 16px;
-  cursor: pointer;
-  text-align: left;
-  min-height: 48px; /* keep question height stable so it doesn't shift */
-}
+
 
 .faq-icon {
+
+  margin-top: 4px;
+
   width: 48px;
-  height: 44px;
-  min-width: 44px;
+  height: 48px;
+  min-width: 48px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -262,15 +235,7 @@
 }
 
 /* Title (question) sits on its own line so it won't move when the answer opens */
-.faq-title {
-  display: block;
-  font-weight: 700;
-  font-size: 18px;
-  color: #111;
-  /* small top offset so it visually aligns with the round icon */
-  padding-top: 6px;
-  line-height: 1.1;
-}
+
 
 
 .faq-answer {
@@ -294,8 +259,10 @@
 }
 
 .faq-answer-inner {
-  color: #555;
+  font-size: 18px;
+  color: #353332;
   line-height: 1.6;
+  font-weight: 400;
 }
 
 
@@ -304,10 +271,15 @@
   background: #fff;
 }
 
-.cta-grid {
+.docs-cta-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* две колонки */
+  grid-auto-rows: auto;
+  gap: 40px;
+  justify-content: center;
+  align-items: start;
+
+  margin-top: 40px;
 }
 
 .cta-card {
@@ -315,8 +287,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 46px 44px;
-  min-height: 280px;
+  padding: 44px;
+  
   justify-content: center;
   position: relative;
   overflow: hidden;
@@ -333,10 +305,8 @@
   font-size: 18px;
   color: #353332;
   line-height: 1.6;
-  margin: 0 0 25px;
+  margin: 12px 0;
   flex-grow: 1;
-  margin-top: 12px;
-  margin-bottom: 32px;
   text-align: center;
   font-family: var(--font-inter-tight);
 }
@@ -353,6 +323,7 @@
   background-position: left center;
   background-size: auto 100%;
   text-align: center;
+  height: 100%;
 }
 
 .email-link {
@@ -375,8 +346,8 @@
   padding: 12px 24px;
   border-radius: 4px;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 18px;
   cursor: pointer;
   border: none;
   transition: background 0.3s ease;
@@ -406,7 +377,10 @@
   font-size: 16px;
   font-family: var(--font-inter-tight);
   color: #666;
-  max-width: 370px;
+  max-width: 480px;
+  min-width: 0;
+
+
 }
 
 .cta-input::placeholder {
@@ -425,11 +399,12 @@
 }
 
 .cta-notice {
-  font-size: 12px;
+  font-size: 16px;
   color: #999;
   text-align: left;
   font-family: var(--font-inter-tight);
   line-height: 1.4;
+  text-align: center;
 }
 
 /* Responsive */
@@ -443,9 +418,7 @@
 
 @media (max-width: 1024px) {
   
-  .documents-page {
-    gap: 96px;
-  }
+
   .page-header h1 {
     font-size: 48px;
   }
@@ -465,6 +438,11 @@
 }
 
 @media (max-width: 960px) {
+
+  .docs-cta-grid {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+  }
 
   .faq-grid {
 
@@ -494,11 +472,6 @@
     gap: 24px;
   }
 
-  .cta-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
   .page-header h1 {
     font-size: 32px;
   }
@@ -516,31 +489,24 @@
   }
 
   .cta-card h3 {
-    font-size: 28px;
-  }
-
-  .faq-intro h2 {
     font-size: 48px;
-
   }
+
+
 }
 
 @media (max-width: 480px) {
 
-  .faq-intro h2 {
-    font-size: 32px;
-
+  .order-cta-btn {
+    width: 100%;
   }
-
 
   .faq-item {
 
     padding: 0;
   }
 
-  .documents-page {
-    gap: 64px;
-  }
+
   .page-header {
     margin-top: 24px;
     margin-bottom: 32px;
@@ -564,8 +530,21 @@
     padding: 24px 20px;
   }
   .cta-card h3 {
-    font-size: 22px;
+    font-size: 32px;
   }
+
+  .order-cta-btn {
+    font-size: 16px;
+  }
+
+  .cta-card p {
+     font-size: 16px;
+  }  
+
+  .email-link {
+    font-size: 24px;
+  }
+  
   .cta-form {
     flex-direction: column;
   }

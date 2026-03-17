@@ -150,7 +150,7 @@ button {
 
 /* Utility Classes */
 .container {
-  max-width: 1792px;
+  max-width: 1920px;
   margin: 0 auto;
 }
 
@@ -195,6 +195,7 @@ button {
     transform: translateX(0);
   }
 }
+
 
 @keyframes bounce {
   0%, 100% {

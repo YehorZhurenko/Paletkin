@@ -63,7 +63,7 @@
   max-width: 100%;
   width: auto;
   height: auto;
-  max-height: 300px;
+  max-height: 450px;
   object-fit: contain;
   object-position: center bottom;
 
@@ -98,6 +98,7 @@
   line-height: 1.5;
   letter-spacing: -0.36px;
   color: #353332;
+  font-weight: 400;
   margin-bottom: 12px;
 }
 .home-offer-text h2 {
@@ -115,7 +116,7 @@
 
 .home-offer-text h2 img {
   display: inline-block;
-  margin: 3px 0px 0 11px;
+  margin: 6px 0 0 12px;
 }
 .home-offer-blocks {
   display: grid;

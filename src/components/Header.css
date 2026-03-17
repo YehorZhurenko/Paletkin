@@ -7,9 +7,10 @@
 }
 
 .logo img {
-  height: 24px;
+  height: 36px;
   width: auto;
   display: block;
+  margin-right: 12px;
 }
 
 .logo-compact {
@@ -20,9 +21,9 @@
   display: flex;
   list-style: none;
   margin: 0;
-  padding: 16px 0;
+  padding: 21px 0;
   align-items: center;
-  gap: 24px;
+  gap: 32px;
 }
 
 .main-nav li {
@@ -38,7 +39,7 @@
 .dropdown-toggle {
   text-decoration: none;
   color: #050200;
-  font-weight: 500;
+  font-weight: 400;
   background: none;
   border: none;
   cursor: pointer;
@@ -50,6 +51,8 @@
   padding: 0;
   transition: color 0.2s ease, transform 0.12s ease;
 }
+
+
 
 .dropdown-toggle.active,
 .nav-link.active {
@@ -93,7 +96,7 @@
 
 .arrow-icon {
   width: 12px;
-  height: 8px;
+  height: 12px;
   display: block;
   background-color: currentColor;
   -webkit-mask: url('../assets/image/icons/header/vector.svg') no-repeat center / contain;
@@ -289,7 +292,7 @@
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 24px;
 }
 
 .header-actions .phone {
@@ -303,8 +306,8 @@
 }
 
 .phone-icon {
-  width: 14px;
-  height: 14px;
+  width: 24px;
+  height: 24px;
   display: block;
 }
 
@@ -314,7 +317,7 @@
   font-weight: 500;
   font-size: 13px;
   white-space: nowrap;
-  padding: 12px 16px;
+  padding: 12px 24px;
   border-radius: 8px;
   background-color: #f87f07;
 
@@ -322,6 +325,8 @@
 }
 
 .order-btn-text {
+  font-size: 18px;
+  font-family: var(--font-inter-tight);
   display: inline;
 }
 

@@ -1,7 +1,4 @@
 
-.faq-section {
-    padding: 0px;
-}
 
 .faq-top-items {
 
@@ -19,6 +16,47 @@
   padding: 8px 12px;
   transition: background 0.2s, color 0.2s;
   white-space: nowrap;
+
+}
+
+.faq-title {
+  font-family: var(--font-tilda);
+  display: block;
+  font-weight: 600;
+  font-size: 32px;
+  color: #111;
+  /* small top offset so it visually aligns with the round icon */
+  line-height: 1.1;
+}
+
+.learn-more-btn {
+  font-family: var(--font-inter-tight);
+  display: inline-block;
+  background: #F87F07;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background: #f08000;
+}
+
+.faq-question {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+  text-align: left;
+  min-height: 48px; /* keep question height stable so it doesn't shift */
 
 }
 
@@ -83,6 +121,13 @@
   flex-shrink: 1;
 }
 
+.faq-intro h2 {
+  font-size: 56px;
+  font-weight: 600;
+  margin: 30px 0 15px;
+  color: #050200
+}
+
 /* Базовая капсула */
 .faq-top-item {
   padding: 10px 18px;
@@ -116,9 +161,7 @@
 }
 
 @media (max-width: 1024px) {
-  .faq-section {
-    padding: 32px 24px;
-  }
+
   .faq-page .faq-grid {
     padding: 32px 24px;
   }
@@ -139,9 +182,6 @@
 
 /* 960px–768px */
 @media (max-width: 960px) {
-  .faq-section {
-    padding: 28px 24px;
-  }
 
   .qta-faq-section {
     grid-template-columns: 1fr; /* одна колонка */
@@ -178,6 +218,11 @@
   .faq-top {
     padding: 20px 16px;
   }
+
+  .faq-intro h2 {
+    font-size: 48px;
+  }
+
   .faq-top-left h2 {
     font-size: 28px;
   }
@@ -198,23 +243,40 @@
     padding: 8px 14px;
   }
 
-  .faq-intro h2 {
+  .faq-answer-inner {
 
-    font-size: 32px;
+    padding-bottom: 14px;
 
   }
 
+  .faq-intro h2 {
+    font-size: 32px;
+  }
   
   .faq-intro p {
-
     font-size: 16px;
-
   }
 
+  .faq-title {
+    font-weight: 500;
+    font-size: 24px;
+  }
 
+  .faq-list {
+    gap: 16px
+  }
 
+  .learn-more-btn {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    height: 48px;
+  }
   
-
+  .faq-question {
+    min-height: 64px;
+    margin-bottom: 8px;
+  }
 
 }
 

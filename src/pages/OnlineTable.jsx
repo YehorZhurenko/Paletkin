@@ -6,6 +6,8 @@ import FaqSection from '../components/FaqSection'
 import OfferSection from '../components/OfferSection'
 import Breadcrumbs from '../components/Breadcrumbs'
 import arrowIcon from '../assets/image/icons/arrow.svg'
+import SortIcon from '../assets/image/icons/sort-icon 32px.svg?react';
+import CalendarIcon from '../assets/image/icons/calendar.svg?react'
 
 import car3 from '../assets/image/cars/item-car3.png'
 
@@ -189,8 +191,8 @@ function DateFilter({ value, onChange }) {
 
       <div className="date-field">
         <div className="date-input-wrapper" onClick={() => setOpen(true)}>
-          <button type="button" className="shipments-filter-btn">
-            Открыть расписание
+          <button type="button" className="shipments-calendar-btn">
+          <CalendarIcon className = "calendar-icon"/>  Открыть расписание
           </button>
         </div>
 
@@ -449,6 +451,15 @@ function OnlineTable() {
                 ))}
               </div>
               <div className="shipments-header-controls">
+
+              <button
+                  type="button"
+                  className="shipments-filter-btn"
+                  onClick={() => setFilterModalOpen(true)}
+                >
+                  
+                  <SortIcon className = "sort-icon"/>
+                </button>
                 <DateFilter
                   value={selectedDate}
                   onChange={(val) => {
@@ -456,13 +467,7 @@ function OnlineTable() {
                     setPage(1)
                   }}
                 />
-                <button
-                  type="button"
-                  className="shipments-filter-btn"
-                  onClick={() => setFilterModalOpen(true)}
-                >
-                  Фильтры
-                </button>
+
               </div>
             </div>
           </div>
