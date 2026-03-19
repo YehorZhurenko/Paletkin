@@ -19,17 +19,22 @@
 .different-title {
   font-family: var(--font-tilda);
   font-size: 56px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   letter-spacing: -1.12px;
   text-align: left;
   color: #050200;
-  margin: 0;
+
+
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .different-buttons {
   display: flex;
   gap: 15px;
+
+  margin-right: 64px;
 }
 
 .different-buttons .slider-btn {
@@ -60,6 +65,9 @@
   display: flex;
   transition: transform 0.4s ease;
   gap: 16px;
+
+  margin-right: -500px;
+
 }
 
 .different .slider-range {
@@ -129,12 +137,12 @@
   display: grid;
 
   grid-template-columns: 1fr;
-  grid-template-rows:160px auto auto;
+  grid-template-rows: 1fr auto auto;
 
   gap: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 580px;
+  width: 586px;
   height: 363px;
   flex-shrink: 0;
 }
@@ -152,6 +160,7 @@
 .different .card-image {
   max-width: 100%;
   object-fit: contain;
+  align-self: center;
 }
 
 .different .feature-card h3 {
@@ -178,6 +187,7 @@
   .different .feature-card {
     padding: 32px;
     height: 316px;
+    width: 584px;
   }
 
 }
@@ -201,12 +211,10 @@
     padding: 0 4px;
   }
 
-  .different .feature-card {    
-    width: 100%;
-    height: auto;
-    min-height: 320px;
-    width: 400px;
+  .different .feature-card {
     padding: 24px;
+    height: 318px;
+    width: 414px;
   }
 
   .different .card-image {
@@ -264,17 +272,13 @@
 @media (max-width: 480px) {
 
   .different .feature-card {
-    
-    grid-template-rows: 80px auto auto;
-    
-    min-height: 230px;
-    width: 310px;
+    height: 233px;
+    width: 309px;
     padding: 16px;
-    
   }
 
   .different .feature-card h3 {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   .different-title {
@@ -289,6 +293,19 @@
 
     max-width: 80px;
 
+  }
+
+}
+
+@media (max-width: 360px) {
+
+  .different .feature-card {
+    height: 226px;
+    width: 308px;
+  }
+
+  .different .feature-card h3 {
+    font-size: 18px;
   }
 
 }

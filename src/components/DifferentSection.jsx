@@ -33,7 +33,12 @@ const slidesData = [
 function DifferentSection() {
   return (
     <section className="different">
-      <div className="container">
+      <div className="container" style={{
+        
+        marginRight: 'calc(-50vw + 50%)',
+        paddingRight: 'calc(50vw - 50%)',
+        
+        }}>
         <div className="different-content">
           <SliderBase items={slidesData}>
             {({ step, maxStep, goTo, sliderRef, trackRef, offset, swipeHandlers }) => (
