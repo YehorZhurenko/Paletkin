@@ -6,6 +6,7 @@
 .different-content {
   display: flex;
   flex-direction: column;
+  gap: 12px;
 }
 
 .different-top {
@@ -17,7 +18,7 @@
 
 .different-title {
   font-family: var(--font-tilda);
-  font-size: 36px;
+  font-size: 56px;
   font-weight: 700;
   line-height: 1;
   letter-spacing: -1.12px;
@@ -125,10 +126,11 @@
   padding: 48px;
   border-radius: 8px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-template-rows:160px auto auto;
+
   gap: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -149,8 +151,6 @@
 
 .different .card-image {
   max-width: 100%;
-  height: auto;
-  margin-bottom: 48px;
   object-fit: contain;
 }
 
@@ -173,11 +173,23 @@
   color: #353332;
 }
 
+@media (max-width: 960px) {
+
+  .different .feature-card {
+    padding: 32px;
+    height: 316px;
+  }
+
+}
+
+
 /* Адаптив */
 @media (max-width: 768px) {
   .different-buttons {
     display: none;
   }
+
+
 
   .different .different-slider {
     margin-left: -4px;
@@ -193,22 +205,11 @@
     width: 100%;
     height: auto;
     min-height: 320px;
-    padding: 32px 28px;
+    width: 400px;
+    padding: 24px;
   }
 
   .different .card-image {
-    margin-bottom: 24px;
-    max-height: 120px;
-    width: auto;
-    object-fit: contain;
-  }
-
-  .different .feature-card h3 {
-    font-size: 24px;
-  }
-
-  .different .feature-card p {
-    font-size: 16px;
   }
 
   .different .slider-range {
@@ -252,7 +253,7 @@
   }
 
   .different-title {
-    font-size: 28px;
+    font-size: 48px;
   }
 
   .different-cards {
@@ -262,13 +263,32 @@
 
 @media (max-width: 480px) {
 
-  .home {
+  .different .feature-card {
+    
+    grid-template-rows: 80px auto auto;
+    
+    min-height: 230px;
+    width: 310px;
+    padding: 16px;
+    
+  }
 
-    gap: 24px;
-
+  .different .feature-card h3 {
+      font-size: 24px;
   }
 
   .different-title {
-    font-size: 24px;
+    font-size: 32px;
   }
+
+  .different .feature-card p {
+    font-size: 16px;
+  }
+
+  .different .card-image {
+
+    max-width: 80px;
+
+  }
+
 }

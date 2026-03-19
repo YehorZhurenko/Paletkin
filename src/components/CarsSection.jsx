@@ -2,11 +2,11 @@ import { useState } from 'react'
 
 import './CarsSection.css'
 import venicle from '../assets/image/cars/vehicle-image-container.png'
-import item_car1 from '../assets/image/cars/item-car.png'
-import item_car2 from '../assets/image/cars/item-car2.png'
-import item_car3 from '../assets/image/cars/item-car3.png'
-import item_car4 from '../assets/image/cars/item-car4.png'
-import item_car5 from '../assets/image/cars/item-car5.png'
+import item_car1 from '../assets/image/icons/cars/1.png'
+import item_car2 from '../assets/image/icons/cars/2.png'
+import item_car3 from '../assets/image/icons/cars/3.png'
+import item_car4 from '../assets/image/icons/cars/4.png'
+import item_car5 from '../assets/image/icons/cars/3.png'
 import SliderBase from './SliderBase'
 
 const cars = [
@@ -139,9 +139,9 @@ function CarsSection() {
                     key={car.id}
                     type="button"
                     className={`cars-item${car.id === selectedId ? ' cars-item--active' : ''}`}
-                    style={{ backgroundImage: `url(${car.bg})` }}
                     onClick={() => setSelectedId(car.id)}
                   >
+                    <div className="cars-pic"><img src={car.bg} alt="car-pic" /></div>
                     <div className="cars-weight">{car.weight}</div>
                     <div className="cars-name">{car.name}</div>
                     <div className="cars-price">{car.price}</div>
@@ -195,8 +195,9 @@ function CarsSection() {
                               <div
                                 key={car.id}
                                 className="cars-item cars-item--slide"
-                                style={{ backgroundImage: `url(${car.bg})` }}
+                               
                               >
+                                <div className="cars-pic"><img src={car.bg} alt="car-pic" /></div>
                                 <div className="cars-weight">{car.weight}</div>
                                 <div className="cars-name">{car.name}</div>
                                 <div className="cars-price">{car.price}</div>

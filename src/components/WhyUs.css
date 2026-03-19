@@ -19,7 +19,7 @@
   letter-spacing: -1.12px;
   text-align: center;
   color: #050200;
-  margin: 40px 0;
+  margin-bottom: 40px;
 }
 .whyus-top p {
 
@@ -65,7 +65,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
-  padding-bottom: 40px;
+
 
 }
 

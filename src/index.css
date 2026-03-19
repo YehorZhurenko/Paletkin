@@ -148,31 +148,8 @@ button {
   background: var(--secondary-color);
 }
 
-/* Utility Classes */
 .container {
-  max-width: 1920px;
-  margin: 0 auto;
-}
-
-@media (max-width: 1919px) {
-  .container {
-    padding-left: 48px;
-    padding-right: 48px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-}
-
-@media (max-width: 360px) {
-  .container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+  padding: 0 64px;
 }
 
 /* Animations */
@@ -196,13 +173,19 @@ button {
   }
 }
 
-
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 960px) {
+
+  .container {
+    padding: 0 48px;
   }
 }
 
@@ -221,16 +204,18 @@ button {
     font-size: 0.95rem;
   }
 
+  .container {
+    padding: 0 32px;
+  }
+
   .card {
     padding: 20px;
   }
+}
 
-  @media (max-width: 480px) {
+@media (max-width: 360px) {
 
-    .container {
-      padding: 20px;
-    }
-
+  .container {
+    padding: 0 20px;
   }
-
 }

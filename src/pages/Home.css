@@ -1,7 +1,7 @@
 .home {
   display: flex;
   flex-direction: column;
-  gap: 90px;
+  gap: 144px;
 }
 
 .home-pupi {
@@ -10,77 +10,44 @@
   gap: 48px;
 }
 
-.container {
- padding: 0 56px;
-}
 
 .home-top {
+  position: relative;
   background: 
   url('../assets/image/main-banner/logo.png') no-repeat right center,
   linear-gradient(78deg, #e46314 26%, #ffa729 96%);
   background-size: auto 100%, 100% 100%;
-  min-height: 468px;
-  display: flex;
-  align-items: center;
+  height: 24.4vw;
+
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
   max-width: 100%;
+
+}
+
+.home-banner__boxes {
+
+  position: absolute;
+  left: 12vw;
+  bottom: 1vw;
+  width: 46vw;
+
+}
+
+.home-banner__logo {
+  position: absolute;
+  bottom: 0;   
+  right: 10vw; 
+
+  width: 28.8vw;
 }
 
 .home-top .container {
-  width: 100%;
   max-width: 100%;
   height: 100%;
   position: relative;
 }
-
-.home-banner {
-  display: flex;
-  width: 100%;
-  max-width: 100%;
-  justify-content: flex-start;
-  align-items: flex-end;
-  gap: 0;
-  max-height: 468px;
-  min-height: 468px;
-  box-sizing: border-box;
-  position: relative;
-}
-
-/* Левая картинка визуально выше правой: приподнята над низом */
-.home-banner__boxes-wrap {
-  display: flex;
-  align-items: flex-end;
-  min-width: 0;
-  max-width: 50%;
-  position: relative;
-  z-index: 0;
-  margin-bottom: 8%;
-}
-
-.home-banner__boxes {
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  max-height: 450px;
-  object-fit: contain;
-  object-position: center bottom;
-
-}
-
-/* Лого на фоне блока: позиция справа, не расширяет блок */
-.home-banner__logo {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  max-width: 48%;
-  height: auto;
-  max-height: 100%;
-  object-fit: contain;
-  object-position: right bottom;
-  pointer-events: none;
-} 
 
 .home-offer-content {
   display: flex; 
@@ -166,142 +133,8 @@
   
 }
 
-/* ========== Адаптив Home ========== */
-/* 1040px: блок не должен мешать адаптивности — ограничиваем ширину и переполнение */
-@media (max-width: 1040px) {
 
-  .home-top {
-    min-height: 320px;
-    overflow: hidden;
-    max-width: 100%;
-  }
-  .home-top .container {
-    max-width: 100%;
-    overflow: hidden;
-  }
-  .home-banner {
-    max-height: 320px;
-    min-height: 320px;
-    max-width: 100%;
-  }
-  .home-banner__boxes-wrap {
-    max-width: 45%;
-    margin-bottom: 6%;
-  }
-  .home-banner__boxes,
-  .home-banner__logo {
-    max-height: 320px;
-    max-width: 100%;
-  }
-  .home-banner__logo {
-    max-width: 50%;
-  }
-}
 
-@media (max-width: 1280px) {
-  .home-top {
-    min-height: 360px;
-  }
-  .home-banner {
-    max-height: 360px;
-    min-height: 360px;
-  }
-  .home-banner__boxes-wrap {
-    margin-bottom: 7%;
-  }
-  .home-banner__boxes,
-  .home-banner__logo {
-    max-height: 360px;
-  }
-
-  .home-offer-text {
-    flex: 1;
-    max-width: 100%;
-  }
-
-  .home-offer-text h2 {
-    font-size: 56px;
-  }
-  .home-offer-blocks {
-    width: 100%;
-  }
-}
-
-/* 960px: высота блока 234px, лого на фоне справа */
-@media (max-width: 960px) {
-
-  .home {
-    gap: 64px;
-  }
-
-  .container {
-    padding: 0 48px;
-   }
-   
-
-  .home-top {
-    min-height: 234px;
-    height: 234px;
-    max-height: 234px;
-    padding: 0;
-    align-items: flex-end;
-  }
-  .home-top .container {
-    height: 234px;
-  }
-  .home-banner {
-    max-height: 234px;
-    min-height: 234px;
-    align-items: flex-end;
-  }
-  .home-banner__boxes-wrap {
-    max-width: 42%;
-    margin-bottom: 5%;
-  }
-  .home-banner__boxes {
-    max-height: 234px;
-    width: auto;
-    object-fit: contain;
-    object-position: left bottom;
-  }
-  .home-banner__logo {
-    max-height: 234px;
-    max-width: 52%;
-  }
-}
-
-/* 768px: высота блока 187px */
-@media (max-width: 768px) {
-  .home-top {
-    min-height: 187px;
-    height: 187px;
-    max-height: 187px;
-    padding: 0;
-    align-items: flex-end;
-  }
-  .home-top .container {
-    height: 187px;
-  }
-  .home-banner {
-    max-height: 187px;
-    min-height: 187px;
-    align-items: flex-end;
-  }
-  .home-banner__boxes-wrap {
-    max-width: 42%;
-    margin-bottom: 4%;
-  }
-  .home-banner__boxes {
-    max-height: 187px;
-    width: auto;
-    object-fit: contain;
-    object-position: left bottom;
-  }
-  .home-banner__logo {
-    max-height: 187px;
-    max-width: 52%;
-  }
-}
 
 @media (max-width: 1024px) {
   .home-offer-content {
@@ -339,14 +172,32 @@
   .home-tariff {
     padding: 20px 0;
   }
-  .home-video {
 
-  }
 }
 
+/* 960px: высота блока 234px, лого на фоне справа */
+@media (max-width: 960px) {
+
+  .home {
+    gap: 96px;
+  }
+
+
+   
+  .home-top {
+    height: 234px;
+  }
+
+}
+
+/* 768px: высота блока 187px */
 @media (max-width: 768px) {
   .home-offer-text h2 {
     font-size: 48px;
+  }
+
+  .home-top {
+    height: 187px;
   }
 
   .home-offer-text h2 img {
@@ -370,23 +221,17 @@
     font-size: 16px;
   }
 
-  /* .home-calculator,
-  .home-services,
-  .home-tariff,
-  .home-video,
-  .home-different,
-  .home-cars,
-  .home-blog,
-  .home-steps,
-  .home-reviews,
-  .home-whyus,
-  .home-faq {
-    padding-top: 48px;
-    padding-bottom: 48px;
+  .home-banner__boxes {
+    left: 8vw;
+    bottom: calc(2vw* 1.4);
+    width: 32vh;
   }
-  .home-blog {
-    padding: 64px 0;
-  } */
+  
+  .home-banner__logo {
+    bottom: 0;   
+    left: 60vw; 
+    width: 24vh;
+  }
 }
 
   @media (max-width: 660px) {
@@ -401,70 +246,14 @@
 @media (max-width: 480px) {
 
   .home {
-    gap: 36px;
-  }
-
-  .container {
-    padding: 0 32px;
-   }
-
-  .home {
     gap: 64px;
   }
-  .home-top {
-    height: 260px;
-    min-height: 260px;
-    max-height: 260px;
-    padding: 0;
-    align-items: stretch;
-  }
-  .home-top .container {
-    height: 260px;
-  }
-  .home-banner {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 0;
-    height: 100%;
-    min-height: 376px;
-    max-height: 376px;
-  }
-  .home-banner__logo {
-    position: absolute;
-    right: -80px;
-    bottom: 110px;
-    margin-left: auto;
-    max-width: 75%;
-    width: auto;
-    object-fit: contain;
-    object-position: right bottom;
-    z-index: 1;
-  }
-  .home-banner__boxes-wrap {
-    align-self: flex-start;
-    max-width: 55%;
-    flex: 1;
-    min-height: 0;
-    display: flex;
-    align-items: flex-end;
-    transform: rotate(-4deg);
-    transform-origin: left bottom;
-    margin-right: -40px;
-    margin-bottom: 0;
-    z-index: 0;
-  }
 
-.home-banner__boxes {
-  transform: rotate(320deg);
-  max-width: 100%;
-  position: relative;
-  left: -15px;
-  bottom: 200px;
 
-  z-index: 4;
-  
-}
+
+   .home-top {
+    height: 376px;
+  }
 
   .home-offer-text h2 {
     font-size: 28px;
@@ -488,99 +277,29 @@
   .home-blocks-text {
     font-size: 14px;
   }
-  .home-calculator,
-  .home-services,
-  .home-tariff,
-  .home-video,
-  .home-different,
-  .home-cars,
-  .home-blog,
-  .home-steps,
-  .home-reviews,
-  .home-whyus,
-  .home-faq {
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
-}
 
-/* 420px: поворот левой картинки усиливается */
-@media (max-width: 420px) {
-  .home-banner__boxes-wrap {
-    margin-right: -50px;
+  .home-banner__boxes {
+
+    transform: rotate(-45deg);
+    left: -12vw;
+    bottom: 26vw;
+    width: 48vh;
   }
+  
+  .home-banner__logo {
+    bottom: 0;   
+    left: 56vw; 
+    width: 28vh;
+  }
+
+
 }
 
 /* 360px: поворот левой картинки сильнее, одна коробка под лого — видно 3 коробки */
 @media (max-width: 360px) {
-  .home-top {
-
-  }
-
-  .home-top .container {
-    height: 376px;
-  }
-  .home-banner {
-    min-height: 376px;
-    max-height: 376px;
-    align-items: flex-start;
-  }
-  .home-banner__logo {
-    position: absolute;
-    margin-left: auto;
-    width: auto;
-    z-index: 2;
-    object-fit: contain;
 
 
-  }
-  .home-banner__boxes-wrap {
-    overflow: hidden;
-    max-width: 50%;
-    align-self: flex-start;
-    z-index: 1;
-    flex: 1;
-    min-height: 0;
-    display: flex;
-    align-items: flex-end;
-
-    transform-origin: left bottom;
-    margin-right: -45px;
-  }
-  .home-banner__boxes {
- 
-    left: 30px;
-    bottom: 260px;
-    max-height: 100px;
-    transform: rotate(300deg);
-    min-width: 240%;
-    margin-left: -70%;
-    object-fit: contain;
-
-  }
 }
 
-@media (max-width: 320px) {
-  .home-top {
-    min-height: 200px;
-    height: 200px;
-    max-height: 200px;
-  }
-  .home-banner {
-    min-height: 320px;
-  }
-  .home-banner__boxes {
-    max-height: 140px;
-  }
-  .home-banner__logo {
-    max-height: 45%;
-  }
 
- 
-}
 
-/* Секция услуг на главной: паддинги задаёт обёртка .home-services, здесь только фон при необходимости */
-.service-all.service-section--home {
-  padding: 0;
-  background: transparent;
-}

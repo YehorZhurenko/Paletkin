@@ -33,15 +33,15 @@ function Home() {
 
       <div className="home-pupi">
         <div className="home-top">
-          <div className="container">
-            <div className="home-banner">
-              <div className="home-banner__boxes-wrap">
+          
+         
+            
                 <img src={boxes} alt="Коробки" className="home-banner__boxes" />
-              </div>
               <img src={logo3d} alt="Paletkin" className="home-banner__logo" />
-            </div>
-          </div>
-        </div>
+  
+              </div>
+     
+        
       
         <div className="home-offer">
           <div className="container">
@@ -104,6 +104,7 @@ function Home() {
             title="Наши услуги"
             subtitle="Мы предлагаем комплексные логистические решения для эффективного управления цепочками поставок и доставки товаров на ведущие маркетплейсы России."
             wrapperClassName="service-section--home"
+            sectionStyle={{padding: 0}}
           />
         </div>
       </div>

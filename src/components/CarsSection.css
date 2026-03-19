@@ -8,6 +8,41 @@
   gap: 40px;
 }
 
+.cars-rigth {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  padding: 24px;
+  border-radius: 8px;
+  background: #ededed;
+  align-content: start;
+
+  justify-items: stretch;
+  height: auto;
+}
+
+.cars-item {
+  position: relative;
+  max-width: 200px;
+  width: auto;
+  height: 170px;
+  padding: 12px;
+  border-radius: 16px;
+  background-color: rgba(5, 2, 0, 0.03);
+  background-position: 0px 5px;
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+
+  overflow: hidden;
+}
+
 .cars-text h2 {
   font-family: var(--font-tilda);
   font-size: 56px;
@@ -31,37 +66,133 @@
   display: block;
   background: #f5f5f5;
   border-radius: 8px;
-  padding: 24px;
+  padding: 48px;
 }
 
 /* Обёртка для сетки и слайдера — один из двух виден в зависимости от ширины */
 .cars-view {
-  display: flex;
-  gap: 40px;
-  align-items: stretch;
-  min-width: 0;
+  display: grid;
+  gap: 48px;
+
+  grid-template-columns: minmax(200px, 908px) minmax(384px, 1fr);
+  grid-template-rows: 1fr;
+
+
+  height: 884px;
 }
 
 .cars-view--slider {
   display: none;
 }
 
+  @media (max-width: 1100px) {
+    .cars-view {
+      grid-template-columns: auto;
+      grid-template-rows: 1fr auto;
+
+      height: fit-content;
+    }
+
+    .cars-rigth {
+  
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+
+      gap: 16px;
+
+      border-radius: 8px;
+      background: #ededed;
+      align-content: start;
+    
+      justify-items: stretch;
+      height: min-content;
+
+    }
+
+  }
+
+  @media (max-width: 960px) {
+
+
+    .cars-body {
+      padding: 32px;
+    }
+
+    .cars-rigth {
+    grid-template-columns: repeat(auto-fill, minmax(116px, 1fr));
+
+
+    gap: 12px;
+}
+
+  }
+
+  @media (max-width: 768px) {
+
+    .cars-rigth {
+      padding: 12px;
+    }
+
+    .cars-body {
+      padding: 24px;
+    }
+
+    .cars {
+      padding: 10px 0;
+    }
+    .cars-text h2 {
+      font-size: 32px;
+      letter-spacing: -0.64px;
+    }
+    .cars-text p {
+      font-size: 18px;
+    }
+    .cars-title span:first-child {
+      font-size: 24px;
+    }
+    .cars-title span:last-child {
+      font-size: 14px;
+      padding: 6px 14px;
+    }
+    .car-descr {
+      font-size: 16px;
+    }
+    .car-spec-item p:first-child {
+      font-size: 12px;
+    }
+    .car-spec-item p:last-child {
+      font-size: 14px;
+    }
+    .cars-left {
+      padding: 0;
+    }
+    .cars-right {
+      padding: 16px;
+    }
+    .cars-main {
+      padding: 16px 16px 0;
+    }
+    .cars-weight {
+      font-size: 10px;
+    }
+    .cars-name {
+      font-size: 12px;
+    }
+    .cars-price {
+      font-size: 14px;
+    }
+  
+
+  
+  
+  }
+
+
 /* До 600px показываем слайдер, скрываем сетку и применяем стили слайдера */
 @media (max-width: 600px) {
-  .cars-view--grid {
-    display: none !important;
-  }
-  .cars-view--slider {
-    display: flex !important;
-    flex-direction: column;
-  }
-  .cars-body {
-    padding: 16px;
-  }
-  .cars-rigth {
-    padding: 0;
-    background: transparent;
-  }
+
+
+
   .cars-slider {
     overflow: hidden;
     width: 100%;
@@ -89,10 +220,10 @@
 
 .cars-left {
   flex: 1.1;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr auto;
   gap: 32px;
-  padding: 32px 32px 40px;
   border-radius: 24px;
 }
 
@@ -124,7 +255,7 @@
 .cars-main {
   margin-top: 16px;
   border-radius: 24px;
-  padding: 24px 24px 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -173,34 +304,9 @@
   color: #050200;
 }
 
-.cars-rigth {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 161px);
-  gap: 16px;
-  padding: 16px;
-  border-radius: 8px;
-  background: #ededed;
-  align-content: start;
-}
 
-.cars-item {
-  position: relative;
-  width: 161px;
-  height: 170px;
-  padding: 12px;
-  border-radius: 16px;
-  background-color: rgba(5, 2, 0, 0.03);
-  background-position: 0px 5px;
-  background-size: 90% auto;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  border: 1px solid transparent;
-  cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
+
+
 
 .cars-item--active {
   background-color: rgba(248, 127, 7, 0.25); 
@@ -208,8 +314,23 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
+.cars-pic {
+    position: relative;
+}
+
+.cars-pic img {
+  position: absolute;
+  right: 16%;
+  bottom: -80px;
+  height: 100px;
+}
+
 .cars-weight {
+  position: absolute;
   align-self: flex-start;
+
+
+
   padding: 4px 10px;
   border-radius: 999px;
   background: #ffffff;
@@ -223,7 +344,7 @@
 .cars-name {
   margin-top: auto;
   font-family: var(--font-inter-tight);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   color: #050200;
   text-align: left;
@@ -231,7 +352,7 @@
 
 .cars-price {
   font-family: var(--font-inter-tight);
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 500;
   color: #050200;
   text-align: left;
@@ -273,70 +394,19 @@
     font-size: 15px;
   }
 
-  .cars-view--grid {
-    flex-direction: column;
-  }
-  .cars-rigth {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
 
-@media (max-width: 768px) {
-  .cars {
-    padding: 10px 0;
-  }
-  .cars-text h2 {
-    font-size: 32px;
-    letter-spacing: -0.64px;
-  }
-  .cars-text p {
-    font-size: 18px;
-  }
-  .cars-title span:first-child {
-    font-size: 24px;
-  }
-  .cars-title span:last-child {
-    font-size: 14px;
-    padding: 6px 14px;
-  }
-  .car-descr {
-    font-size: 16px;
-  }
-  .car-spec-item p:first-child {
-    font-size: 12px;
-  }
-  .car-spec-item p:last-child {
-    font-size: 14px;
-  }
-  .cars-left {
-    padding: 0;
-  }
-  .cars-right {
-    display: none;
-  }
-  .cars-main {
-    padding: 16px 16px 0;
-  }
-  .cars-weight {
-    font-size: 10px;
-  }
-  .cars-name {
-    font-size: 12px;
-  }
-  .cars-price {
-    font-size: 14px;
-  }
-  .cars-item {
-    min-width: 109px;
-    max-width: 136px;
-  }
+
 }
 
 @media (max-width: 480px) {
   .cars {
     padding: 40px 0;
   }
+
+  .cars-body {
+    padding: 16px;
+  }
+
   .cars-text h2 {
     font-size: 26px;
     letter-spacing: -0.52px;
@@ -370,10 +440,7 @@
     font-size: 13px;
   }
 
-  .cars-rigth {
-    padding: 0;
-    background: transparent;
-  }
+
   .cars-slider {
     overflow: hidden;
     width: 100%;
