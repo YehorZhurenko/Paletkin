@@ -85,6 +85,28 @@
   display: none;
 }
 
+.car-descr {
+  font-family: var(--font-inter-tight);
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: -0.32px;
+  color: #353332;
+}
+
+.car-spec-item p:first-child {
+  font-family: var(--font-inter-tight);
+  font-size: 18px;
+  color: #353332;
+  margin-bottom: 4px;
+}
+
+.car-spec-item p:last-child {
+  font-family: var(--font-inter-tight);
+  font-size: 24px;
+  font-weight: 500;
+  color: #050200;
+}
+
   @media (max-width: 1100px) {
     .cars-view {
       grid-template-columns: auto;
@@ -94,75 +116,37 @@
     }
 
     .cars-rigth {
-  
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-
-      gap: 16px;
-
-      border-radius: 8px;
-      background: #ededed;
-      align-content: start;
-    
-      justify-items: stretch;
-      height: min-content;
-
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     }
 
   }
 
   @media (max-width: 960px) {
 
-
     .cars-body {
       padding: 32px;
     }
 
     .cars-rigth {
-    grid-template-columns: repeat(auto-fill, minmax(116px, 1fr));
-
-
+    grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
     gap: 12px;
-}
-
-  }
+}  }
 
   @media (max-width: 768px) {
 
-    .cars-rigth {
-      padding: 12px;
+    .cars-text h2 {
+      font-size: 48px;
+    }
+
+      .cars-rigth {
+        grid-template-columns: repeat(auto-fill, minmax(124px, 1fr));
+        padding: 16px;
     }
 
     .cars-body {
       padding: 24px;
     }
 
-    .cars {
-      padding: 10px 0;
-    }
-    .cars-text h2 {
-      font-size: 32px;
-      letter-spacing: -0.64px;
-    }
-    .cars-text p {
-      font-size: 18px;
-    }
-    .cars-title span:first-child {
-      font-size: 24px;
-    }
-    .cars-title span:last-child {
-      font-size: 14px;
-      padding: 6px 14px;
-    }
-    .car-descr {
-      font-size: 16px;
-    }
-    .car-spec-item p:first-child {
-      font-size: 12px;
-    }
-    .car-spec-item p:last-child {
-      font-size: 14px;
-    }
     .cars-left {
       padding: 0;
     }
@@ -172,26 +156,12 @@
     .cars-main {
       padding: 16px 16px 0;
     }
-    .cars-weight {
-      font-size: 10px;
-    }
-    .cars-name {
-      font-size: 12px;
-    }
-    .cars-price {
-      font-size: 14px;
-    }
-  
-
-  
   
   }
 
 
 /* До 600px показываем слайдер, скрываем сетку и применяем стили слайдера */
 @media (max-width: 600px) {
-
-
 
   .cars-slider {
     overflow: hidden;
@@ -235,9 +205,9 @@
 }
 
 .cars-title span:first-child {
-  font-family: var(--font-tilda);
+  font-family: var(--font-inter-tight);
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.64px;
   color: #050200;
 }
@@ -276,37 +246,11 @@
   margin-top: 24px;
 }
 
-.car-descr {
-  font-family: var(--font-inter-tight);
-  font-size: 18px;
-  line-height: 1.6;
-  letter-spacing: -0.32px;
-  color: #353332;
-}
-
 .car-spec {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
 }
-
-.car-spec-item p:first-child {
-  font-family: var(--font-inter-tight);
-  font-size: 18px;
-  color: #353332;
-  margin-bottom: 4px;
-}
-
-.car-spec-item p:last-child {
-  font-family: var(--font-inter-tight);
-  font-size: 24px;
-  font-weight: 500;
-  color: #050200;
-}
-
-
-
-
 
 .cars-item--active {
   background-color: rgba(248, 127, 7, 0.25); 
@@ -328,9 +272,6 @@
 .cars-weight {
   position: absolute;
   align-self: flex-start;
-
-
-
   padding: 4px 10px;
   border-radius: 999px;
   background: #ffffff;
@@ -346,7 +287,7 @@
   font-family: var(--font-inter-tight);
   font-size: 18px;
   font-weight: 500;
-  color: #050200;
+  color: #353332;
   text-align: left;
 }
 
@@ -358,49 +299,70 @@
   text-align: left;
 }
 
-/* Адаптив */
-@media (max-width: 1024px) {
-  .cars {
-    padding: 20px 0;
-  }
-  .cars-text h2 {
-    font-size: 44px;
-  }
-  .cars-text p {
-    font-size: 17px;
-  }
-  .cars-title span:first-child {
-    font-size: 28px;
-  }
-  .cars-title span:last-child {
-    font-size: 15px;
-  }
-  .car-descr {
-    font-size: 15px;
-  }
-  .car-spec-item p:first-child {
-    font-size: 13px;
-  }
-  .car-spec-item p:last-child {
-    font-size: 15px;
-  }
-  .cars-weight {
-    font-size: 10px;
-  }
-  .cars-name {
-    font-size: 13px;
-  }
-  .cars-price {
-    font-size: 15px;
-  }
-
-
-
-}
 
 @media (max-width: 480px) {
-  .cars {
-    padding: 40px 0;
+  
+  .cars-view {
+    gap: 24px;
+  }
+
+  .car-spec {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .car-spec-item p:first-child {
+    font-size: 16px;
+  }
+
+  .car-spec-item p:last-child {
+    font-size: 18px;
+  }
+
+  .car-descr {
+    font-size:  16px;
+  }
+
+  .cars-title {
+    flex-direction: column-reverse;
+    align-items: start;
+  }
+
+  .cars-title span:last-child {
+    font-size: 14px;
+    padding: 13px;
+    width: 100%;
+    text-align: center;
+    
+  }
+
+  .cars-title span:first-child {
+    font-size: 24px;
+  }
+
+  .cars-text p {
+    font-size: 16px;
+  }
+
+  .cars-pic img {
+    right: 6%;
+  }
+
+  .cars-item {
+    height: 164px;
+  }
+
+  .cars-rigth {
+    grid-template-columns: repeat(auto-fill, minmax(102px, 1fr));
+    padding: 16px;
+}
+
+  .cars-name {
+    font-size: 16px;
+  }
+
+  .cars-price {
+    font-size: 18px;
   }
 
   .cars-body {
@@ -408,36 +370,7 @@
   }
 
   .cars-text h2 {
-    font-size: 26px;
-    letter-spacing: -0.52px;
-  }
-  .cars-text p {
-    font-size: 15px;
-  }
-  .cars-title span:first-child {
-    font-size: 20px;
-  }
-  .cars-title span:last-child {
-    font-size: 13px;
-    padding: 6px 12px;
-  }
-  .car-descr {
-    font-size: 13px;
-  }
-  .car-spec-item p:first-child {
-    font-size: 11px;
-  }
-  .car-spec-item p:last-child {
-    font-size: 13px;
-  }
-  .cars-weight {
-    font-size: 9px;
-  }
-  .cars-name {
-    font-size: 11px;
-  }
-  .cars-price {
-    font-size: 13px;
+    font-size: 32px;
   }
 
 
@@ -455,3 +388,37 @@
   }
 
 }
+
+@media (max-width:360px) {
+
+  .cars-pic img {
+    right: 4%;
+}
+
+  .cars-item {
+    flex: 0 0 108px; 
+    height: 152px;
+}
+
+  .cars-rigth {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    grid-template-rows: none;
+    -webkit-overflow-scrolling: touch;
+    padding: 12px;
+    gap: 12px;
+
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+    mask-image: linear-gradient(to right, black 85%, transparent 100%);
+}
+
+  .cars-name {
+    font-size: 14px;
+}
+
+  .cars-price {
+    font-size: 16px;
+}
+
+} 
